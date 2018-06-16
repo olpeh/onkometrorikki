@@ -1,0 +1,8 @@
+{
+  "name": "proto",
+  "alias": "proto",
+  "type": "static",
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

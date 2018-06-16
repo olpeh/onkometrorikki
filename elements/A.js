@@ -1,0 +1,49 @@
+import styled from 'react-emotion';
+import {
+  space,
+  width,
+  display,
+  flex,
+  alignItems,
+  justifyContent,
+  fontSize,
+  fontWeight,
+  textAlign,
+  lineHeight,
+  color,
+  borders,
+  borderColor,
+  borderWidth,
+  borderRadius,
+  hover,
+  focus,
+  active,
+} from 'styled-system';
+import tag from 'clean-tag';
+
+const A = styled(tag.a)(
+  space,
+  width,
+  display,
+  fontSize,
+  fontWeight,
+  textAlign,
+  lineHeight,
+  color,
+  borders,
+  borderColor,
+  borderWidth,
+  borderRadius,
+  hover,
+  focus,
+  active,
+  {
+    boxSizing: 'border-box',
+  },
+);
+
+A.defaultProps = {
+  bg: 'transparent',
+};
+
+export default A;
