@@ -20,7 +20,6 @@ export default class Index extends React.Component {
       console.log(status);
       this.setState({ loading: false, status: status });
     });
-    console.log(this.state);
   }
 
   render() {
@@ -61,8 +60,6 @@ export default class Index extends React.Component {
     const url = 'https://onkolansimetrorikki.herokuapp.com/api/isitbroken';
     return fetch(url)
       .then(response => {
-        const responseCopy = response.clone();
-        console.log(responseCopy.json());
         return response.json();
       })
       .catch(error => console.error(error));
