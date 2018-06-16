@@ -1,14 +1,11 @@
 import React from 'react';
 import Div from '../elements/Div';
 import H1 from '../elements/H1';
+import H2 from '../elements/H2';
 import P from '../elements/P';
 import A from '../elements/A';
 import theme from '../theme';
 import { css } from 'react-emotion';
-
-const linkStyle = css`
-  text-decoration-color: ${theme.colors.blue[2]};
-`;
 
 export default class Index extends React.Component {
   constructor(props, context) {
@@ -35,18 +32,26 @@ export default class Index extends React.Component {
         py={[5, 6, 7]}
         px={[4, 5, 6]}
       >
-        <H1 fontSize={[3, 4, 6]} color="fuschia.7" lineHeight="title">
+        <H1 fontSize={[3, 4, 6]} color="metro.0" lineHeight="title">
           Onko Länsimetro rikki?
         </H1>
-        <P lineHeight="copy">
-          {this.state.loading
-            ? 'Ladataan statusta...'
-            : this.state.status
-              ? this.state.status.broken
-                ? 'Kyllä!'
-                : 'Ei!'
-              : 'Jokin on pielessä :/'}
-        </P>
+        <Div>
+          {this.state.loading ? (
+            <P lineHeight="copy">Ladataan statusta...</P>
+          ) : this.state.status ? (
+            this.state.status.broken ? (
+              <H2 fontSize={[3, 4, 6]} color="red.6" lineHeight="copy">
+                Kyllä!
+              </H2>
+            ) : (
+              <H1 fontSize={[3, 4, 6]} color="green.8" lineHeight="copy">
+                Ei!
+              </H1>
+            )
+          ) : (
+            <P lineHeight="copy">Jokin on pielessä :/</P>
+          )}
+        </Div>
       </Div>
     );
   }

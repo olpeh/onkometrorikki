@@ -30,6 +30,7 @@ const letterSpacings = ['0.05em', '0.075em', '0.1em'];
 
 const colors = {
   dark: '#393f49',
+  metro: ['#FF6600'],
   gray: [
     '#f8f9fa',
     '#ebedef',
