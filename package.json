@@ -23,6 +23,7 @@
     "emotion-theming": "^9.1.2",
     "koa": "^2.5.1",
     "koa-bodyparser": "^4.2.1",
+    "koa-request": "^1.0.0",
     "koa-route": "^3.2.0",
     "react": "^16.3.2",
     "react-emotion": "^9.1.3",
