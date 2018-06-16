@@ -1,6 +1,5 @@
 import React from 'react';
 import { ThemeProvider } from 'emotion-theming';
-import SiteNav from '../components/Nav';
 import theme from '../theme';
 
 /* Use this file to customise your app's layout and shared providers */
@@ -16,10 +15,7 @@ export default class extends React.Component {
     // Here, we wrap the app with emotion's theme provider, to offer access to styled-system values
     return (
       <ThemeProvider theme={theme}>
-        <React.Fragment>
-          <SiteNav routes={routes} currentRoute={route} />
-          {render()}
-        </React.Fragment>
+        <React.Fragment>{render()}</React.Fragment>
       </ThemeProvider>
     );
   }

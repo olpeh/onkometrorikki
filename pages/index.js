@@ -10,30 +10,56 @@ const linkStyle = css`
   text-decoration-color: ${theme.colors.blue[2]};
 `;
 
-const Index = props => (
-  <Div fontSize={[2, 3]} color="black.1" bg="bg" py={[5, 6, 7]} px={[4, 5, 6]}>
-    <H1 fontSize={[3, 4, 6]} color="fuschia.7" lineHeight="title">
-      Proto
-    </H1>
-    <P lineHeight="copy">
-      Setup for prototyping static sites with x0, emotion, styled-system and
-      react.
-    </P>
-    <P lineHeight="copy">Read the docs for more information:</P>
-    <A
-      fontSize={[2, 3]}
-      color="blue.5"
-      hover={{
-        color: 'blue.7',
-        textDecorationColor: theme.colors.blue[7],
-      }}
-      active={{ color: 'blue.5' }}
-      css={linkStyle}
-      href="https://github.com/fpapado/proto"
-    >
-      https://github.com/fpapado/proto
-    </A>
-  </Div>
-);
+export default class Index extends React.Component {
+  constructor(props, context) {
+    super(props, context);
+    this.state = {
+      loading: true,
+    };
+  }
 
-export default Index;
+  componentDidMount() {
+    const status = this.fetchStatus().then(status => {
+      console.log(status);
+      this.setState({ loading: false, status: status });
+    });
+    console.log(this.state);
+  }
+
+  render() {
+    return (
+      <Div
+        fontSize={[2, 3]}
+        color="black.1"
+        bg="bg"
+        py={[5, 6, 7]}
+        px={[4, 5, 6]}
+      >
+        <H1 fontSize={[3, 4, 6]} color="fuschia.7" lineHeight="title">
+          Onko Länsimetro rikki?
+        </H1>
+        <P lineHeight="copy">
+          {this.state.loading
+            ? 'Ladataan statusta...'
+            : this.state.status
+              ? this.state.status.broken
+                ? 'Kyllä!'
+                : 'Ei!'
+              : 'Jokin on pielessä :/'}
+        </P>
+      </Div>
+    );
+  }
+
+  fetchStatus() {
+    console.log('Trying to fetch status form the API');
+    const url = 'https://onkolansimetrorikki.herokuapp.com/api/isitbroken';
+    return fetch(url)
+      .then(response => {
+        const responseCopy = response.clone();
+        console.log(responseCopy.json());
+        return response.json();
+      })
+      .catch(error => console.error(error));
+  }
+}
