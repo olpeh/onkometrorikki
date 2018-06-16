@@ -7,3 +7,5 @@ npm-debug.log*
 *.swp
 .vscode/
 site/
+
+package-lock\.json
