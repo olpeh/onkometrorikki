@@ -1,4 +1,4 @@
-# Onko Länsimetro rikki
+# Onko Länsimetro rikki?
 
 Check if Länsimetro is broken at the moment
 
