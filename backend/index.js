@@ -118,19 +118,24 @@ const createResponse = (feed, error) => {
     };
   } else {
     console.log('Going to check if Metro is broken at the moment');
-    let broken = false;
+    let brokenCount = 0;
     let reasons = [];
     feed.entity.forEach(function(entity) {
+      let thisAlertForBrokenMetro = false;
       if (entity.alert) {
-        broken =
+        if (
           entity.alert &&
           entity.alert.informed_entity &&
           entity.alert.informed_entity.length > 0 &&
           (entity.alert.informed_entity[0].route_type == METRO_ROUTE_TYPE_OLD ||
-            entity.alert.informed_entity[0].route_type == METRO_ROUTE_TYPE_NEW);
+            entity.alert.informed_entity[0].route_type == METRO_ROUTE_TYPE_NEW)
+        ) {
+          brokenCount++;
+          thisAlertForBrokenMetro = true;
+        }
 
         if (
-          broken &&
+          thisAlertForBrokenMetro &&
           entity.alert.description_text &&
           entity.alert.description_text.translation &&
           entity.alert.description_text.translation.length > 0 &&
@@ -143,7 +148,7 @@ const createResponse = (feed, error) => {
 
     return {
       ...defaultResponse,
-      broken,
+      broken: brokenCount > 0,
       reasons: [...defaultResponse.reasons, ...reasons]
     };
   }
