@@ -102,7 +102,7 @@ const createResponse = (feed, error) => {
   const defaultResponse = {
     success: true,
     broken: false,
-    reasons: ['Only god knows']
+    reasons: []
   };
 
   if (!feed) {
@@ -112,6 +112,7 @@ const createResponse = (feed, error) => {
       success: false,
       reasons: [
         ...defaultResponse.reasons,
+        'Failed to fetch the feed.',
         'Failed to fetch the feed. The Metro might work or might not.'
       ],
       error
@@ -152,8 +153,6 @@ const createResponse = (feed, error) => {
       reasons: [...defaultResponse.reasons, ...reasons]
     };
   }
-
-  return response;
 };
 
 setUpApp();
