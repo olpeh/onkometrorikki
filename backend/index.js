@@ -56,12 +56,16 @@ async function setUpApp() {
   app.use(
     route.get('/api/isitbroken', async ctx => {
       console.log('Got the request');
+      const failIfBroken = ctx.request.query.failIfBroken || undefined;
       await fetchFeed()
         .then(feed => {
           const dataToRespondWith = createResponse(feed, null);
-          console.log('Success, going to respond with', dataToRespondWith);
-          ctx.response.statusCode = 200;
-          ctx.response.body = dataToRespondWith;
+          if (failIfBroken && dataToRespondWith.broken) {
+            ctx.response.statusCode = 500;
+          } else {
+            ctx.response.statusCode = 200;
+            ctx.response.body = dataToRespondWith;
+          }
         })
         .catch(e => {
           console.log('Error in fetching data');
