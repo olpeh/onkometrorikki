@@ -13,6 +13,7 @@ module.exports = {
     language: process.env.TWITTER_LANG,
     username: process.env.TWITTER_USERNAME,
     check: process.env.TWITTER_CHECK_RATE * 1000 * 60,
+    minInterval: process.env.TWITTER_MIN_INTERVAL * 1000 * 60,
     searchCount: process.env.TWITTER_SEARCH_COUNT,
     randomReply: process.env.RANDOM_REPLY
   }

@@ -1,9 +1,10 @@
 const Twit = require('twit');
 const config = require('./config');
 const hsl = require('./hsl');
-const param = config.twitterConfig;
 
 let bot;
+let previousTweetTime;
+let previouslyWasBroken = false;
 
 function setup() {
   bot = new Twit(config.twitterKeys);
@@ -22,9 +23,24 @@ function tweetNow(text) {
       console.error('ERROR,', err);
     } else {
       console.log('SUCCESS: tweeted: ', text);
+      previousTweetTime = new Date();
     }
   });
 }
+
+const shouldTweetNow = brokenNow => {
+  if (!previouslyWasBroken && brokenNow && !previousTweetTime) {
+    return true;
+  } else if (previouslyWasBroken && !brokenNow) {
+    return true;
+  } else if (
+    previousTweetTime &&
+    new Date() - previousTweetTime > config.twitterConfig.minInterval
+  ) {
+    return true;
+  }
+  return false;
+};
 
 const tweetIfBroken = async () => {
   console.log('Checking if broken and tweeting maybe');
@@ -32,13 +48,26 @@ const tweetIfBroken = async () => {
     .fetchFeed()
     .then(feed => {
       const dataToRespondWith = hsl.createResponse(feed, null);
-      if (dataToRespondWith.broken) {
-        const tweetText = `
+      if (shouldTweetNow(dataToRespondWith.broken)) {
+        console.log('Decided to tweet at', new Date());
+        if (dataToRespondWith.broken) {
+          const tweetText = `
           Länsimetrossa häiriö:
           ${dataToRespondWith.reasons.join('')}
           Katso: https://onkolansimetrorikki.now.sh/
           `;
-        tweetNow(tweetText);
+          previouslyWasBroken = true;
+          tweetNow(tweetText);
+        } else {
+          const tweetText = `
+          Länsimetro toimii jälleen!
+          Katso: https://onkolansimetrorikki.now.sh/
+          `;
+          previouslyWasBroken = false;
+          tweetNow(tweetText);
+        }
+      } else {
+        console.log('Decided not to tweet this time');
       }
     })
     .catch(e => {
