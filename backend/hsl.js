@@ -2,6 +2,42 @@ const http = require('http');
 const GtfsRealtimeBindings = require('gtfs-realtime-bindings');
 const request = require('request');
 
+/*
+Deprecated Types
+The values below are retained for backwards-compatibility with existing feeds;
+feed-reading applications should continue to understand these, but they shouldn't be used in new feeds.
+https://sites.google.com/site/gtfschanges/proposals/route-type
+
+Value
+	Name
+	Corresponding New Value
+0
+	Tram, Light Rail, Streetcar
+	900
+1
+	Subway, Metro
+	400
+2
+	Rail
+	100
+3
+	Bus
+	700
+4
+	Ferry 	1000
+5
+	Cable Car
+	1701
+6
+	Gondola, Suspended cable car
+	1300
+7
+	Funicular
+	1400
+*/
+const METRO_ROUTE_TYPE_OLD = 1;
+const METRO_ROUTE_TYPE_NEW = 400;
+
 module.exports = {
   fetchFeed: async function() {
     return new Promise((resolve, reject) => {

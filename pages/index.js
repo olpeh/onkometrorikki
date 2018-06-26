@@ -38,17 +38,29 @@ export default class Index extends React.Component {
           {this.state.loading ? (
             <P lineHeight="copy">Ladataan statusta...</P>
           ) : this.state.status ? (
-            this.state.status.broken ? (
+            this.state.status.success ? (
+              this.state.status.broken ? (
+                <Div>
+                  <H2 fontSize={[3, 4, 6]} color="red.6" lineHeight="copy">
+                    Kyllä!
+                  </H2>
+                  {this.state.status.reasons.map(reason => <Div>{reason}</Div>)}
+                </Div>
+              ) : (
+                <H1 fontSize={[3, 4, 6]} color="green.8" lineHeight="copy">
+                  Ei!
+                </H1>
+              )
+            ) : (
               <Div>
                 <H2 fontSize={[3, 4, 6]} color="red.6" lineHeight="copy">
-                  Kyllä!
+                  Mahdollisesti...
                 </H2>
+                <P lineHeight="copy">
+                  Jokin on pielessä :/ Kokeile myöhemmin uudestaan.
+                </P>
                 {this.state.status.reasons.map(reason => <Div>{reason}</Div>)}
               </Div>
-            ) : (
-              <H1 fontSize={[3, 4, 6]} color="green.8" lineHeight="copy">
-                Ei!
-              </H1>
             )
           ) : (
             <P lineHeight="copy">
