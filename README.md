@@ -14,4 +14,5 @@ Head to [onkolansimetrorikki.now.sh](https://onkolansimetrorikki.now.sh/)
 
 ## Credits, Thanks, Inspiration
 
-Inspired by [fpapado/proto](https://github.com/fpapado/proto)
+- Inspired by [fpapado/proto](https://github.com/fpapado/proto)
+- This project is sponsored by [Futurice's](https://futurice.com/) [Open Source Sponsorship program](http://spiceprogram.org/oss-sponsorship)
