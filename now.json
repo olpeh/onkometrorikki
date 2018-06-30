@@ -2,9 +2,11 @@
   "name": "onkolansimetrorikki",
   "alias": "onkolansimetrorikki",
   "type": "static",
+  "static": {
+    "public": "build"
+  },
   "env": {
     "NODE_ENV": "production"
   },
-  "public": false,
-  "files": ["build"]
+  "public": false
 }
