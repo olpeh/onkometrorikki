@@ -2,5 +2,6 @@
   "name": "onkolansimetrorikki",
   "alias": "onkolansimetrorikki",
   "type": "npm",
-  "public": false
+  "public": false,
+  "files": ["public"]
 }
