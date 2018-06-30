@@ -6,6 +6,7 @@
     "start": "node ./backend/index.js",
     "dev": "elm-app start",
     "build": "NODE_ENV=production elm-app build",
+    "now-build": "cd .. && NODE_ENV=production elm-app build",
     "deploy:now": "cd ./build && now deploy --local-config=../now.json . && now alias --local-config=../now.json",
     "release:now": "npm run build && npm run deploy:now",
     "test": "echo \"Error: no test specified\" && exit 1"
