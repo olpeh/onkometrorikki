@@ -1,7 +1,5 @@
 {
   "name": "onkolansimetrorikki",
   "alias": "onkolansimetrorikki",
-  "type": "npm",
-  "public": false,
-  "files": ["public", "src", "elm-package.json"]
+  "type": "npm"
 }
