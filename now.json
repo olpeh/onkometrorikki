@@ -1,6 +1,6 @@
 {
   "name": "onkolansimetrorikki",
   "alias": "onkolansimetrorikki",
-  "type": "static",
+  "type": "npm",
   "public": false
 }
