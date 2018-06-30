@@ -12,7 +12,23 @@ A really stupid prototype app that shows whether the Metro in Helsinki is broken
 
 Head to [onkolansimetrorikki.now.sh](https://onkolansimetrorikki.now.sh/)
 
+## Development
+
+Install dependencies: `yarn`
+
+Start the backend: `npm start`
+
+Start the frontend: `npm run dev`
+
+## Deployments
+
+Backend is deployed in Heroku: `git push heroku master`
+
+Frontend is deployed automatically to now.sh by GitHub
+
 ## Credits, Thanks, Inspiration
 
 - Inspired by [fpapado/proto](https://github.com/fpapado/proto)
 - This project is sponsored by [Futurice's](https://futurice.com/) [Open Source Sponsorship program](http://spiceprogram.org/oss-sponsorship)
+- The elm app is heavily inspired by [elm-quicks](https://github.com/ohanhi/elm-quicks/) by [ohanhi](https://github.com/ohanhi/)
+- The UI is built using Elm, and it is based on [create-elm-app](https://github.com/halfzebra/create-elm-app)
