@@ -24,7 +24,7 @@ Start the frontend: `npm run dev`
 
 Backend is deployed in Heroku: `git push heroku master`
 
-Frontend is deployed automatically to now.sh by GitHub
+Deploy frontend to now.sh: `npm run release:now`
 
 ## Credits, Thanks, Inspiration
 
