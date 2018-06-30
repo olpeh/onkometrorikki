@@ -8,5 +8,6 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "public": false
+  "public": false,
+  "files": ["build"]
 }
