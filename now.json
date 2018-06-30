@@ -3,5 +3,5 @@
   "alias": "onkolansimetrorikki",
   "type": "npm",
   "public": false,
-  "files": ["public", "elm-package.json"]
+  "files": ["public", "build", "src", "elm-package.json"]
 }
