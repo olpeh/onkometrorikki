@@ -5,5 +5,5 @@
   "env": {
     "NODE_ENV": "production"
   },
-  "root": "./build"
+  "public": "build"
 }
