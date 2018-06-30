@@ -1,9 +1,11 @@
 module Main exposing (..)
 
-import Html exposing (Html, text, div, h1, h2, br, ul, li)
+import Html exposing (Html, text, div, footer, h1, h2, br, ul, li)
 import Http
 import Json.Decode exposing (list, string, bool, maybe, field)
 import Json.Decode.Pipeline exposing (required, optional, resolve, decode)
+import Markdown
+
 
 type Msg
     = GotResponse Status
@@ -52,6 +54,7 @@ view model =
           else
             text ""
         , errorView model.error
+        , footer [] [ footerView ]
         ]
 
 
@@ -95,6 +98,15 @@ reasonsView reasons =
 reasonView : String -> Html msg
 reasonView reason =
     li [] [ text reason ]
+
+
+footerView : Html msg
+footerView =
+    Markdown.toHtml [] """
+Built by [0lpeh](https://twitter.com/0lpeh) |
+Repository available at [GitHub](https://github.com/olpeh/onkolansimetrorikki) |
+Follow [@onkometrorikki](https://twitter.com/onkometrorikki)
+"""
 
 
 init : ( Model, Cmd Msg )
