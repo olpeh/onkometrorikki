@@ -4,10 +4,10 @@
   "description": "Check if Länsimetro is broken at the moment",
   "scripts": {
     "start": "node ./backend/index.js",
-    "now-start": "elm-app start",
+    "now-start": "npm run build && now ./build --local-config=../now.json && now alias --local-config=./now.json",
     "dev": "elm-app start",
     "build": "NODE_ENV=production elm-app build",
-    "deploy:now": "now deploy --local-config=./now.json ./build && now alias --local-config=./now.json",
+    "deploy:now": "now ./build --local-config=../now.json && now alias --local-config=./now.json",
     "release:now": "npm run build && npm run deploy:now",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
