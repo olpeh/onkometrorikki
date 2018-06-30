@@ -1,8 +1,5 @@
 {
   "name": "onkolansimetrorikki",
   "alias": "onkolansimetrorikki",
-  "type": "static",
-  "env": {
-    "NODE_ENV": "production"
-  }
+  "type": "static"
 }
