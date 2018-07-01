@@ -1,6 +1,7 @@
 module Main exposing (..)
 
 import Html exposing (Html, text, div, footer, h1, h2, br, ul, li)
+import Html.Attributes exposing (class)
 import Http
 import Json.Decode exposing (list, string, bool, maybe, field)
 import Json.Decode.Pipeline exposing (required, optional, resolve, decode)
@@ -47,13 +48,13 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div []
-        [ h1 [] [ text "Onko Länsimetro rikki?" ]
-        , statusView model.status
-        , if model.loading == True then
-            text "Ladataan statusta..."
-          else
-            text ""
-        , errorView model.error
+        [ div [class "main"] [ h1 [] [ text "Onko Länsimetro rikki?" ]
+            , statusView model.status
+            , if model.loading == True then
+                text "Ladataan statusta..."
+            else
+                text ""
+            , errorView model.error]
         , footer [] [ footerView ]
         ]
 
@@ -70,7 +71,7 @@ currentStatusView status =
     div []
         [
             if status.broken == True then
-                h2 [] [ text "Kyllä!" ]
+                h2 [ class "broken" ] [ text "Kyllä!" ]
             else
                 h2 [] [ text "Ei!" ]
         , br [] []
@@ -103,9 +104,9 @@ reasonView reason =
 footerView : Html msg
 footerView =
     Markdown.toHtml [] """
-Built by [0lpeh](https://twitter.com/0lpeh) |
-Repository available at [GitHub](https://github.com/olpeh/onkolansimetrorikki) |
-Follow [@onkometrorikki](https://twitter.com/onkometrorikki)
+* Built by [0lpeh](https://twitter.com/0lpeh) |
+* Repository available at [GitHub](https://github.com/olpeh/onkolansimetrorikki) |
+* Follow [@onkometrorikki](https://twitter.com/onkometrorikki)
 """
 
 

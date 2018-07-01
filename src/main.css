@@ -14,7 +14,7 @@ body {
   font-size: 22px;
 }
 
-#root {
+.main {
   padding: 0 40px;
 }
 
@@ -28,11 +28,25 @@ h2 {
   color: #03a40e;
 }
 
+.broken {
+  color: #df1305;
+}
+
 footer {
   font-size: 16px;
   position: absolute;
-  bottom: 0;
+  bottom: 20px;
   text-align: center;
   width: 100%;
   overflow: hidden;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+}
+
+footer ul li {
+  display: inline-block;
 }
