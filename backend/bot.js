@@ -51,18 +51,15 @@ const tweetIfBroken = async () => {
       if (shouldTweetNow(dataToRespondWith.broken)) {
         console.log('Decided to tweet at', new Date());
         if (dataToRespondWith.broken) {
-          const tweetText = `
-          Länsimetrossa häiriö:
+          const tweetText = `Metrossa häiriö:
           ${dataToRespondWith.reasons.join('')}
           Katso: https://onkolansimetrorikki.now.sh/
+          #länsimetro
           `;
           previouslyWasBroken = true;
           tweetNow(tweetText);
         } else {
-          const tweetText = `
-          Länsimetro toimii jälleen!
-          Katso: https://onkolansimetrorikki.now.sh/
-          `;
+          const tweetText = `Länsimetro toimii jälleen! Katso: https://onkolansimetrorikki.now.sh/ #länsimetro`;
           previouslyWasBroken = false;
           tweetNow(tweetText);
         }
