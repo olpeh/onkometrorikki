@@ -74,7 +74,6 @@ currentStatusView status =
                 h2 [ class "broken" ] [ text "Kyllä!" ]
             else
                 h2 [] [ text "Ei!" ]
-        , br [] []
         , reasonsView status.reasons
         , case status.error of
             Just error -> text error
