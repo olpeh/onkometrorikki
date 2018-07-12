@@ -1,10 +1,16 @@
 const Twit = require('twit');
 const config = require('./config');
 const hsl = require('./hsl');
+const redisWrapper = require('./redisWrapper');
+
+const PREVIOUSLY_BROKEN_KEY = 'previously-broken';
+const PREVIOUS_TWEET_TIME_KEY = 'previous-tweet-time';
+const brokenStatusCacheTtlSeconds =
+  process.env.STATUS_CACHE_TTL_SECONDS || 60 * 60 * 24;
+
+const redisClient = redisWrapper.instance();
 
 let bot;
-let previousTweetTime;
-let previouslyWasBroken = false;
 
 function setup() {
   bot = new Twit(config.twitterKeys);
@@ -13,22 +19,69 @@ function setup() {
   setInterval(tweetIfBroken, config.twitterConfig.check);
 }
 
-function tweetNow(text) {
+async function tweetNow(text, brokenNow) {
   const tweet = {
     status: text
   };
 
-  bot.post('statuses/update', tweet, (err, data, response) => {
-    if (err) {
-      console.error('ERROR,', err);
-    } else {
-      console.log('SUCCESS: tweeted: ', text);
-      previousTweetTime = new Date();
-    }
-  });
+  if (config.twitterConfig.enabled) {
+    bot.post('statuses/update', tweet, (err, data, response) => {
+      if (err) {
+        console.error('ERROR,', err);
+      } else {
+        console.log('SUCCESS: tweeted: ', text);
+        savePreviousTweetTime(new Date());
+        saveBrokenStatus(brokenNow);
+      }
+    });
+  } else {
+    console.log('Tweeting was disabled, but would have tweeted:', {
+      text,
+      brokenNow
+    });
+    savePreviousTweetTime(new Date());
+    saveBrokenStatus(brokenNow);
+  }
 }
 
-const shouldTweetNow = brokenNow => {
+const saveBrokenStatus = async brokenNow =>
+  redisClient.setex(
+    PREVIOUSLY_BROKEN_KEY,
+    brokenStatusCacheTtlSeconds,
+    brokenNow
+  );
+
+const getPreviousBrokenStatus = async () =>
+  new Promise((resolve, reject) => {
+    redisClient.get(PREVIOUSLY_BROKEN_KEY, (error, result) => {
+      if (result !== undefined) {
+        resolve(result === 'true');
+      }
+      resolve(null);
+    });
+  });
+
+const savePreviousTweetTime = async previousTweetTime =>
+  redisClient.setex(
+    PREVIOUS_TWEET_TIME_KEY,
+    brokenStatusCacheTtlSeconds,
+    previousTweetTime.toString()
+  );
+
+const getPreviousTweetTime = async () =>
+  new Promise((resolve, reject) => {
+    redisClient.get(PREVIOUS_TWEET_TIME_KEY, (error, result) => {
+      if (result !== undefined) {
+        resolve(new Date(result));
+      }
+      resolve(null);
+    });
+  });
+
+const shouldTweetNow = async brokenNow => {
+  const previouslyWasBroken = await getPreviousBrokenStatus();
+  const previousTweetTime = await getPreviousTweetTime();
+
   if (!previouslyWasBroken && brokenNow && !previousTweetTime) {
     return true;
   } else if (previouslyWasBroken && !brokenNow) {
@@ -38,30 +91,33 @@ const shouldTweetNow = brokenNow => {
     new Date() - previousTweetTime > config.twitterConfig.minInterval
   ) {
     return true;
+  } else {
+    return false;
   }
-  return false;
 };
 
 const tweetIfBroken = async () => {
   console.log('Checking if broken and tweeting maybe');
   await hsl
     .fetchFeed()
-    .then(feed => {
+    .then(async feed => {
       const dataToRespondWith = hsl.createResponse(feed, null);
-      if (shouldTweetNow(dataToRespondWith.broken)) {
+      const brokenNow = dataToRespondWith.broken;
+      const shouldTweet = await shouldTweetNow(brokenNow);
+
+      console.log({ shouldTweet, brokenNow });
+      if (shouldTweet) {
         console.log('Decided to tweet at', new Date());
-        if (dataToRespondWith.broken) {
+        if (brokenNow) {
           const tweetText = `Metrossa häiriö:
           ${dataToRespondWith.reasons.join('')}
           Katso: https://onkolansimetrorikki.now.sh/
           #länsimetro
           `;
-          previouslyWasBroken = true;
-          tweetNow(tweetText);
+          tweetNow(tweetText, brokenNow);
         } else {
           const tweetText = `Länsimetro toimii jälleen! Katso: https://onkolansimetrorikki.now.sh/ #länsimetro`;
-          previouslyWasBroken = false;
-          tweetNow(tweetText);
+          tweetNow(tweetText, brokenNow);
         }
       } else {
         console.log('Decided not to tweet this time');

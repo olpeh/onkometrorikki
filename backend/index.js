@@ -3,35 +3,30 @@ const koa = require('koa');
 const bodyParser = require('koa-bodyparser');
 const route = require('koa-route');
 const app = new koa();
-const redis = require('redis');
 const cacheControl = require('koa-cache-control');
 
 const hsl = require('./hsl');
 const bot = require('./bot');
+const redisWrapper = require('./redisWrapper');
+
+const port = process.env.PORT || 3000;
+const cacheTtlSeconds = process.env.CACHE_TTL_SECONDS || 60;
+const CACHE_KEY = 'lansimetro';
 
 require('dotenv').config();
 
 app.use(cors());
 app.use(bodyParser());
 
-const port = process.env.PORT || 3000;
-const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379';
-const cacheTtlSeconds = process.env.CACHE_TTL_SECONDS || 60;
 app.use(
   cacheControl({
     maxAge: cacheTtlSeconds
   })
 );
 
-const CACHE_KEY = 'lansimetro';
+const redisClient = redisWrapper.instance();
 
-console.log({ port, redisUrl, cacheTtlSeconds });
-
-// create a new redis client and connect to our local redis instance
-const redisClient = redis.createClient({ url: redisUrl });
-
-// if an error occurs, print it to the console
-redisClient.on('error', err => console.error('Error ' + err));
+console.log({ port, cacheTtlSeconds });
 
 async function setUpApp() {
   app.use(
