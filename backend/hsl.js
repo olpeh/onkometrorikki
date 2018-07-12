@@ -58,7 +58,6 @@ module.exports = {
     });
   },
   createResponse: function(feed, error) {
-    console.log('Going to figure out what to respond');
     const defaultResponse = {
       success: true,
       broken: false,
@@ -78,7 +77,6 @@ module.exports = {
         error
       };
     } else {
-      console.log('Going to check if Metro is broken at the moment');
       let brokenCount = 0;
       let reasons = [];
       feed.entity.forEach(function(entity) {

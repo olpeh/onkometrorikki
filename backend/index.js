@@ -43,7 +43,6 @@ async function setUpApp() {
               await hsl
                 .fetchFeed()
                 .then(async feed => {
-                  console.log('Got feed', feed);
                   const dataToRespondWith = hsl.createResponse(feed, null);
                   await redisClient.setex(
                     CACHE_KEY,
