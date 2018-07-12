@@ -115,10 +115,8 @@ const tweetIfBroken = async () => {
         console.log('Decided to tweet at', new Date());
         if (brokenNow) {
           const tweetText = `Metrossa häiriö:
-          ${dataToRespondWith.reasons.join('')}
-          Katso: https://onkolansimetrorikki.now.sh/
-          #länsimetro
-          `;
+${dataToRespondWith.reasons.join('')}
+Katso: https://onkolansimetrorikki.now.sh/ #länsimetro`;
           tweetNow(tweetText, brokenNow);
         } else {
           const tweetText = `Länsimetro toimii jälleen! Katso: https://onkolansimetrorikki.now.sh/ #länsimetro`;
