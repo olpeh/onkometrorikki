@@ -48,7 +48,12 @@ footer {
   padding: 6px;
   text-align: center;
   width: 100%;
-  background: #cccccc;
+  background: #ff6600;
+  color: #ffffff;
+}
+
+footer a {
+  color: #ffffff;
 }
 
 footer ul {
