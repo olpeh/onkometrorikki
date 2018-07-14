@@ -78,28 +78,29 @@ const getPreviousTweetTime = async () =>
     });
   });
 
-const shouldTweetNow = async brokenNow => {
-  const previouslyWasBroken = await getPreviousBrokenStatus();
-  const previousTweetTime = await getPreviousTweetTime();
+const shouldTweetNow = async brokenNow =>
+  new Promise(async (resolve, reject) => {
+    const previouslyWasBroken = await getPreviousBrokenStatus();
+    const previousTweetTime = await getPreviousTweetTime();
 
-  if (
-    previouslyWasBroken === false &&
-    brokenNow === true &&
-    previousTweetTime === null
-  ) {
-    return true;
-  } else if (previouslyWasBroken === true && brokenNow === false) {
-    return true;
-  } else if (
-    brokenNow === true &&
-    previousTweetTime !== null &&
-    new Date() - previousTweetTime > config.twitterConfig.minInterval
-  ) {
-    return true;
-  } else {
-    return false;
-  }
-};
+    if (
+      previouslyWasBroken === false &&
+      brokenNow === true &&
+      previousTweetTime === null
+    ) {
+      resolve(true);
+    } else if (previouslyWasBroken === true && brokenNow === false) {
+      resolve(true);
+    } else if (
+      brokenNow === true &&
+      previousTweetTime !== null &&
+      new Date() - previousTweetTime > config.twitterConfig.minInterval
+    ) {
+      resolve(true);
+    } else {
+      resolve(false);
+    }
+  });
 
 const tweetIfBroken = async () => {
   console.log('Checking if broken and tweeting maybe');
