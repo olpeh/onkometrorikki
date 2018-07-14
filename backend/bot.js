@@ -30,9 +30,9 @@ async function tweetNow(text, brokenNow) {
         console.error('ERROR,', err);
       } else {
         console.log('SUCCESS: tweeted: ', text);
-        savePreviousTweetTime(new Date());
-        saveBrokenStatus(brokenNow);
       }
+      savePreviousTweetTime(new Date());
+      saveBrokenStatus(brokenNow);
     });
   } else {
     console.log('Tweeting was disabled, but would have tweeted:', {
