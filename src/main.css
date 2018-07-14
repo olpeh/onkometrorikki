@@ -14,29 +14,41 @@ body {
 }
 
 .main {
-  padding: 0 40px;
+  padding: 0 20px;
 }
 
 h1 {
   font-size: 64px;
   color: #ff6600;
+  margin: 10px;
 }
 
 h2 {
   font-size: 64px;
   color: #03a40e;
+  margin: 10px;
 }
 
 .broken {
   color: #df1305;
 }
 
+.reasons {
+  padding: 0 10px;
+}
+
+.reasons li {
+  list-style: none;
+}
+
 footer {
   font-size: 16px;
-  position: absolute;
-  bottom: 20px;
+  position: fixed;
+  bottom: 0;
+  padding: 6px;
   text-align: center;
   width: 100%;
+  background: #cccccc;
 }
 
 footer ul {

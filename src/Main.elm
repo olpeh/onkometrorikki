@@ -92,7 +92,7 @@ reasonsView : List String -> Html msg
 reasonsView reasons =
     reasons
         |> List.map reasonView
-        |> ul []
+        |> ul [class "reasons"]
 
 
 reasonView : String -> Html msg
