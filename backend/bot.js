@@ -10,10 +10,12 @@ const brokenStatusCacheTtlSeconds =
 
 const redisClient = redisWrapper.instance();
 
-let bot;
+let bot, cacheKey, cacheTtlSeconds;
 
-function setup() {
+function setup(cacheKeyParam, cacheTtlSecondsParam) {
   bot = new Twit(config.twitterKeys);
+  cacheKey = cacheKeyParam;
+  cacheTtlSeconds = cacheTtlSecondsParam;
   console.log('Bot starting...');
   tweetIfBroken();
   setInterval(tweetIfBroken, config.twitterConfig.check);
@@ -108,6 +110,14 @@ const tweetIfBroken = async () => {
     .fetchFeed()
     .then(async feed => {
       const dataToRespondWith = hsl.createResponse(feed, null);
+
+      // Update redis cache with the response
+      redisClient.setex(
+        cacheKey,
+        cacheTtlSeconds,
+        JSON.stringify(dataToRespondWith)
+      );
+
       const brokenNow = dataToRespondWith.broken;
       const shouldTweet = await shouldTweetNow(brokenNow);
 

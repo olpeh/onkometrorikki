@@ -88,4 +88,4 @@ async function setUpApp() {
 }
 
 setUpApp();
-bot.setup();
+bot.setup(CACHE_KEY, cacheTtlSeconds);
