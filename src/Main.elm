@@ -48,7 +48,7 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div []
-        [ div [class "main"] [ h1 [] [ text "Onko Länsimetro rikki?" ]
+        [ div [class "main"] [ h1 [] [ text "Onko metro rikki?" ]
             , statusView model.status
             , if model.loading == True then
                 text "Ladataan statusta..."
@@ -104,7 +104,7 @@ footerView : Html msg
 footerView =
     Markdown.toHtml [] """
 * Built by [0lpeh](https://twitter.com/0lpeh) |
-* Repository available at [GitHub](https://github.com/olpeh/onkolansimetrorikki) |
+* Repository available at [GitHub](https://github.com/olpeh/onkometrorikki) |
 * Follow [@onkometrorikki](https://twitter.com/onkometrorikki)
 """
 

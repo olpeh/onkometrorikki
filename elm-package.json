@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "summary": "Check if Länsimetro is broken at the moment",
-  "repository": "https://github.com/olpeh/onkolansimetrorikki.git",
+  "summary": "Check if the metro in Helsinki area is broken at the moment",
+  "repository": "https://github.com/olpeh/onkometrorikki.git",
   "license": "MIT",
   "source-directories": ["src"],
   "exposed-modules": [],

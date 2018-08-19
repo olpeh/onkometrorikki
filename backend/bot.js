@@ -117,10 +117,10 @@ const tweetIfBroken = async () => {
         if (brokenNow) {
           const tweetText = `Metrossa häiriö:
 ${dataToRespondWith.reasons.join('')}
-Katso: https://onkolansimetrorikki.now.sh/ #länsimetro`;
+Katso: https://onkometrorikki.now.sh/ #länsimetro #hsl #metrohelsinki`;
           tweetNow(tweetText, brokenNow);
         } else {
-          const tweetText = `Länsimetro toimii jälleen! Katso: https://onkolansimetrorikki.now.sh/ #länsimetro`;
+          const tweetText = `Metro toimii jälleen! Katso: https://onkometrorikki.now.sh/ #länsimetro #hsl #metrohelsinki`;
           tweetNow(tweetText, brokenNow);
         }
       } else {

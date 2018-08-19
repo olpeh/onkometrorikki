@@ -1,16 +1,18 @@
-# Onko Länsimetro rikki?
+# Onko metro rikki?
 
-Check if Länsimetro is broken at the moment
+Check if the metro in Helsinki area is broken at the moment
 
 ## What is this?
 
-A really stupid prototype app that shows whether the Metro in Helsinki is broken currently\*
+A really stupid prototype app that shows whether the metro in Helsinki is broken currently.
 
-(\*The logic currently is super stupid and might show wrong information)
+The information is based on the [Service Alerts API](https://digitransit.fi/en/developers/apis/4-realtime-api/service-alerts/).
+
+Follow [@onkometrorikki](https://twitter.com/onkometrorikki) for notifications when there are disruptions in the metro.
 
 ## Try it
 
-Head to [onkolansimetrorikki.now.sh](https://onkolansimetrorikki.now.sh/)
+Head to [onkometrorikki.now.sh](https://onkometrorikki.now.sh/)
 
 ## Development
 

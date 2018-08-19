@@ -11,7 +11,7 @@ const redisWrapper = require('./redisWrapper');
 
 const port = process.env.PORT || 3000;
 const cacheTtlSeconds = process.env.CACHE_TTL_SECONDS || 60;
-const CACHE_KEY = 'lansimetro';
+const CACHE_KEY = 'metro';
 
 require('dotenv').config();
 
