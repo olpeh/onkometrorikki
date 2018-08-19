@@ -12,7 +12,7 @@ Follow [@onkometrorikki](https://twitter.com/onkometrorikki) for notifications w
 
 ## Try it
 
-Head to [onkometrorikki.now.sh](https://onkometrorikki.now.sh/)
+Head to [onkometrorikki.fi](https://onkometrorikki.fi/)
 
 ## Development
 
