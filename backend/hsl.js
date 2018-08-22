@@ -40,6 +40,7 @@ const METRO_ROUTE_TYPE_NEW = 400;
 
 module.exports = {
   fetchFeed: async function() {
+    console.log('Going to fetch from the external API');
     return new Promise((resolve, reject) => {
       const requestOptions = {
         method: 'GET',
@@ -49,9 +50,11 @@ module.exports = {
 
       request(requestOptions, function(error, response, body) {
         if (!error && response.statusCode == 200) {
+          console.log('Fetch successful!');
           const feed = GtfsRealtimeBindings.FeedMessage.decode(body);
           resolve(feed);
         } else {
+          console.error(error);
           reject(error);
         }
       });

@@ -36,6 +36,7 @@ async function setUpApp() {
           const failIfBroken = ctx.request.query.failIfBroken || undefined;
           redisClient.get(CACHE_KEY, async (error, result) => {
             if (result && !failIfBroken) {
+              console.log('Response was found from the cache', result);
               ctx.response.statusCode = 200;
               ctx.response.body = JSON.parse(result);
               resolve();

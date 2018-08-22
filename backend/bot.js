@@ -29,12 +29,12 @@ async function tweetNow(text, brokenNow) {
   if (config.twitterConfig.enabled) {
     bot.post('statuses/update', tweet, (err, data, response) => {
       if (err) {
-        console.error('ERROR,', err);
+        console.error('ERROR in tweeting!', err);
       } else {
-        console.log('SUCCESS: tweeted: ', text);
+        console.log('SUCCESS! tweeted: ', text);
+        savePreviousTweetTime(new Date());
+        saveBrokenStatus(brokenNow);
       }
-      savePreviousTweetTime(new Date());
-      saveBrokenStatus(brokenNow);
     });
   } else {
     console.log('Tweeting was disabled, but would have tweeted:', {
@@ -56,10 +56,8 @@ const saveBrokenStatus = async brokenNow =>
 const getPreviousBrokenStatus = async () =>
   new Promise((resolve, reject) => {
     redisClient.get(PREVIOUSLY_BROKEN_KEY, (error, result) => {
-      if (result !== undefined) {
-        resolve(result === 'true');
-      }
-      resolve(null);
+      console.log(getPreviousBrokenStatus, { result });
+      resolve(result === 'true');
     });
   });
 
@@ -73,7 +71,7 @@ const savePreviousTweetTime = async previousTweetTime =>
 const getPreviousTweetTime = async () =>
   new Promise((resolve, reject) => {
     redisClient.get(PREVIOUS_TWEET_TIME_KEY, (error, result) => {
-      if (result !== undefined) {
+      if (result !== null) {
         resolve(new Date(result));
       }
       resolve(null);
@@ -84,20 +82,22 @@ const shouldTweetNow = async brokenNow =>
   new Promise(async (resolve, reject) => {
     const previouslyWasBroken = await getPreviousBrokenStatus();
     const previousTweetTime = await getPreviousTweetTime();
+    console.log({ previouslyWasBroken, previousTweetTime });
 
     if (
-      previouslyWasBroken === false &&
       brokenNow === true &&
+      previouslyWasBroken === false &&
       previousTweetTime === null
     ) {
       resolve(true);
-    } else if (previouslyWasBroken === true && brokenNow === false) {
-      resolve(true);
     } else if (
       brokenNow === true &&
+      previouslyWasBroken === false &&
       previousTweetTime !== null &&
       new Date() - previousTweetTime > config.twitterConfig.minInterval
     ) {
+      resolve(true);
+    } else if (previouslyWasBroken === true && brokenNow === false) {
       resolve(true);
     } else {
       resolve(false);
