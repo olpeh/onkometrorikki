@@ -27,6 +27,7 @@ async function tweetNow(text, brokenNow) {
   };
 
   if (config.twitterConfig.enabled) {
+    console.log('Going to try to tweet: ', text);
     bot.post('statuses/update', tweet, (err, data, response) => {
       if (err) {
         console.error('ERROR in tweeting!', err);
@@ -115,13 +116,14 @@ const tweetIfBroken = async () => {
       redisClient.setex(
         cacheKey,
         cacheTtlSeconds,
-        JSON.stringify(dataToRespondWith)
+        JSON.stringify(dataToRespondWith),
+        () => console.log('Bot successfully updated cache')
       );
 
       const brokenNow = dataToRespondWith.broken;
       const shouldTweet = await shouldTweetNow(brokenNow);
 
-      console.log({ shouldTweet, brokenNow });
+      console.log('tweetIfBroken', { shouldTweet, brokenNow });
       if (shouldTweet) {
         console.log('Decided to tweet at', new Date());
         if (brokenNow) {

@@ -26,7 +26,7 @@ app.use(
 
 const redisClient = redisWrapper.instance();
 
-console.log({ port, cacheTtlSeconds });
+console.log('Starting...', { port, cacheTtlSeconds });
 
 async function setUpApp() {
   app.use(
@@ -36,7 +36,7 @@ async function setUpApp() {
           const failIfBroken = ctx.request.query.failIfBroken || undefined;
           redisClient.get(CACHE_KEY, async (error, result) => {
             if (result && !failIfBroken) {
-              console.log('Response was found from the cache', result);
+              console.log('Response was served from the cache');
               ctx.response.statusCode = 200;
               ctx.response.body = JSON.parse(result);
               resolve();
