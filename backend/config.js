@@ -12,8 +12,8 @@ module.exports = {
     resultType: process.env.RESULT_TYPE,
     language: process.env.TWITTER_LANG,
     username: process.env.TWITTER_USERNAME,
-    check: process.env.TWITTER_CHECK_RATE * 1000 * 60,
-    minInterval: process.env.TWITTER_MIN_INTERVAL * 1000 * 60,
+    check: process.env.TWITTER_CHECK_RATE_SECONDS * 1000,
+    minInterval: process.env.TWITTER_MIN_INTERVAL_SECONDS * 1000,
     searchCount: process.env.TWITTER_SEARCH_COUNT,
     randomReply: process.env.RANDOM_REPLY,
     enabled: process.env.TWEETING_ENABLED || false
