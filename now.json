@@ -1,5 +1,10 @@
 {
   "name": "onkometrorikki",
-  "alias": "onkometrorikki.fi",
+  "alias": [
+    "onkometrorikki.fi",
+    "www.onkometrorikki.fi",
+    "onkometrorikki.now.sh",
+    "onkolansimetrorikki.now.sh"
+  ],
   "type": "static"
 }
