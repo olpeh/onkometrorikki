@@ -83,6 +83,33 @@ async function setUpApp() {
     })
   );
 
+  app.use(
+    route.get('/api/hsl/debug', async ctx => {
+      try {
+        await new Promise(resolve => {
+          hsl
+            .fetchFeed()
+            .then(async feed => {
+              ctx.response.statusCode = 200;
+              ctx.response.body = feed;
+              resolve();
+            })
+            .catch(e => {
+              console.log('Error in fetching data');
+              console.error(e);
+              ctx.response.statusCode = 500;
+              ctx.response.body = e;
+            });
+        });
+      } catch (e) {
+        console.log('Error');
+        console.error(e);
+        ctx.response.statusCode = 500;
+        ctx.response.body = e;
+      }
+    })
+  );
+
   console.log('app listening on port ' + port);
 
   app.listen(port);
