@@ -86,6 +86,11 @@ async function setUpApp() {
   app.use(
     route.get('/api/hsl/debug', async ctx => {
       try {
+        const weakSecret = ctx.request.query.weakSecret || null;
+        const correctWeakSecret = process.env.DEBUG_WEAK_SECRET || 'länsimetro';
+        if (weakSecret !== correctWeakSecret) {
+          throw 'Not allowed';
+        }
         await new Promise(resolve => {
           hsl
             .fetchFeed()
