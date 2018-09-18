@@ -1,0 +1,9 @@
+*
+!src
+!assets
+!index.html
+!package.json
+!elm.json
+!webpack.config.js
+!package-lock.json
+!yarn.lock
