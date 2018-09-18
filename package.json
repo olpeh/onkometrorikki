@@ -23,11 +23,11 @@
     "koa-route": "^3.2.0",
     "redis": "^2.8.0",
     "request": "^2.87.0",
-    "twit": "^2.2.10"
+    "twit": "^2.2.10",
+    "create-elm-app": "^1.10.4",
+    "elm": "0.18.0"
   },
   "devDependencies": {
-    "create-elm-app": "^1.10.4",
-    "elm": "0.18.0",
     "prettier": "1.13.0"
   }
 }
