@@ -16,7 +16,7 @@ type Msg
 
 type alias Model =
     { status : Maybe Status
-    , error : Maybe String
+    , error : Maybe Http.Error
     , loading : Bool
     }
 
@@ -35,8 +35,8 @@ update msg model =
         GotResponse status ->
             ( { model | status = Just status, loading = False }, Cmd.none )
 
-        GotError error ->
-            ( { model | error = Just (Debug.toString error), loading = False }, Cmd.none )
+        GotError e ->
+            ( { model | error = Just e, loading = False }, Cmd.none )
 
 
 view : Model -> Html Msg
@@ -84,11 +84,11 @@ currentStatusView status =
         ]
 
 
-errorView : Maybe String -> Html msg
+errorView : Maybe Http.Error -> Html msg
 errorView error =
     case error of
         Just e ->
-            text e
+            text "Virhe pyynnön lähettämisessä"
 
         Nothing ->
             text ""
