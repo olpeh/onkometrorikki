@@ -24,9 +24,12 @@ Start the frontend: `npm run dev`
 
 ## Deployments
 
-Backend is deployed in Heroku: `git push heroku master`
+Deployments are triggered automatically for every commit in master branch.
 
-Deploy frontend to now: `npm run release`
+For manual deployments:
+
+- Backend is deployed in Heroku: `git push heroku master`
+- Deploy frontend to now: `npm run release`
 
 ## Credits, Thanks, Inspiration
 
