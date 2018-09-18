@@ -26,6 +26,7 @@
     "twit": "^2.2.10"
   },
   "devDependencies": {
+    "create-elm-app": "^1.10.4",
     "elm": "^0.18.0",
     "prettier": "1.13.0"
   }
