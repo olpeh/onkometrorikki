@@ -1,10 +1,11 @@
-module Main exposing (..)
+module Main exposing (Model, Msg(..), Status, currentStatusView, decoder, errorView, footerView, handler, init, main, reasonView, reasonsView, statusView, subscriptions, update, view)
 
-import Html exposing (Html, text, div, footer, h1, h2, br, ul, li)
+import Browser
+import Html exposing (Html, br, div, footer, h1, h2, li, text, ul)
 import Html.Attributes exposing (class)
 import Http
-import Json.Decode exposing (list, string, bool, maybe, field)
-import Json.Decode.Pipeline exposing (required, optional, resolve, decode)
+import Json.Decode exposing (bool, field, list, maybe, string, succeed)
+import Json.Decode.Pipeline exposing (optional, required, resolve)
 import Markdown
 
 
@@ -16,8 +17,9 @@ type Msg
 type alias Model =
     { status : Maybe Status
     , error : Maybe String
-    , loading: Bool
+    , loading : Bool
     }
+
 
 type alias Status =
     { success : Bool
@@ -27,34 +29,29 @@ type alias Status =
     }
 
 
-model : Model
-model =
-    { status = Nothing
-    , error = Nothing
-    , loading = True
-    }
-
-
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         GotResponse status ->
-            ( { model | status = Just(status), loading = False }, Cmd.none )
+            ( { model | status = Just status, loading = False }, Cmd.none )
 
         GotError error ->
-            ( { model | error = Just(toString error), loading = False }, Cmd.none )
+            ( { model | error = Just (Debug.toString error), loading = False }, Cmd.none )
 
 
 view : Model -> Html Msg
 view model =
     div []
-        [ div [class "main"] [ h1 [] [ text "Onko metro rikki?" ]
+        [ div [ class "main" ]
+            [ h1 [] [ text "Onko metro rikki?" ]
             , statusView model.status
             , if model.loading == True then
                 text "Ladataan statusta..."
-            else
+
+              else
                 text ""
-            , errorView model.error]
+            , errorView model.error
+            ]
         , footer [] [ footerView ]
         ]
 
@@ -62,37 +59,46 @@ view model =
 statusView : Maybe Status -> Html msg
 statusView status =
     case status of
-        Just status -> currentStatusView status
-        Nothing -> text ""
+        Just s ->
+            currentStatusView s
+
+        Nothing ->
+            text ""
 
 
 currentStatusView : Status -> Html msg
 currentStatusView status =
     div []
-        [
-            if status.broken == True then
-                h2 [ class "broken" ] [ text "Kyllä!" ]
-            else
-                h2 [] [ text "Ei!" ]
+        [ if status.broken == True then
+            h2 [ class "broken" ] [ text "Kyllä!" ]
+
+          else
+            h2 [] [ text "Ei!" ]
         , reasonsView status.reasons
         , case status.error of
-            Just error -> text error
-            Nothing -> text ""
+            Just error ->
+                text error
+
+            Nothing ->
+                text ""
         ]
 
 
 errorView : Maybe String -> Html msg
 errorView error =
     case error of
-        Just error -> text error
-        Nothing -> text ""
+        Just e ->
+            text e
+
+        Nothing ->
+            text ""
 
 
 reasonsView : List String -> Html msg
 reasonsView reasons =
     reasons
         |> List.map reasonView
-        |> ul [class "reasons"]
+        |> ul [ class "reasons" ]
 
 
 reasonView : String -> Html msg
@@ -109,20 +115,24 @@ footerView =
 """
 
 
-init : ( Model, Cmd Msg )
-init =
-    ( model
+init : () -> ( Model, Cmd Msg )
+init _ =
+    ( { status = Nothing
+      , error = Nothing
+      , loading = True
+      }
     , Http.send handler (Http.get "https://onkolansimetrorikki.herokuapp.com/api/isitbroken" decoder)
     )
 
 
 decoder : Json.Decode.Decoder Status
 decoder =
-    decode Status
+    succeed Status
         |> required "success" bool
         |> required "broken" bool
         |> required "reasons" (list string)
         |> optional "error" (maybe string) Nothing
+
 
 handler : Result Http.Error Status -> Msg
 handler result =
@@ -139,9 +149,9 @@ subscriptions model =
     Sub.none
 
 
-main : Program Never Model Msg
+main : Program () Model Msg
 main =
-    Html.program
+    Browser.element
         { view = view
         , init = init
         , update = update
