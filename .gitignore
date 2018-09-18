@@ -10,3 +10,4 @@ site/
 
 package-lock\.json
 elm-stuff
+*.log
