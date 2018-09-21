@@ -30,7 +30,7 @@ console.log('Starting...', { port, cacheTtlSeconds });
 
 async function setUpApp() {
   app.use(
-    route.get('/api/isitbroken', async ctx => {
+    route.get('/isitbroken', async ctx => {
       try {
         await new Promise(resolve => {
           const failIfBroken = ctx.request.query.failIfBroken || undefined;
@@ -84,7 +84,7 @@ async function setUpApp() {
   );
 
   app.use(
-    route.get('/api/hsl/debug', async ctx => {
+    route.get('/hsl/debug', async ctx => {
       try {
         const weakSecret = ctx.request.query.weakSecret || null;
         const correctWeakSecret = process.env.DEBUG_WEAK_SECRET || 'länsimetro';

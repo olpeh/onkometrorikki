@@ -121,7 +121,7 @@ init _ =
       , error = Nothing
       , loading = True
       }
-    , Http.send handler (Http.get "https://onkolansimetrorikki.herokuapp.com/api/isitbroken" decoder)
+    , Http.send handler (Http.get "https://api.onkometrorikki.fi/isitbroken" decoder)
     )
 
 
