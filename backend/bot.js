@@ -132,7 +132,8 @@ ${dataToRespondWith.reasons.join('')}
 Katso: https://onkometrorikki.fi #länsimetro #hsl #metrohelsinki`;
           tweetNow(tweetText, brokenNow);
         } else {
-          const tweetText = `JUURI NYT – Metro toimii jälleen! Katso: https://onkometrorikki.fi #länsimetro #hsl #metrohelsinki`;
+          const timeNowStr = new Date().toLocaleTimeString();
+          const tweetText = `JUURI NYT – Metro toimii jälleen! Katso: https://onkometrorikki.fi Kello on nyt ${timeNowStr}. #länsimetro #hsl #metrohelsinki`;
           tweetNow(tweetText, brokenNow);
         }
       } else {
