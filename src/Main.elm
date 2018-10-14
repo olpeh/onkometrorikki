@@ -2,6 +2,7 @@ module Main exposing (Model, Msg(..), Status, currentStatusView, decoder, errorV
 
 import Browser
 import Html exposing (Html, br, button, div, footer, h1, h2, li, span, text, ul)
+import Html.A11y exposing (ariaPressed)
 import Html.Attributes exposing (attribute, class)
 import Html.Events exposing (onClick)
 import Http
@@ -9,7 +10,6 @@ import Json.Decode exposing (bool, field, list, maybe, string, succeed)
 import Json.Decode.Pipeline exposing (optional, required, resolve)
 import Markdown
 import Theme exposing (Theme)
-import Util
 
 
 type Msg
@@ -75,6 +75,7 @@ but you would have to change it if you added more themes.
 viewThemeToggle : Theme -> Html Msg
 viewThemeToggle theme =
     let
+        -- Boolean representation of theme being dark
         isDarkTheme =
             theme == Theme.Dark
 
@@ -83,7 +84,7 @@ viewThemeToggle theme =
     in
     -- TODO: Style this button
     button
-        [ attribute "aria-pressed" (Util.boolToString isDarkTheme)
+        [ ariaPressed isDarkTheme
         , class "button-reset theme-button"
 
         -- show the button in the inverted colours
