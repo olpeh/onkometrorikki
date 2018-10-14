@@ -54,6 +54,10 @@ update msg model =
             ( { model | theme = newTheme }, Cmd.none )
 
 
+
+-- VIEW
+
+
 view : Model -> Html Msg
 view model =
     div [ class ("container " ++ Theme.toClass model.theme) ]
@@ -161,9 +165,17 @@ viewFooter =
 """
 
 
+
+-- SUBSCRIPTIONS
+
+
 subscriptions : Model -> Sub Msg
 subscriptions model =
     Sub.none
+
+
+
+-- MAIN
 
 
 main : Program () Model Msg
