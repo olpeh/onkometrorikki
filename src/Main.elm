@@ -1,8 +1,9 @@
 module Main exposing (Model, Msg(..), Status, currentStatusView, decoder, errorView, footerView, handler, init, main, reasonView, reasonsView, statusView, subscriptions, update, view)
 
 import Browser
+import FeatherIcons
 import Html exposing (Html, br, button, div, footer, h1, h2, li, span, text, ul)
-import Html.A11y exposing (ariaPressed)
+import Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed)
 import Html.Attributes exposing (attribute, class)
 import Html.Events exposing (onClick)
 import Http
@@ -51,58 +52,21 @@ view : Model -> Html Msg
 view model =
     div [ class ("container " ++ Theme.toClass model.theme) ]
         [ div [ class "main" ]
-            [ h1 [] [ text "Onko metro rikki?" ]
-            , statusView model.status
-            , if model.loading == True then
-                text "Ladataan statusta..."
+            [ div []
+                [ h1 [] [ text "Onko metro rikki?" ]
+                , statusView model.status
+                , if model.loading == True then
+                    text "Ladataan statusta..."
 
-              else
-                text ""
-            , errorView model.error
+                  else
+                    text ""
+                , errorView model.error
+                ]
 
             -- You could, in principle, put this in Theme.elm as well...
             , viewThemeToggle model.theme
             ]
         , footer [] [ footerView ]
-        ]
-
-
-{-| The Theme Toggle is a button that communicates whether it is pressed
-(as a binary "is dark" state). This simplifies the accessibility roles,
-but you would have to change it if you added more themes.
-@see <https://inclusive-components.design/a-theme-switcher/>
--}
-viewThemeToggle : Theme -> Html Msg
-viewThemeToggle theme =
-    let
-        -- Boolean representation of theme being dark
-        isDarkTheme =
-            theme == Theme.Dark
-
-        inverseTheme =
-            Theme.invert theme
-    in
-    -- TODO: Style this button
-    button
-        [ ariaPressed isDarkTheme
-        , class "button-reset theme-button"
-
-        -- show the button in the inverted colours
-        , class (Theme.toClass inverseTheme)
-        , onClick (ChangeTheme inverseTheme)
-        ]
-        [ text "dark theme: "
-
-        -- Hide the state text from assistive tech, since it is announced via the pressed state
-        , span [ attribute "aria-hidden" "true" ]
-            [ text
-                (if isDarkTheme then
-                    "on"
-
-                 else
-                    "off"
-                )
-            ]
         ]
 
 
@@ -154,6 +118,36 @@ reasonsView reasons =
 reasonView : String -> Html msg
 reasonView reason =
     li [] [ text reason ]
+
+
+{-| The Theme Toggle is a button that communicates whether it is pressed
+(as a binary "is dark" state). This simplifies the accessibility roles,
+but you would have to change it if you added more themes.
+@see <https://inclusive-components.design/a-theme-switcher/>
+-}
+viewThemeToggle : Theme -> Html Msg
+viewThemeToggle theme =
+    let
+        -- Boolean representation of theme being dark
+        isDarkTheme =
+            theme == Theme.Dark
+
+        inverseTheme =
+            Theme.invert theme
+    in
+    -- TODO: Style this button
+    button
+        [ ariaPressed isDarkTheme
+        , ariaLabel "Dark mode"
+        , class "button-reset theme-button"
+
+        -- show the button in the inverted colours
+        , class (Theme.toClass inverseTheme)
+        , onClick (ChangeTheme inverseTheme)
+        ]
+        [ FeatherIcons.moon
+            |> FeatherIcons.toHtml [ ariaHidden True ]
+        ]
 
 
 footerView : Html msg

@@ -64,8 +64,19 @@ body {
 }
 
 .main {
+  /* Prevent this container from growing to the ends of the earth. */
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+
   height: 100%;
   padding: 1rem;
+
+  /* Used to set the toggle button to the right or bottom, depending on space */
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 h1 {
@@ -128,4 +139,12 @@ footer ul li {
 
   color: var(--color-fg);
   background-color: var(--color-bg);
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.v-text-top {
+  vertical-align: text-top;
 }
