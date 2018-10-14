@@ -135,7 +135,6 @@ viewThemeToggle theme =
         inverseTheme =
             Theme.invert theme
     in
-    -- TODO: Style this button
     button
         [ ariaPressed isDarkTheme
         , ariaLabel "Dark mode"
