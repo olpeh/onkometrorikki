@@ -49,6 +49,10 @@
   --color-broken: #ef0671;
 }
 
+.color-fg {
+  color: var(--color-fg);
+}
+
 html,
 body {
   width: 100%;
@@ -60,7 +64,6 @@ body {
 body {
   font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande',
     'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
-  color: #293c4b;
   font-size: 22px;
 }
 

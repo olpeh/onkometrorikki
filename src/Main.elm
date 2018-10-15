@@ -50,7 +50,7 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div [ class ("container " ++ Theme.toClass model.theme) ]
+    div [ class ("container color-fg " ++ Theme.toClass model.theme) ]
         [ div [ class "main" ]
             [ div []
                 [ h1 [] [ text "Onko metro rikki?" ]
