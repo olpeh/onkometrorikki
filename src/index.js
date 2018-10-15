@@ -1,9 +1,14 @@
 import './main.css';
 import { Elm } from './Main.elm';
 
+//
+// INIT
+
 var app = Elm.Main.init({ node: document.getElementById('root') });
 
-// Listen for Elm messages
+//
+// ELM MESSAGES
+
 app.ports.themePort.subscribe(function({ msg, data }) {
   switch (msg) {
     case 'ThemeChanged':
@@ -13,8 +18,10 @@ app.ports.themePort.subscribe(function({ msg, data }) {
     default:
       console.warn('Unknown msg from Elm: ', fromElm.msg);
   }
-  localStorage.setItem('cache', JSON.stringify(data));
 });
+
+//
+// THEME HANDLING
 
 // Map a theme to the accent colour
 var themes = {
@@ -22,6 +29,7 @@ var themes = {
   dark: '#f18e71'
 };
 
+/** Change the head's theme-color to match the theme */
 function handleThemeChanged(theme) {
   if (themes[theme]) {
     document
