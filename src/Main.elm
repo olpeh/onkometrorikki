@@ -45,7 +45,7 @@ update msg model =
             ( { model | error = Just e, loading = False }, Cmd.none )
 
         ChangeTheme newTheme ->
-            ( { model | theme = newTheme }, Cmd.none )
+            ( { model | theme = newTheme }, Theme.notifyChanged newTheme )
 
 
 view : Model -> Html Msg
