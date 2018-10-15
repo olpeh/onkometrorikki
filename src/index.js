@@ -27,6 +27,7 @@ function handleThemeChanged(theme) {
     document
       .getElementById('theme-color')
       .setAttribute('content', themes[theme]);
+  } else {
+    console.warn('Unknown theme: ', theme);
   }
-  console.warn('Unknown theme: ', theme);
 }
