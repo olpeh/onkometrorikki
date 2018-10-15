@@ -3,7 +3,7 @@ module Main exposing (Model, Msg(..), Status, currentStatusView, decoder, errorV
 import Browser
 import FeatherIcons
 import Html exposing (Html, br, button, div, footer, h1, h2, li, span, text, ul)
-import Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed)
+import Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed, focusable)
 import Html.Attributes exposing (attribute, class)
 import Html.Events exposing (onClick)
 import Http
@@ -138,14 +138,14 @@ viewThemeToggle theme =
     button
         [ ariaPressed isDarkTheme
         , ariaLabel "Dark mode"
-        , class "button-reset theme-button"
+        , class "button-reset theme-button enhanced-outline"
 
         -- show the button in the inverted colours
         , class (Theme.toClass inverseTheme)
         , onClick (ChangeTheme inverseTheme)
         ]
         [ FeatherIcons.moon
-            |> FeatherIcons.toHtml [ ariaHidden True ]
+            |> FeatherIcons.toHtml [ ariaHidden True, focusable False ]
         ]
 
 

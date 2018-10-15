@@ -23,6 +23,12 @@
   -webkit-appearance: none;
 }
 
+/* Remove excess padding and border in Firefox 4+ */
+.button-reset::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
 /* Theming.
   CSS properties cascade dynamically, so you can use them like this.
   TODO: Set up base styles at :root
@@ -143,4 +149,9 @@ footer ul li {
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+/** An outline that follows borders, by using box-shadow */
+.enhanced-outline:focus {
+  box-shadow: 0 0 0 4px var(--color-accent);
 }
