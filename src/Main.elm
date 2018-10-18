@@ -2,7 +2,7 @@ module Main exposing (Model, Msg(..), init, main, subscriptions, update, view, v
 
 import Browser
 import FeatherIcons
-import Html exposing (Html, br, button, div, footer, h1, h2, li, span, text, ul)
+import Html exposing (Html, br, button, div, footer, h1, h2, li, main_, span, text, ul)
 import Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed, focusable)
 import Html.Attributes exposing (attribute, class)
 import Html.Events exposing (onClick)
@@ -61,7 +61,7 @@ update msg model =
 view : Model -> Html Msg
 view model =
     div [ class ("container color-fg " ++ Theme.toClass model.theme) ]
-        [ div [ class "main" ]
+        [ main_ [ class "main" ]
             [ div []
                 [ h1 [] [ text "Onko metro rikki?" ]
                 , viewStatusRequest model.statusRequest
