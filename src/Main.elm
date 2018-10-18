@@ -3,7 +3,7 @@ module Main exposing (Model, Msg(..), init, main, subscriptions, update, view, v
 import Browser
 import FeatherIcons
 import Html exposing (Html, br, button, div, footer, h1, h2, li, span, text, ul)
-import Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed)
+import Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed, focusable)
 import Html.Attributes exposing (attribute, class)
 import Html.Events exposing (onClick)
 import Http
@@ -51,7 +51,7 @@ update msg model =
             ( { model | statusRequest = statusRequest }, Cmd.none )
 
         ChangeTheme newTheme ->
-            ( { model | theme = newTheme }, Cmd.none )
+            ( { model | theme = newTheme }, Theme.notifyChanged newTheme )
 
 
 
@@ -60,7 +60,7 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
-    div [ class ("container " ++ Theme.toClass model.theme) ]
+    div [ class ("container color-fg " ++ Theme.toClass model.theme) ]
         [ div [ class "main" ]
             [ div []
                 [ h1 [] [ text "Onko metro rikki?" ]
@@ -145,14 +145,14 @@ viewThemeToggle theme =
     button
         [ ariaPressed isDarkTheme
         , ariaLabel "Dark mode"
-        , class "button-reset theme-button"
+        , class "button-reset theme-button enhanced-outline"
 
         -- show the button in the inverted colours
         , class (Theme.toClass inverseTheme)
         , onClick (ChangeTheme inverseTheme)
         ]
         [ FeatherIcons.moon
-            |> FeatherIcons.toHtml [ ariaHidden True ]
+            |> FeatherIcons.toHtml [ ariaHidden True, focusable False ]
         ]
 
 

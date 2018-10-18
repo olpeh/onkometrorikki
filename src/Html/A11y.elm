@@ -1,4 +1,4 @@
-module Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed, boolToAttr)
+module Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed, boolToAttr, focusable)
 
 import Html exposing (Attribute)
 import Html.Attributes exposing (attribute)
@@ -15,8 +15,8 @@ import Html.Attributes exposing (attribute)
 {-| Typed, convenient aria-checked attribute
 -}
 ariaPressed : Bool -> Attribute msg
-ariaPressed pressed =
-    attribute "aria-pressed" (boolToAttr pressed)
+ariaPressed =
+    boolToAttr >> attribute "aria-pressed"
 
 
 ariaLabel : String -> Attribute msg
@@ -25,8 +25,13 @@ ariaLabel =
 
 
 ariaHidden : Bool -> Attribute msg
-ariaHidden hidden =
-    attribute "aria-hidden" (boolToAttr hidden)
+ariaHidden =
+    boolToAttr >> attribute "aria-hidden"
+
+
+focusable : Bool -> Attribute msg
+focusable =
+    boolToAttr >> attribute "focusable"
 
 
 {-| Convert a bool to a boolean attribute value,
