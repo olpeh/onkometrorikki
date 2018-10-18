@@ -1,7 +1,62 @@
+/* Button reset; use this as the base for buttons */
+.button-reset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+
+  background: transparent;
+
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+
+/* Remove excess padding and border in Firefox 4+ */
+.button-reset::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* Theming.
+  CSS properties cascade dynamically, so you can use them like this.
+  TODO: Set up base styles at :root
+*/
+.theme-light {
+  --color-fg: #293c4b;
+  --color-bg: #ffffff;
+  --color-accent: #ff6600;
+  --color-working: #03a40e;
+  --color-broken: #df1305;
+}
+
+.theme-dark {
+  --color-fg: #ffffff;
+  --color-bg: #01132b;
+  --color-accent: #f18e71;
+  --color-working: #47d4de;
+  --color-broken: #ef0671;
+}
+
+.color-fg {
+  color: var(--color-fg);
+}
+
 html,
 body {
   width: 100%;
-  height: 97%;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -9,28 +64,46 @@ body {
 body {
   font-family: 'Source Sans Pro', 'Trebuchet MS', 'Lucida Grande',
     'Bitstream Vera Sans', 'Helvetica Neue', sans-serif;
-  color: #293c4b;
   font-size: 22px;
 }
 
+.container {
+  min-height: 100vh;
+  background-color: var(--color-bg);
+}
+
 .main {
-  padding: 0 20px;
+  /* Prevent this container from growing to the ends of the earth. */
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  height: 100%;
+  padding: 1rem;
+
+  /* Used to set the toggle button to the right or bottom, depending on space */
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 h1 {
   font-size: 64px;
-  color: #ff6600;
-  margin: 10px;
+  color: var(--color-accent);
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 h2 {
   font-size: 64px;
-  color: #03a40e;
-  margin: 10px;
+  color: var(--color-working);
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .broken {
-  color: #df1305;
+  color: var(--color-broken);
 }
 
 .reasons {
@@ -48,12 +121,12 @@ footer {
   padding: 6px;
   text-align: center;
   width: 100%;
-  background: #ff6600;
-  color: #ffffff;
+  background: var(--color-accent);
+  color: var(--color-bg);
 }
 
 footer a {
-  color: #ffffff;
+  color: var(--color-bg);
 }
 
 footer ul {
@@ -64,4 +137,24 @@ footer ul {
 
 footer ul li {
   display: inline-block;
+}
+
+.theme-button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 4px;
+
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/** An outline that follows borders, by using box-shadow */
+.enhanced-outline:focus {
+  box-shadow: 0 0 0 4px var(--color-accent);
 }
