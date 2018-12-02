@@ -3,7 +3,7 @@ node_modules/
 dist/
 build/
 npm-debug.log*
-.env*
+.env
 *.swp
 .vscode/
 site/
