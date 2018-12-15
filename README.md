@@ -23,9 +23,16 @@ Head to [onkometrorikki.fi](https://onkometrorikki.fi/)
 
 Install dependencies: `yarn`
 
-Start the backend: `npm start`
+Start the backend and frontend for local development: `npm run dev`
 
-Start the frontend: `npm run dev`
+This command will start both the backend and the frontend locally.
+
+The backend will run in port 4000 by default and the frontend in port 3000.
+The backend url is defined by the env variable `ELM_APP_API_URL` as can be seen in the package.json file.
+
+Start _only_ the frontend, using "production" backend: `npm run frontend`.
+
+Start _only_ the backend: `npm start` or `npm run backend`.
 
 ## Deployments
 

@@ -1,6 +1,7 @@
 module Main exposing (Model, Msg(..), init, main, subscriptions, update, view, viewError, viewFooter, viewReason, viewReasons, viewStatus, viewStatusRequest, viewThemeToggle)
 
 import Browser
+import Config exposing (Config)
 import FeatherIcons
 import Html exposing (Html, br, button, div, footer, h1, h2, li, main_, span, text, ul)
 import Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed, focusable)
@@ -19,15 +20,17 @@ import Theme exposing (Theme)
 type alias Model =
     { statusRequest : StatusRequest
     , theme : Theme
+    , config : Config
     }
 
 
-init : () -> ( Model, Cmd Msg )
-init _ =
+init : Config -> ( Model, Cmd Msg )
+init config =
     ( { statusRequest = Status.Loading
       , theme = Theme.Light
+      , config = config
       }
-    , Http.send (Status.requestHandler GotStatus) Status.get
+    , Http.send (Status.requestHandler GotStatus) (Status.get config.apiBaseUrl)
     )
 
 
@@ -178,7 +181,7 @@ subscriptions model =
 -- MAIN
 
 
-main : Program () Model Msg
+main : Program Config Model Msg
 main =
     Browser.element
         { view = view
