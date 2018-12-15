@@ -20,6 +20,17 @@
         "bug",
         "review"
       ]
+    },
+    {
+      "login": "fpapado",
+      "name": "Fotis Papadogeorgopoulos",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3210764?v=4",
+      "profile": "http://fpapado.com",
+      "contributions": [
+        "code",
+        "design",
+        "review"
+      ]
     }
   ]
 }
