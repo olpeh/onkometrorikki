@@ -4,7 +4,12 @@ import { Elm } from './Main.elm';
 //
 // INIT
 
-var app = Elm.Main.init({ node: document.getElementById('root') });
+var app = Elm.Main.init({
+  node: document.getElementById('root'),
+  flags: {
+    apiBaseUrl: process.env.ELM_APP_API_URL || 'https://api.onkometrorikki.fi'
+  }
+});
 
 //
 // ELM MESSAGES

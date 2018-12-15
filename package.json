@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Check if the metro in Helsinki area is broken at the moment",
   "scripts": {
-    "start": "node ./backend/index.js",
-    "dev": "elm-app start",
+    "start": "npm run backend",
+    "dev": "ELM_APP_API_URL=http://localhost:4000 npm-run-all --parallel backend frontend",
+    "frontend": "elm-app start",
+    "backend": "node ./backend/index.js",
     "build": "NODE_ENV=production elm-app build",
     "deploy:now": "now --public ./build --local-config=../now.json && now alias --local-config=./now.json",
     "release": "npm run build && npm run deploy:now",
@@ -40,9 +42,10 @@
     "all-contributors-cli": "^5.4.1",
     "create-elm-app": "^3.0.0",
     "elm": "^0.19.0-bugfix2",
-    "elm-format": "^0.8.0",
+    "elm-format": "^0.8.1",
     "husky": "^1.2.1",
     "lint-staged": "^8.1.0",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.15.3"
   },
   "husky": {

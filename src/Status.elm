@@ -108,9 +108,13 @@ dtoToStatusRequest { success, broken, reasons, error } =
 -- HTTP
 
 
-get : Http.Request StatusRequest
-get =
-    Http.get "https://api.onkometrorikki.fi/isitbroken" requestDecoder
+get : String -> Http.Request StatusRequest
+get apiBaseUrl =
+    Http.get
+        (apiBaseUrl
+            ++ "/isitbroken"
+        )
+        requestDecoder
 
 
 {-| Transform the HTTP Result into a StatusRequest, and convert to some message type

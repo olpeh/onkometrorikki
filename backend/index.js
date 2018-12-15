@@ -9,7 +9,7 @@ const hsl = require('./hsl');
 const bot = require('./bot');
 const redisWrapper = require('./redisWrapper');
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 4000;
 const cacheTtlSeconds = process.env.CACHE_TTL_SECONDS || 60;
 const CACHE_KEY = 'metro';
 
