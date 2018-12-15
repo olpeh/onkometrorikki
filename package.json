@@ -9,7 +9,9 @@
     "deploy:now": "now --public ./build --local-config=../now.json && now alias --local-config=./now.json",
     "release": "npm run build && npm run deploy:now",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write 'src/**/*.{ts,js,css,md,html}' 'backend/**/*.{ts,js,css,md,html}' 'public/**/*.{ts,js,css,md,html}'"
+    "format": "prettier --write 'src/**/*.{ts,js,css,md,html}' 'backend/**/*.{ts,js,css,md,html}' 'public/**/*.{ts,js,css,md,html}'",
+    "contributors:add": "all-contributors add",
+    "contributors:generate": "all-contributors generate"
   },
   "lint-staged": {
     "linters": {
@@ -35,6 +37,7 @@
     "twit": "^2.2.10"
   },
   "devDependencies": {
+    "all-contributors-cli": "^5.4.1",
     "create-elm-app": "^3.0.0",
     "elm": "^0.19.0-bugfix2",
     "elm-format": "^0.8.0",

@@ -38,11 +38,13 @@ For manual deployments:
 
 ## Contributors
 
+If you'd like to contribute, see [CONTRIBUTING.md](CONTRIBUTING.md).
+
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars1.githubusercontent.com/u/6113341?v=4" width="100px;"/><br /><sub><b>Olavi Haapala</b></sub>](https://olpe.fi/)<br />[💻](https://github.com/olpeh/onkometrorikki/commits?author=olpeh "Code") [📖](https://github.com/olpeh/onkometrorikki/commits?author=olpeh "Documentation") [🐛](https://github.com/olpeh/onkometrorikki/issues?q=author%3Aolpeh "Bug reports") [👀](#review-olpeh "Reviewed Pull Requests") | [<img src="https://avatars3.githubusercontent.com/u/3210764?v=4" width="100px;"/><br /><sub><b>Fotis Papadogeorgopoulos</b></sub>](http://fpapado.com)<br />[💻](https://github.com/olpeh/onkometrorikki/commits?author=fpapado "Code") [🎨](#design-fpapado "Design") [👀](#review-fpapado "Reviewed Pull Requests") |
+| [<img src="https://avatars1.githubusercontent.com/u/6113341?v=4" width="100px;"/><br /><sub><b>Olavi Haapala</b></sub>](https://olpe.fi/)<br />[💻](https://github.com/olpeh/onkometrorikki/commits?author=olpeh "Code") [📖](https://github.com/olpeh/onkometrorikki/commits?author=olpeh "Documentation") [🐛](https://github.com/olpeh/onkometrorikki/issues?q=author%3Aolpeh "Bug reports") [👀](#review-olpeh "Reviewed Pull Requests") [📢](#talk-olpeh "Talks") | [<img src="https://avatars3.githubusercontent.com/u/3210764?v=4" width="100px;"/><br /><sub><b>Fotis Papadogeorgopoulos</b></sub>](http://fpapado.com)<br />[💻](https://github.com/olpeh/onkometrorikki/commits?author=fpapado "Code") [🎨](#design-fpapado "Design") [👀](#review-fpapado "Reviewed Pull Requests") [🚇](#infra-fpapado "Infrastructure (Hosting, Build-Tools, etc)") |
 | :---: | :---: |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->

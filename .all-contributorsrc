@@ -18,7 +18,8 @@
         "code",
         "doc",
         "bug",
-        "review"
+        "review",
+        "talk"
       ]
     },
     {
@@ -29,7 +30,8 @@
       "contributions": [
         "code",
         "design",
-        "review"
+        "review",
+        "infra"
       ]
     }
   ]
