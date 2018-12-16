@@ -92,13 +92,6 @@ const shouldTweetNow = async brokenNow =>
     ) {
       resolve(true);
     } else if (
-      brokenNow === true &&
-      previouslyWasBroken === false &&
-      previousTweetTime !== null &&
-      new Date() - previousTweetTime > config.twitterConfig.minInterval
-    ) {
-      resolve(true);
-    } else if (
       previouslyWasBroken === true &&
       brokenNow === false &&
       previousTweetTime !== null &&
