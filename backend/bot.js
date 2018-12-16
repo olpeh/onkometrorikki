@@ -85,11 +85,7 @@ const shouldTweetNow = async brokenNow =>
     const previousTweetTime = await getPreviousTweetTime();
     console.log({ previouslyWasBroken, previousTweetTime });
 
-    if (
-      brokenNow === true &&
-      previouslyWasBroken === false &&
-      previousTweetTime === null
-    ) {
+    if (brokenNow === true && previouslyWasBroken === false) {
       resolve(true);
     } else if (
       previouslyWasBroken === true &&
