@@ -5,7 +5,7 @@ import Config exposing (Config)
 import FeatherIcons
 import Html exposing (Html, br, button, div, footer, h1, h2, li, main_, span, text, ul)
 import Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed, focusable)
-import Html.Attributes exposing (attribute, class)
+import Html.Attributes exposing (attribute, class, disabled)
 import Html.Events exposing (onClick)
 import Http
 import Markdown
@@ -76,10 +76,16 @@ view model =
     div [ class ("container color-fg " ++ Theme.toClass model.theme) ]
         [ main_ [ class "main" ]
             [ div []
-                [ h1 [] [ text "Onko metro rikki?" ]
-                , viewStatusRequest model.statusRequest
+                [ h1 []
+                    [ text "Onko metro rikki?" ]
+                , div
+                    [ class "status" ]
+                    [ viewStatusRequest model.statusRequest ]
                 ]
-            , viewThemeToggle model.theme
+            , div [ class "actions" ]
+                [ viewRefreshButton model.statusRequest model.theme
+                , viewThemeToggle model.theme
+                ]
             ]
         , footer [] [ viewFooter ]
         ]
@@ -92,10 +98,10 @@ viewStatusRequest statusRequest =
             text ""
 
         Loading ->
-            text "Ladataan statusta..."
+            span [] [ text "Ladataan statusta..." ]
 
         Refreshing ->
-            text "Päivitetään..."
+            span [] [ text "Päivitetään..." ]
 
         Success status ->
             viewStatus status
@@ -141,6 +147,42 @@ viewReasons reasons =
 viewReason : String -> Html msg
 viewReason reason =
     li [] [ text reason ]
+
+
+viewRefreshButton : StatusRequest -> Theme -> Html Msg
+viewRefreshButton statusRequest theme =
+    let
+        isRefreshing =
+            case statusRequest of
+                Loading ->
+                    True
+
+                Refreshing ->
+                    True
+
+                _ ->
+                    False
+    in
+    button
+        [ ariaPressed isRefreshing
+        , ariaLabel "Refresh"
+        , disabled isRefreshing
+        , class "button-reset refresh-button enhanced-outline"
+        , class
+            (if isRefreshing then
+                "refreshing"
+
+             else
+                ""
+            )
+
+        -- Show this button also with inverted colors
+        , class (Theme.toClass (Theme.invert theme))
+        , onClick (Tick (Time.millisToPosix 0))
+        ]
+        [ FeatherIcons.refreshCw
+            |> FeatherIcons.toHtml [ ariaHidden True, focusable False ]
+        ]
 
 
 {-| The Theme Toggle is a button that communicates whether it is pressed
