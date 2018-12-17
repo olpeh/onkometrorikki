@@ -80,29 +80,30 @@ body {
 
   height: 100%;
   padding: 1rem;
-
-  /* Used to set the toggle button to the right or bottom, depending on space */
-  display: flex;
-  align-items: flex-start;
-  flex-wrap: wrap;
-  justify-content: space-between;
 }
 
 h1 {
   font-size: 64px;
   color: var(--color-accent);
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 2rem;
 }
 
-h2 {
+.status {
+  min-height: 73px;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.status h2 {
   font-size: 64px;
   color: var(--color-working);
   margin-top: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
-.broken {
+.status .broken {
   color: var(--color-broken);
 }
 
@@ -139,6 +140,12 @@ footer ul li {
   display: inline-block;
 }
 
+.actions {
+  display: flex;
+  align-items: flex-start;
+}
+
+.refresh-button,
 .theme-button {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -148,13 +155,26 @@ footer ul li {
 
   color: var(--color-fg);
   background-color: var(--color-bg);
-
   display: flex;
   justify-content: center;
   align-content: center;
 }
 
+.theme-button {
+  margin-left: 1rem;
+}
+
 /** An outline that follows borders, by using box-shadow */
 .enhanced-outline:focus {
   box-shadow: 0 0 0 4px var(--color-accent);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.refresh-button.refreshing svg {
+  animation: spin 1s linear infinite;
 }

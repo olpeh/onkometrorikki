@@ -10,11 +10,11 @@ import Json.Decode.Pipeline as JP
 
 
 {-| Represents how the request for a status is progressing
-TODO: Consider "Refreshing" if implemented
 -}
 type StatusRequest
     = NotAsked
     | Loading
+    | Refreshing
     | Success Status
     | Error String
 
