@@ -90,7 +90,7 @@ h1 {
 }
 
 .status {
-  min-height: 73px;
+  min-height: 80px;
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
