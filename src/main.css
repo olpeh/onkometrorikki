@@ -175,6 +175,6 @@ footer ul li {
   }
 }
 
-.refresh-button.refreshing svg {
+.refresh-button.refreshing > svg {
   animation: spin 1s linear infinite;
 }
