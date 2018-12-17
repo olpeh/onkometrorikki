@@ -11,6 +11,7 @@ import Http
 import Markdown
 import Status exposing (Status(..), StatusRequest(..))
 import Theme exposing (Theme)
+import Time
 
 
 
@@ -30,7 +31,7 @@ init config =
       , theme = Theme.Light
       , config = config
       }
-    , Http.send (Status.requestHandler GotStatus) (Status.get config.apiBaseUrl)
+    , fetchStatus config.apiBaseUrl
     )
 
 
@@ -41,10 +42,16 @@ init config =
 type Msg
     = GotStatus StatusRequest
     | ChangeTheme Theme
+    | Tick Time.Posix
 
 
 
 -- UPDATE
+
+
+fetchStatus : String -> Cmd Msg
+fetchStatus apiBaseUrl =
+    Http.send (Status.requestHandler GotStatus) (Status.get apiBaseUrl)
 
 
 update : Msg -> Model -> ( Model, Cmd Msg )
@@ -55,6 +62,9 @@ update msg model =
 
         ChangeTheme newTheme ->
             ( { model | theme = newTheme }, Theme.notifyChanged newTheme )
+
+        Tick tick ->
+            ( { model | statusRequest = Status.Refreshing }, fetchStatus model.config.apiBaseUrl )
 
 
 
@@ -83,6 +93,9 @@ viewStatusRequest statusRequest =
 
         Loading ->
             text "Ladataan statusta..."
+
+        Refreshing ->
+            text "Päivitetään..."
 
         Success status ->
             viewStatus status
@@ -174,7 +187,8 @@ viewFooter =
 
 subscriptions : Model -> Sub Msg
 subscriptions model =
-    Sub.none
+    -- Re-fetch status every 30s
+    Time.every 30000 Tick
 
 
 
@@ -187,5 +201,5 @@ main =
         { view = view
         , init = init
         , update = update
-        , subscriptions = always Sub.none
+        , subscriptions = subscriptions
         }
