@@ -1,4 +1,4 @@
-port module Theme exposing (Theme(..), invert, notifyChanged, toClass)
+port module Theme exposing (Theme(..), decode, invert, notifyChanged, toClass)
 
 import Json.Encode as JE
 
@@ -40,6 +40,19 @@ encode theme =
 
         Dark ->
             JE.string "dark"
+
+
+decode : String -> Theme
+decode str =
+    case str of
+        "light" ->
+            Light
+
+        "dark" ->
+            Dark
+
+        _ ->
+            Light
 
 
 

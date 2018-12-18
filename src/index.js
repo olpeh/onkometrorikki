@@ -1,13 +1,16 @@
 import './main.css';
 import { Elm } from './Main.elm';
 
+var THEME_KEY = 'theme';
 //
 // INIT
 
+var theme = window.localStorage.getItem(THEME_KEY);
 var app = Elm.Main.init({
   node: document.getElementById('root'),
   flags: {
-    apiBaseUrl: process.env.ELM_APP_API_URL || 'https://api.onkometrorikki.fi'
+    apiBaseUrl: process.env.ELM_APP_API_URL || 'https://api.onkometrorikki.fi',
+    theme
   }
 });
 
@@ -40,6 +43,7 @@ function handleThemeChanged(theme) {
     document
       .getElementById('theme-color')
       .setAttribute('content', themes[theme]);
+    window.localStorage.setItem(THEME_KEY, theme);
   } else {
     console.warn('Unknown theme: ', theme);
   }
