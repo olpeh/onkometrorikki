@@ -2,10 +2,20 @@ import './main.css';
 import { Elm } from './Main.elm';
 
 var THEME_KEY = 'theme';
+// Map a theme to the accent colour
+var themes = {
+  light: '#ff6600',
+  dark: '#f18e71'
+};
+
+var theme = window.localStorage.getItem(THEME_KEY);
+if (theme) {
+  handleThemeChanged(theme, false);
+}
+
 //
 // INIT
 
-var theme = window.localStorage.getItem(THEME_KEY);
 var app = Elm.Main.init({
   node: document.getElementById('root'),
   flags: {
@@ -20,7 +30,7 @@ var app = Elm.Main.init({
 app.ports.themePort.subscribe(function({ msg, data }) {
   switch (msg) {
     case 'ThemeChanged':
-      handleThemeChanged(data);
+      handleThemeChanged(data, true);
       break;
 
     default:
@@ -31,19 +41,15 @@ app.ports.themePort.subscribe(function({ msg, data }) {
 //
 // THEME HANDLING
 
-// Map a theme to the accent colour
-var themes = {
-  light: '#ff6600',
-  dark: '#f18e71'
-};
-
 /** Change the head's theme-color to match the theme */
-function handleThemeChanged(theme) {
+function handleThemeChanged(theme, store) {
   if (themes[theme]) {
     document
       .getElementById('theme-color')
       .setAttribute('content', themes[theme]);
-    window.localStorage.setItem(THEME_KEY, theme);
+    if (store) {
+      window.localStorage.setItem(THEME_KEY, theme);
+    }
   } else {
     console.warn('Unknown theme: ', theme);
   }
