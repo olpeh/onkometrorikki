@@ -10,7 +10,7 @@ import Html.Events exposing (onClick)
 import Http
 import Markdown
 import Status exposing (Status(..), StatusRequest(..))
-import Theme exposing (Theme)
+import Theme exposing (Theme, decode)
 import Time
 
 
@@ -28,7 +28,13 @@ type alias Model =
 init : Config -> ( Model, Cmd Msg )
 init config =
     ( { statusRequest = Status.Loading
-      , theme = Theme.Light
+      , theme =
+            case config.theme of
+                Just str ->
+                    Theme.decode str
+
+                _ ->
+                    Theme.Light
       , config = config
       }
     , fetchStatus config.apiBaseUrl
