@@ -141,6 +141,9 @@ footer ul li {
 }
 
 .actions {
+  position: fixed;
+  bottom: 5rem;
+  margin-left: 1rem;
   display: flex;
   align-items: flex-start;
 }
@@ -161,7 +164,7 @@ footer ul li {
 }
 
 .theme-button {
-  margin-left: 1rem;
+  margin-left: 2rem;
 }
 
 /** An outline that follows borders, by using box-shadow */
