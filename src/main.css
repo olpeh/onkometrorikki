@@ -100,7 +100,7 @@ h1 {
   font-size: 64px;
   color: var(--color-working);
   margin-top: 0px;
-  margin-bottom: 0;
+  margin-bottom: 2rem;
 }
 
 .status .broken {
