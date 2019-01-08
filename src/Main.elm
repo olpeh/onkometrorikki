@@ -56,6 +56,7 @@ type Msg
     | Refresh Time.Posix
     | UpdateTime Time.Posix
     | AdjustTimeZone Time.Zone
+    | NoOp
 
 
 
@@ -83,6 +84,9 @@ update msg model =
             ( { model | zone = newZone }
             , Task.perform Refresh Time.now
             )
+
+        NoOp ->
+            ( model, Cmd.none )
 
 
 
@@ -204,10 +208,7 @@ viewRefreshButton statusRequest theme =
                     False
     in
     button
-        [ ariaPressed isRefreshing
-        , ariaLabel "Refresh"
-        , disabled isRefreshing
-        , class "button-reset refresh-button enhanced-outline"
+        [ class "button-reset refresh-button enhanced-outline"
         , class
             (if isRefreshing then
                 "refreshing"
@@ -215,12 +216,20 @@ viewRefreshButton statusRequest theme =
              else
                 ""
             )
-
-        -- Show this button also with inverted colors
         , class (Theme.toClass (Theme.invert theme))
-        , onClick (Refresh (Time.millisToPosix 0))
+
+        -- Instead of disabling the button, remove the onClick handler when submitting
+        , onClick
+            (case isRefreshing of
+                True ->
+                    NoOp
+
+                False ->
+                    Refresh (Time.millisToPosix 0)
+            )
         ]
-        [ FeatherIcons.refreshCw
+        [ span [ class "refresh-button-label" ] [ text "Päivitä" ]
+        , FeatherIcons.refreshCw
             |> FeatherIcons.toHtml [ ariaHidden True, focusable False ]
         ]
 
