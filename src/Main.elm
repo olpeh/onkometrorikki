@@ -228,7 +228,7 @@ viewRefreshButton statusRequest theme =
                     Refresh (Time.millisToPosix 0)
             )
         ]
-        [ span [ class "refresh-button-label" ] [ text "Refresh" ]
+        [ span [ class "refresh-button-label" ] [ text "Päivitä" ]
         , FeatherIcons.refreshCw
             |> FeatherIcons.toHtml [ ariaHidden True, focusable False ]
         ]
