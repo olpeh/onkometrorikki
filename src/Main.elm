@@ -10,6 +10,7 @@ import Html.Events exposing (onClick)
 import Http
 import Markdown
 import Status exposing (Status(..), StatusRequest(..))
+import Task exposing (Task)
 import Theme exposing (Theme, decode)
 import Time
 
@@ -20,6 +21,8 @@ import Time
 
 type alias Model =
     { statusRequest : StatusRequest
+    , lastUpdated : Time.Posix
+    , zone : Time.Zone
     , theme : Theme
     , config : Config
     }
@@ -28,6 +31,8 @@ type alias Model =
 init : Config -> ( Model, Cmd Msg )
 init config =
     ( { statusRequest = Status.Loading
+      , lastUpdated = Time.millisToPosix 0
+      , zone = Time.utc
       , theme =
             case config.theme of
                 Just str ->
@@ -37,7 +42,7 @@ init config =
                     Theme.Light
       , config = config
       }
-    , fetchStatus config.apiBaseUrl
+    , Task.perform AdjustTimeZone Time.here
     )
 
 
@@ -48,29 +53,36 @@ init config =
 type Msg
     = GotStatus StatusRequest
     | ChangeTheme Theme
-    | Tick Time.Posix
+    | Refresh Time.Posix
+    | UpdateTime Time.Posix
+    | AdjustTimeZone Time.Zone
 
 
 
 -- UPDATE
 
 
-fetchStatus : String -> Cmd Msg
-fetchStatus apiBaseUrl =
-    Http.send (Status.requestHandler GotStatus) (Status.get apiBaseUrl)
-
-
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
     case msg of
         GotStatus statusRequest ->
-            ( { model | statusRequest = statusRequest }, Cmd.none )
+            ( { model | statusRequest = statusRequest }, Task.perform UpdateTime Time.now )
 
         ChangeTheme newTheme ->
             ( { model | theme = newTheme }, Theme.notifyChanged newTheme )
 
-        Tick tick ->
-            ( { model | statusRequest = Status.Refreshing }, fetchStatus model.config.apiBaseUrl )
+        Refresh _ ->
+            ( { model | statusRequest = Status.Refreshing }, Http.send (Status.requestHandler GotStatus) (Status.get model.config.apiBaseUrl) )
+
+        UpdateTime newTime ->
+            ( { model | lastUpdated = newTime }
+            , Cmd.none
+            )
+
+        AdjustTimeZone newZone ->
+            ( { model | zone = newZone }
+            , Task.perform Refresh Time.now
+            )
 
 
 
@@ -86,7 +98,7 @@ view model =
                     [ text "Onko metro rikki?" ]
                 , div
                     [ class "status" ]
-                    [ viewStatusRequest model.statusRequest ]
+                    [ viewStatusRequest model.statusRequest model.lastUpdated model.zone ]
                 ]
             , div [ class "actions" ]
                 [ viewRefreshButton model.statusRequest model.theme
@@ -97,8 +109,8 @@ view model =
         ]
 
 
-viewStatusRequest : StatusRequest -> Html msg
-viewStatusRequest statusRequest =
+viewStatusRequest : StatusRequest -> Time.Posix -> Time.Zone -> Html msg
+viewStatusRequest statusRequest lastUpdated timeZone =
     case statusRequest of
         NotAsked ->
             text ""
@@ -110,23 +122,45 @@ viewStatusRequest statusRequest =
             span [] [ text "Päivitetään..." ]
 
         Success status ->
-            viewStatus status
+            viewStatus status lastUpdated timeZone
 
         Error error ->
             viewError error
 
 
-viewStatus : Status -> Html msg
-viewStatus status =
+viewStatus : Status -> Time.Posix -> Time.Zone -> Html msg
+viewStatus status lastUpdated timeZone =
     case status of
         Working ->
-            h2 [] [ text "Ei!" ]
+            div []
+                [ h2 [] [ text "Ei!" ]
+                , viewLastUpdated lastUpdated timeZone
+                ]
 
         Broken reasons ->
             div []
                 [ h2 [ class "broken" ] [ text "Kyllä!" ]
                 , viewReasons reasons
+                , viewLastUpdated lastUpdated timeZone
                 ]
+
+
+viewLastUpdated : Time.Posix -> Time.Zone -> Html msg
+viewLastUpdated lastUpdated timeZone =
+    let
+        hour =
+            String.fromInt (Time.toHour timeZone lastUpdated)
+
+        minute =
+            String.padLeft 2 '0' (String.fromInt (Time.toMinute timeZone lastUpdated))
+
+        second =
+            String.padLeft 2 '0' (String.fromInt (Time.toSecond timeZone lastUpdated))
+
+        lastUpdatedText =
+            "Viimeksi päivitetty: " ++ hour ++ ":" ++ minute ++ ":" ++ second
+    in
+    span [ class "last-updated" ] [ text lastUpdatedText ]
 
 
 viewError : String -> Html msg
@@ -184,7 +218,7 @@ viewRefreshButton statusRequest theme =
 
         -- Show this button also with inverted colors
         , class (Theme.toClass (Theme.invert theme))
-        , onClick (Tick (Time.millisToPosix 0))
+        , onClick (Refresh (Time.millisToPosix 0))
         ]
         [ FeatherIcons.refreshCw
             |> FeatherIcons.toHtml [ ariaHidden True, focusable False ]
@@ -236,7 +270,7 @@ viewFooter =
 subscriptions : Model -> Sub Msg
 subscriptions model =
     -- Re-fetch status every 30s
-    Time.every 30000 Tick
+    Time.every 30000 Refresh
 
 
 
