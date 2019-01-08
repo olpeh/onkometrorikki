@@ -107,6 +107,10 @@ h1 {
   color: var(--color-broken);
 }
 
+.status .last-updated {
+  font-feature-settings: 'tnum';
+}
+
 .reasons {
   padding: 0 10px;
 }
