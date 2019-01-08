@@ -204,9 +204,7 @@ viewRefreshButton statusRequest theme =
                     False
     in
     button
-        [ ariaPressed isRefreshing
-        , ariaLabel "Refresh"
-        , disabled isRefreshing
+        [ disabled isRefreshing
         , class "button-reset refresh-button enhanced-outline"
         , class
             (if isRefreshing then
@@ -220,7 +218,8 @@ viewRefreshButton statusRequest theme =
         , class (Theme.toClass (Theme.invert theme))
         , onClick (Refresh (Time.millisToPosix 0))
         ]
-        [ FeatherIcons.refreshCw
+        [ span [ class "refresh-button-label" ] [ text "Refresh" ]
+        , FeatherIcons.refreshCw
             |> FeatherIcons.toHtml [ ariaHidden True, focusable False ]
         ]
 
