@@ -152,10 +152,10 @@ viewLastUpdated lastUpdated timeZone =
             String.fromInt (Time.toHour timeZone lastUpdated)
 
         minute =
-            String.fromInt (Time.toMinute timeZone lastUpdated)
+            String.padLeft 2 '0' (String.fromInt (Time.toMinute timeZone lastUpdated))
 
         second =
-            String.fromInt (Time.toSecond timeZone lastUpdated)
+            String.padLeft 2 '0' (String.fromInt (Time.toSecond timeZone lastUpdated))
 
         lastUpdatedText =
             "Viimeksi päivitetty: " ++ hour ++ ":" ++ minute ++ ":" ++ second
