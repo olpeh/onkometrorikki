@@ -7,6 +7,7 @@ const cacheControl = require('koa-cache-control');
 
 const hsl = require('./hsl');
 const bot = require('./bot');
+const telegramBot = require('./telegram-bot');
 const redisWrapper = require('./redisWrapper');
 
 const port = process.env.PORT || 4000;
@@ -122,3 +123,4 @@ async function setUpApp() {
 
 setUpApp();
 bot.setup(CACHE_KEY, cacheTtlSeconds);
+telegramBot.setup(redisClient, CACHE_KEY);
