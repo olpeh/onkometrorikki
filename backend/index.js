@@ -7,7 +7,7 @@ const cacheControl = require('koa-cache-control');
 
 const hsl = require('./hsl');
 const bot = require('./bot');
-const telegramBot = require('./telegram-bot');
+const telegramBot = require('./telegramBot');
 const redisWrapper = require('./redisWrapper');
 
 const port = process.env.PORT || 4000;
