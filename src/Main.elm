@@ -153,7 +153,7 @@ viewLastUpdated : Time.Posix -> Time.Zone -> Html msg
 viewLastUpdated lastUpdated timeZone =
     let
         hour =
-            String.fromInt (Time.toHour timeZone lastUpdated)
+            String.padLeft 2 '0' (String.fromInt (Time.toHour timeZone lastUpdated))
 
         minute =
             String.padLeft 2 '0' (String.fromInt (Time.toMinute timeZone lastUpdated))
