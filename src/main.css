@@ -185,6 +185,7 @@ footer ul li {
 
 .refresh-button-label {
   margin-right: 0.5rem;
+  line-height: 22px;
 }
 
 .refresh-button.refreshing > svg {
