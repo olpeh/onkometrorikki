@@ -1,4 +1,6 @@
 {
+  "version": 2,
+  "public": true,
   "name": "onkometrorikki",
   "alias": [
     "onkometrorikki.fi",
@@ -6,5 +8,7 @@
     "onkometrorikki.now.sh",
     "onkolansimetrorikki.now.sh"
   ],
-  "type": "static"
+  "builds": [
+    {"src": "package.json", "use": "@now/static-build", "config": {"distDir": "build"}}
+  ]
 }
