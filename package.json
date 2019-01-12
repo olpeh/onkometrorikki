@@ -8,6 +8,7 @@
     "frontend": "elm-app start",
     "backend": "node ./backend/index.js",
     "build": "NODE_ENV=production elm-app build",
+    "now-build": "NODE_ENV=production elm-app build",
     "deploy:now": "now --public ./build --local-config=../now.json && now alias --local-config=./now.json",
     "release": "npm run build && npm run deploy:now",
     "test": "echo \"Error: no test specified\" && exit 1",
