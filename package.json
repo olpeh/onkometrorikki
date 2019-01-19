@@ -11,7 +11,7 @@
     "now-build": "NODE_ENV=production elm-app build",
     "deploy:now": "now --public ./build --local-config=../now.json && now alias --local-config=./now.json",
     "release": "npm run build && npm run deploy:now",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "elm-format --validate . && elm-test",
     "format": "prettier --write 'src/**/*.{ts,js,css,md,html}' 'backend/**/*.{ts,js,css,md,html}' 'public/**/*.{ts,js,css,md,html}'",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
