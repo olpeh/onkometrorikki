@@ -4,7 +4,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/olpeh/onkometrorikki/pulls)
 [![license](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat)](https://github.com/olpeh/onkometrorikki/blob/master/LICENSE)
 [![Build Status](https://travis-ci.org/olpeh/onkometrorikki.svg?branch=master)](https://travis-ci.org/olpeh/onkometrorikki)
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 
 Check if the metro in Helsinki area is broken at the moment
 
@@ -52,8 +52,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars1.githubusercontent.com/u/6113341?v=4" width="100px;"/><br /><sub><b>Olavi Haapala</b></sub>](https://olpe.fi/)<br />[💻](https://github.com/olpeh/onkometrorikki/commits?author=olpeh "Code") [📖](https://github.com/olpeh/onkometrorikki/commits?author=olpeh "Documentation") [🐛](https://github.com/olpeh/onkometrorikki/issues?q=author%3Aolpeh "Bug reports") [👀](#review-olpeh "Reviewed Pull Requests") [📢](#talk-olpeh "Talks") | [<img src="https://avatars3.githubusercontent.com/u/3210764?v=4" width="100px;"/><br /><sub><b>Fotis Papadogeorgopoulos</b></sub>](http://fpapado.com)<br />[💻](https://github.com/olpeh/onkometrorikki/commits?author=fpapado "Code") [🎨](#design-fpapado "Design") [👀](#review-fpapado "Reviewed Pull Requests") [🚇](#infra-fpapado "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars1.githubusercontent.com/u/7690649?v=4" width="100px;"/><br /><sub><b>paulogdm</b></sub>](https://paulogdm.com)<br />[🚇](#infra-paulogdm "Infrastructure (Hosting, Build-Tools, etc)") |
-| :---: | :---: | :---: |
+| [<img src="https://avatars1.githubusercontent.com/u/6113341?v=4" width="100px;"/><br /><sub><b>Olavi Haapala</b></sub>](https://olpe.fi/)<br />[💻](https://github.com/olpeh/onkometrorikki/commits?author=olpeh "Code") [📖](https://github.com/olpeh/onkometrorikki/commits?author=olpeh "Documentation") [🐛](https://github.com/olpeh/onkometrorikki/issues?q=author%3Aolpeh "Bug reports") [👀](#review-olpeh "Reviewed Pull Requests") [📢](#talk-olpeh "Talks") | [<img src="https://avatars3.githubusercontent.com/u/3210764?v=4" width="100px;"/><br /><sub><b>Fotis Papadogeorgopoulos</b></sub>](http://fpapado.com)<br />[💻](https://github.com/olpeh/onkometrorikki/commits?author=fpapado "Code") [🎨](#design-fpapado "Design") [👀](#review-fpapado "Reviewed Pull Requests") [🚇](#infra-fpapado "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars1.githubusercontent.com/u/7690649?v=4" width="100px;"/><br /><sub><b>paulogdm</b></sub>](https://paulogdm.com)<br />[🚇](#infra-paulogdm "Infrastructure (Hosting, Build-Tools, etc)") | [<img src="https://avatars1.githubusercontent.com/u/8436403?v=4" width="100px;"/><br /><sub><b>Ossi Hanhinen</b></sub>](http://ohanhi.com)<br />[💻](https://github.com/olpeh/onkometrorikki/commits?author=ohanhi "Code") [⚠️](https://github.com/olpeh/onkometrorikki/commits?author=ohanhi "Tests") |
+| :---: | :---: | :---: | :---: |
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 

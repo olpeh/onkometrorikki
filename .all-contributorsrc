@@ -42,6 +42,16 @@
       "contributions": [
         "infra"
       ]
+    },
+    {
+      "login": "ohanhi",
+      "name": "Ossi Hanhinen",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/8436403?v=4",
+      "profile": "http://ohanhi.com",
+      "contributions": [
+        "code",
+        "test"
+      ]
     }
   ]
 }
