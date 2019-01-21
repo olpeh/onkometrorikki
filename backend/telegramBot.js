@@ -1,5 +1,6 @@
 const Telegraf = require('telegraf');
 const Extra = require('telegraf/extra');
+const Markup = require('telegraf/markup');
 require('dotenv').config();
 
 function setup(redisClient, cacheKey) {
