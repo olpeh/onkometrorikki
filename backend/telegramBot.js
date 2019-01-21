@@ -9,29 +9,29 @@ function setup(redisClient, cacheKey) {
     const bot = new Telegraf(botToken);
     bot.start(ctx =>
       ctx.reply(
-        'Terve. Olen onkometrorikki.fi botti. Lähetä komento */status* nähdäksesi onko metro rikki tällä hetkellä.',
+        'Terve. Olen onkometrorikki.fi botti. Lähetä komento /status nähdäksesi onko metro rikki tällä hetkellä.',
         Extra.markdown()
       )
     );
+
+    const keyboard = Markup.inlineKeyboard([
+      Markup.urlButton('🌍', 'https://onkometrorikki.fi'),
+      Markup.callbackButton('Päivitä', 'status')
+    ]);
 
     bot.command('status', ctx => {
       redisClient.get(cacheKey, async (error, result) => {
         if (result) {
           console.log('Telegram bot is serving the response from cache');
           const status = JSON.parse(result);
-          const question = 'Onko metro rikki?';
+          const question = 'Onko metro rikki? – ';
           if (status.broken) {
             ctx.reply(
-              `${question} *Kyllä!* ${status.reasons.join(
-                ','
-              )} \n https://onkometrorikki.fi`,
-              Extra.markdown()
+              `${question} Kyllä!\n ${status.reasons.join(',')}`,
+              Extra.markup(keyboard)
             );
           } else {
-            ctx.reply(
-              `${question} *Ei!* \n https://onkometrorikki.fi`,
-              Extra.markdown()
-            );
+            ctx.reply(`${question} Ei!`, Extra.markup(keyboard));
           }
         } else {
           console.warn(
@@ -43,7 +43,8 @@ function setup(redisClient, cacheKey) {
         }
       });
     });
-    bot.startPolling();
+    bot.launch();
+    console.log('Bot listening to messages and commands...');
   } else {
     console.warn('Telegram bot token was missing... ignoring');
   }
