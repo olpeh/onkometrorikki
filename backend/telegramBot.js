@@ -45,8 +45,9 @@ function setup(redisClient, cacheKey) {
       )
     );
 
-    bot.action('refresh', ({ reply }) => {
+    bot.action('refresh', ({ reply, deleteMessage }) => {
       replyWithStatus(reply);
+      deleteMessage();
     });
 
     bot.command('status', ctx => replyWithStatus(ctx.reply));
