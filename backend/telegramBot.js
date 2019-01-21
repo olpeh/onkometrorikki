@@ -6,6 +6,36 @@ require('dotenv').config();
 function setup(redisClient, cacheKey) {
   const botToken = process.env.BOT_TOKEN;
   console.log('Setting up telegram bot', cacheKey, botToken);
+
+  const keyboard = Markup.inlineKeyboard([
+    Markup.urlButton('🌍', 'https://onkometrorikki.fi'),
+    Markup.callbackButton('Päivitä ↺', 'refresh')
+  ]);
+
+  const replyWithStatus = reply =>
+    redisClient.get(cacheKey, async (error, result) => {
+      if (result) {
+        console.log('Telegram bot is serving the response from cache');
+        const status = JSON.parse(result);
+        const question = 'Onko metro rikki? – ';
+        if (status.broken) {
+          reply(
+            `${question} Kyllä!\n ${status.reasons.join(',')}`,
+            Extra.markup(keyboard)
+          );
+        } else {
+          reply(`${question} Ei!`, Extra.markup(keyboard));
+        }
+      } else {
+        console.warn(
+          'Status was not found in cache, Telegram bot failed to serve status'
+        );
+        reply(
+          'Jokin meni pieleen... Kokeile myöhemmin uudestaan tai vieraile https://onkometrorikki.fi sivulla.'
+        );
+      }
+    });
+
   if (botToken) {
     const bot = new Telegraf(botToken);
     bot.start(ctx =>
@@ -15,35 +45,11 @@ function setup(redisClient, cacheKey) {
       )
     );
 
-    const keyboard = Markup.inlineKeyboard([
-      Markup.urlButton('🌍', 'https://onkometrorikki.fi'),
-      Markup.callbackButton('Päivitä', 'status')
-    ]);
-
-    bot.command('status', ctx => {
-      redisClient.get(cacheKey, async (error, result) => {
-        if (result) {
-          console.log('Telegram bot is serving the response from cache');
-          const status = JSON.parse(result);
-          const question = 'Onko metro rikki? – ';
-          if (status.broken) {
-            ctx.reply(
-              `${question} Kyllä!\n ${status.reasons.join(',')}`,
-              Extra.markup(keyboard)
-            );
-          } else {
-            ctx.reply(`${question} Ei!`, Extra.markup(keyboard));
-          }
-        } else {
-          console.warn(
-            'Status was not found in cache, Telegram bot failed to serve status'
-          );
-          ctx.reply(
-            'Jokin meni pieleen... Kokeile myöhemmin uudestaan tai vieraile https://onkometrorikki.fi sivulla.'
-          );
-        }
-      });
+    bot.action('refresh', ({ reply }) => {
+      replyWithStatus(reply);
     });
+
+    bot.command('status', ctx => replyWithStatus(ctx.reply));
     bot.launch();
     console.log('Bot listening to messages and commands...');
   } else {
