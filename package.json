@@ -27,28 +27,28 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@koa/cors": "^2.2.1",
-    "dotenv": "^6.0.0",
+    "@koa/cors": "^2.2.3",
+    "dotenv": "^6.2.0",
     "gtfs-realtime-bindings": "^0.0.4",
-    "koa": "^2.5.1",
+    "koa": "^2.6.2",
     "koa-bodyparser": "^4.2.1",
     "koa-cache-control": "^2.0.0",
     "koa-request": "^1.0.0",
     "koa-route": "^3.2.0",
     "redis": "^2.8.0",
-    "request": "^2.87.0",
-    "telegraf": "^3.25.5",
-    "twit": "^2.2.10"
+    "request": "^2.88.0",
+    "telegraf": "^3.26.0",
+    "twit": "^2.2.11"
   },
   "devDependencies": {
-    "all-contributors-cli": "^5.4.1",
-    "create-elm-app": "^3.0.0",
-    "elm": "^0.19.0-bugfix2",
+    "all-contributors-cli": "^5.10.2",
+    "create-elm-app": "^3.0.3",
+    "elm": "^0.19.0-bugfix6",
     "elm-format": "^0.8.1",
-    "husky": "^1.2.1",
+    "husky": "^1.3.1",
     "lint-staged": "^8.1.0",
     "npm-run-all": "^4.1.5",
-    "prettier": "^1.15.3"
+    "prettier": "^1.16.0"
   },
   "husky": {
     "hooks": {
