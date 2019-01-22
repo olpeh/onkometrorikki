@@ -20,7 +20,7 @@ function setup(redisClient, cacheKey) {
         const question = 'Onko metro rikki? – ';
         if (status.broken) {
           reply(
-            `${question} Kyllä!\n ${status.reasons.join(',')}`,
+            `${question} Kyllä!\n${status.reasons.join(',')}`,
             Extra.markup(keyboard)
           );
         } else {
