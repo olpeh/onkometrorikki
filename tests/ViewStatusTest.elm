@@ -8,13 +8,18 @@ import Test exposing (..)
 import Test.Html.Query as Query
 import Test.Html.Selector as Selector
 import Time
+import Translations exposing (..)
 
 
 suite : Test
 suite =
+    let
+        t =
+            translate Translations.Finnish
+    in
     fuzz statusFuzzer "viewStatus should show correct option" <|
         \status ->
-            Main.viewStatus status (Time.millisToPosix 0) Time.utc
+            Main.viewStatus t status (Time.millisToPosix 0) Time.utc
                 |> Query.fromHtml
                 |> Query.find [ Selector.tag "h2" ]
                 |> Query.has
