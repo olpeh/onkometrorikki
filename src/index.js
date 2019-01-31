@@ -1,26 +1,32 @@
 import './main.css';
 import { Elm } from './Main.elm';
 
-var THEME_KEY = 'theme';
+const THEME_KEY = 'theme';
+const LANG_KEY = 'language';
 // Map a theme to the accent colour
-var themes = {
+const themes = {
   light: '#ff6600',
   dark: '#f18e71'
 };
 
-var theme = window.localStorage.getItem(THEME_KEY);
+const theme = window.localStorage.getItem(THEME_KEY);
 if (theme) {
   handleThemeChanged(theme, false);
 }
 
+const language = window.localStorage.getItem(LANG_KEY);
+
 //
 // INIT
 
-var app = Elm.Main.init({
+console.log(language);
+
+const app = Elm.Main.init({
   node: document.getElementById('root'),
   flags: {
     apiBaseUrl: process.env.ELM_APP_API_URL || 'https://api.onkometrorikki.fi',
-    theme
+    theme,
+    language
   }
 });
 
@@ -34,7 +40,7 @@ app.ports.themePort.subscribe(function({ msg, data }) {
       break;
 
     default:
-      console.warn('Unknown msg from Elm: ', fromElm.msg);
+      console.warn('Unknown msg from Elm: ', msg);
   }
 });
 
@@ -54,3 +60,7 @@ function handleThemeChanged(theme, store) {
     console.warn('Unknown theme: ', theme);
   }
 }
+
+app.ports.setLanguage.subscribe(function(str) {
+  localStorage.setItem(LANG_KEY, str);
+});

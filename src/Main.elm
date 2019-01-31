@@ -1,11 +1,11 @@
-module Main exposing (Model, Msg(..), init, main, subscriptions, update, view, viewError, viewFooter, viewReason, viewReasons, viewStatus, viewStatusRequest, viewThemeToggle)
+port module Main exposing (Model, Msg(..), init, main, subscriptions, update, view, viewError, viewFooter, viewReason, viewReasons, viewStatus, viewStatusRequest, viewThemeToggle)
 
 import Browser
 import Config exposing (Config)
 import FeatherIcons
 import Html exposing (Html, br, button, div, footer, h1, h2, li, main_, span, text, ul)
 import Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed, focusable)
-import Html.Attributes exposing (attribute, class, disabled)
+import Html.Attributes exposing (attribute, class, disabled, title, value)
 import Html.Events exposing (onClick)
 import Http
 import Markdown
@@ -13,6 +13,10 @@ import Status exposing (Status(..), StatusRequest(..))
 import Task exposing (Task)
 import Theme exposing (Theme, decode)
 import Time
+import Translations exposing (..)
+
+
+port setLanguage : String -> Cmd msg
 
 
 
@@ -24,6 +28,7 @@ type alias Model =
     , lastUpdated : Time.Posix
     , zone : Time.Zone
     , theme : Theme
+    , language : Translations.Language
     , config : Config
     }
 
@@ -40,6 +45,11 @@ init config =
 
                 _ ->
                     Theme.Light
+      , language =
+            config.language
+                |> Maybe.withDefault "EN"
+                |> Translations.stringToLanguage
+                |> Maybe.withDefault Translations.English
       , config = config
       }
     , Task.perform AdjustTimeZone Time.here
@@ -56,6 +66,7 @@ type Msg
     | Refresh Time.Posix
     | UpdateTime Time.Posix
     | AdjustTimeZone Time.Zone
+    | SetLanguage Language
     | NoOp
 
 
@@ -85,6 +96,13 @@ update msg model =
             , Task.perform Refresh Time.now
             )
 
+        SetLanguage language ->
+            let
+                nextModel =
+                    { model | language = language }
+            in
+            ( nextModel, setLanguage (Translations.languageToString nextModel.language) )
+
         NoOp ->
             ( model, Cmd.none )
 
@@ -95,62 +113,82 @@ update msg model =
 
 view : Model -> Html Msg
 view model =
+    let
+        t =
+            translate model.language
+
+        tText =
+            text << t
+    in
     div [ class ("container color-fg " ++ Theme.toClass model.theme) ]
         [ main_ [ class "main" ]
             [ div []
                 [ h1 []
-                    [ text "Onko metro rikki?" ]
+                    [ tText PageTitle ]
                 , div
                     [ class "status" ]
-                    [ viewStatusRequest model.statusRequest model.lastUpdated model.zone ]
+                    [ viewStatusRequest t model.statusRequest model.lastUpdated model.zone ]
                 ]
             , div [ class "actions" ]
-                [ viewRefreshButton model.statusRequest model.theme
-                , viewThemeToggle model.theme
+                [ viewRefreshButton t model.statusRequest model.theme
+                , viewThemeToggle t model.theme
+                , languageSelect model.language
                 ]
             ]
         , footer [] [ viewFooter ]
         ]
 
 
-viewStatusRequest : StatusRequest -> Time.Posix -> Time.Zone -> Html msg
-viewStatusRequest statusRequest lastUpdated timeZone =
+viewStatusRequest : T -> StatusRequest -> Time.Posix -> Time.Zone -> Html msg
+viewStatusRequest t statusRequest lastUpdated timeZone =
+    let
+        tText =
+            text << t
+    in
     case statusRequest of
         NotAsked ->
             text ""
 
         Loading ->
-            span [] [ text "Ladataan statusta..." ]
+            span [] [ tText LoadingStatusText ]
 
         Refreshing ->
-            span [] [ text "Päivitetään..." ]
+            span [] [ tText RefreshingText ]
 
         Success status ->
-            viewStatus status lastUpdated timeZone
+            viewStatus t status lastUpdated timeZone
 
         Error error ->
-            viewError error
+            viewError t error
 
 
-viewStatus : Status -> Time.Posix -> Time.Zone -> Html msg
-viewStatus status lastUpdated timeZone =
+viewStatus : T -> Status -> Time.Posix -> Time.Zone -> Html msg
+viewStatus t status lastUpdated timeZone =
+    let
+        tText =
+            text << t
+    in
     case status of
         Working ->
             div []
-                [ h2 [] [ text "Ei!" ]
-                , viewLastUpdated lastUpdated timeZone
+                [ h2 [] [ tText WorkingText ]
+                , viewLastUpdated t lastUpdated timeZone
                 ]
 
         Broken reasons ->
             div []
-                [ h2 [ class "broken" ] [ text "Kyllä!" ]
+                [ h2 [ class "broken" ] [ tText BrokenText ]
                 , viewReasons reasons
-                , viewLastUpdated lastUpdated timeZone
+                , viewLastUpdated t lastUpdated timeZone
                 ]
 
 
-viewLastUpdated : Time.Posix -> Time.Zone -> Html msg
-viewLastUpdated lastUpdated timeZone =
+viewLastUpdated : T -> Time.Posix -> Time.Zone -> Html msg
+viewLastUpdated t lastUpdated timeZone =
+    let
+        tText =
+            text << t
+    in
     let
         hour =
             String.padLeft 2 '0' (String.fromInt (Time.toHour timeZone lastUpdated))
@@ -161,16 +199,20 @@ viewLastUpdated lastUpdated timeZone =
         second =
             String.padLeft 2 '0' (String.fromInt (Time.toSecond timeZone lastUpdated))
 
-        lastUpdatedText =
-            "Viimeksi päivitetty: " ++ hour ++ ":" ++ minute ++ ":" ++ second
+        lastUpdatedTimeText =
+            ": " ++ hour ++ ":" ++ minute ++ ":" ++ second
     in
-    span [ class "last-updated" ] [ text lastUpdatedText ]
+    span [ class "last-updated" ] [ tText LastUpdatedText, text lastUpdatedTimeText ]
 
 
-viewError : String -> Html msg
-viewError error =
+viewError : T -> String -> Html msg
+viewError t error =
+    let
+        tText =
+            text << t
+    in
     -- TODO: Consider showing the error?
-    text "Virhe pyynnön lähettämisessä"
+    tText GeneralErrorMessage
 
 
 viewReasons : List String -> Html msg
@@ -193,9 +235,15 @@ viewReason reason =
     li [] [ text reason ]
 
 
-viewRefreshButton : StatusRequest -> Theme -> Html Msg
-viewRefreshButton statusRequest theme =
+viewRefreshButton : T -> StatusRequest -> Theme -> Html Msg
+viewRefreshButton t statusRequest theme =
     let
+        tText =
+            text << t
+
+        tTitle =
+            title << t
+
         isRefreshing =
             case statusRequest of
                 Loading ->
@@ -228,7 +276,7 @@ viewRefreshButton statusRequest theme =
                     Refresh (Time.millisToPosix 0)
             )
         ]
-        [ span [ class "refresh-button-label" ] [ text "Päivitä" ]
+        [ span [ class "refresh-button-label", tTitle RefreshButtonTitleText ] [ tText DoRefreshText ]
         , FeatherIcons.refreshCw
             |> FeatherIcons.toHtml [ ariaHidden True, focusable False ]
         ]
@@ -239,9 +287,15 @@ viewRefreshButton statusRequest theme =
 but you would have to change it if you added more themes.
 @see <https://inclusive-components.design/a-theme-switcher/>
 -}
-viewThemeToggle : Theme -> Html Msg
-viewThemeToggle theme =
+viewThemeToggle : T -> Theme -> Html Msg
+viewThemeToggle t theme =
     let
+        tText =
+            text << t
+
+        tTitle =
+            title << t
+
         -- Boolean representation of theme being dark
         isDarkTheme =
             theme == Theme.Dark
@@ -253,6 +307,7 @@ viewThemeToggle theme =
         [ ariaPressed isDarkTheme
         , ariaLabel "Dark mode"
         , class "button-reset theme-button enhanced-outline"
+        , tTitle ThemeToggleButtonTitleText
 
         -- show the button in the inverted colours
         , class (Theme.toClass inverseTheme)
@@ -261,6 +316,26 @@ viewThemeToggle theme =
         [ FeatherIcons.moon
             |> FeatherIcons.toHtml [ ariaHidden True, focusable False ]
         ]
+
+
+languageSelect : Language -> Html Msg
+languageSelect currentLanguage =
+    let
+        optionAttrs lang =
+            [ value (languageToString lang)
+            , Html.Events.onClick (SetLanguage lang)
+            , class
+                (if currentLanguage == lang then
+                    "is-current"
+
+                 else
+                    ""
+                )
+            ]
+    in
+    allLanguages
+        |> List.map (\lang -> button (optionAttrs lang) [ text (languageToString lang) ])
+        |> div [ class "language-select" ]
 
 
 viewFooter : Html msg
