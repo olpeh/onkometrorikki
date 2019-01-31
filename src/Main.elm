@@ -47,9 +47,9 @@ init config =
                     Theme.Light
       , language =
             config.language
-                |> Maybe.withDefault "EN"
+                |> Maybe.withDefault "FI"
                 |> Translations.stringToLanguage
-                |> Maybe.withDefault Translations.English
+                |> Maybe.withDefault Translations.Finnish
       , config = config
       }
     , Task.perform AdjustTimeZone Time.here
