@@ -137,9 +137,9 @@ translationSetFor translationKey =
             }
 
         GeneralErrorMessage ->
-            { english = "Last updated"
-            , finnish = "Viimeksi päivitetty"
-            , swedish = "Sist uppdaterad"
+            { english = "Something went wrong :( Please try again later!"
+            , finnish = "Jokin meni pieleen :( Ole hyvä ja yritä myöhemmin uudelleen!"
+            , swedish = "Något gick fel :( Vänligen försök igen senare!"
             }
 
         ThemeToggleButtonTitleText ->
