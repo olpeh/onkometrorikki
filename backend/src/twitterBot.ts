@@ -1,27 +1,31 @@
 const Twit = require('twit');
+import { Option, none, some } from 'fp-ts/lib/Option';
+
 const config = require('./config');
 const hsl = require('./hsl');
-const redisWrapper = require('./redisWrapper');
 
 const PREVIOUSLY_BROKEN_KEY = 'previously-broken';
 const PREVIOUS_TWEET_TIME_KEY = 'previous-tweet-time';
 const brokenStatusCacheTtlSeconds =
   process.env.STATUS_CACHE_TTL_SECONDS || 60 * 60 * 24;
 
-const redisClient = redisWrapper.instance();
+let redisClient, bot, cacheKey, cacheTtl;
 
-let bot, cacheKey, cacheTtlSeconds;
-
-function setup(cacheKeyParam, cacheTtlSecondsParam) {
+const setupTwitterBot = (
+  redisInstance,
+  cacheKeyParam,
+  cacheTtlSecondsParam
+) => {
+  redisClient = redisInstance;
   bot = new Twit(config.twitterKeys);
   cacheKey = cacheKeyParam;
-  cacheTtlSeconds = cacheTtlSecondsParam;
+  cacheTtl = cacheTtlSecondsParam;
   console.log('Bot starting...');
   tweetIfBroken();
   setInterval(tweetIfBroken, config.twitterConfig.check);
-}
+};
 
-async function tweetNow(text, brokenNow) {
+const tweetNow = async (text, brokenNow) => {
   const tweet = {
     status: text
   };
@@ -45,7 +49,7 @@ async function tweetNow(text, brokenNow) {
     savePreviousTweetTime(new Date());
     saveBrokenStatus(brokenNow);
   }
-}
+};
 
 const saveBrokenStatus = async brokenNow =>
   redisClient.setex(
@@ -54,10 +58,13 @@ const saveBrokenStatus = async brokenNow =>
     brokenNow
   );
 
-const getPreviousBrokenStatus = async () =>
+const getPreviousBrokenStatus = async (): Promise<boolean> =>
   new Promise((resolve, reject) => {
     redisClient.get(PREVIOUSLY_BROKEN_KEY, (error, result) => {
-      console.log(getPreviousBrokenStatus, { result });
+      console.log(getPreviousBrokenStatus, { result, error });
+      if (error) {
+        resolve(false);
+      }
       resolve(result === 'true');
     });
   });
@@ -69,20 +76,24 @@ const savePreviousTweetTime = async previousTweetTime =>
     previousTweetTime.toString()
   );
 
-const getPreviousTweetTime = async () =>
+const getPreviousTweetTime = async (): Promise<Option<Date>> =>
   new Promise((resolve, reject) => {
     redisClient.get(PREVIOUS_TWEET_TIME_KEY, (error, result) => {
-      if (result !== null) {
-        resolve(new Date(result));
+      if (error) {
+        resolve(none);
       }
-      resolve(null);
+
+      if (result !== null) {
+        resolve(some(new Date(result)));
+      }
+      resolve(none);
     });
   });
 
 const shouldTweetNow = async brokenNow =>
   new Promise(async (resolve, reject) => {
     const previouslyWasBroken = await getPreviousBrokenStatus();
-    const previousTweetTime = await getPreviousTweetTime();
+    const previousTweetTime: Option<Date> = await getPreviousTweetTime();
     console.log({ previouslyWasBroken, previousTweetTime });
 
     if (brokenNow === true && previouslyWasBroken === false) {
@@ -91,7 +102,9 @@ const shouldTweetNow = async brokenNow =>
       previouslyWasBroken === true &&
       brokenNow === false &&
       previousTweetTime !== null &&
-      new Date() - previousTweetTime > config.twitterConfig.minInterval
+      previousTweetTime.isSome() &&
+      new Date().getTime() - previousTweetTime.value.getTime() >
+        config.twitterConfig.minInterval
     ) {
       resolve(true);
     } else {
@@ -109,7 +122,7 @@ const tweetIfBroken = async () => {
       // Update redis cache with the response
       redisClient.setex(
         cacheKey,
-        cacheTtlSeconds,
+        cacheTtl,
         JSON.stringify(dataToRespondWith),
         () => console.log('Bot successfully updated cache')
       );
@@ -140,6 +153,4 @@ Katso: https://onkometrorikki.fi #länsimetro #hsl #metrohelsinki`;
     });
 };
 
-module.exports = {
-  setup: setup
-};
+module.exports = { setupTwitterBot };
