@@ -1,27 +1,30 @@
 const Twit = require('twit');
-const config = require('./config');
-const hsl = require('./hsl');
-const redisWrapper = require('./redisWrapper');
+
+import { config } from './config';
+import { fetchFeed, createResponse } from './hsl';
 
 const PREVIOUSLY_BROKEN_KEY = 'previously-broken';
 const PREVIOUS_TWEET_TIME_KEY = 'previous-tweet-time';
 const brokenStatusCacheTtlSeconds =
   process.env.STATUS_CACHE_TTL_SECONDS || 60 * 60 * 24;
 
-const redisClient = redisWrapper.instance();
+let redisClient, bot, cacheKey, cacheTtl;
 
-let bot, cacheKey, cacheTtlSeconds;
-
-function setup(cacheKeyParam, cacheTtlSecondsParam) {
+export const setupTwitterBot = (
+  redisInstance,
+  cacheKeyParam,
+  cacheTtlSecondsParam
+) => {
+  redisClient = redisInstance;
   bot = new Twit(config.twitterKeys);
   cacheKey = cacheKeyParam;
-  cacheTtlSeconds = cacheTtlSecondsParam;
+  cacheTtl = cacheTtlSecondsParam;
   console.log('Bot starting...');
   tweetIfBroken();
   setInterval(tweetIfBroken, config.twitterConfig.check);
-}
+};
 
-async function tweetNow(text, brokenNow) {
+const tweetNow = async (text, brokenNow) => {
   const tweet = {
     status: text
   };
@@ -45,44 +48,63 @@ async function tweetNow(text, brokenNow) {
     savePreviousTweetTime(new Date());
     saveBrokenStatus(brokenNow);
   }
-}
+};
 
-const saveBrokenStatus = async brokenNow =>
-  redisClient.setex(
-    PREVIOUSLY_BROKEN_KEY,
-    brokenStatusCacheTtlSeconds,
-    brokenNow
-  );
+const saveBrokenStatus = async brokenNow => {
+  if (redisClient) {
+    return redisClient.setex(
+      PREVIOUSLY_BROKEN_KEY,
+      brokenStatusCacheTtlSeconds,
+      brokenNow
+    );
+  }
+};
 
-const getPreviousBrokenStatus = async () =>
+const getPreviousBrokenStatus = async (): Promise<boolean> =>
   new Promise((resolve, reject) => {
-    redisClient.get(PREVIOUSLY_BROKEN_KEY, (error, result) => {
-      console.log(getPreviousBrokenStatus, { result });
-      resolve(result === 'true');
-    });
+    if (redisClient) {
+      redisClient.get(PREVIOUSLY_BROKEN_KEY, (error, result) => {
+        console.log(getPreviousBrokenStatus, { result, error });
+        if (error) {
+          resolve(false);
+        }
+        resolve(result === 'true');
+      });
+    }
+    resolve(false);
   });
 
-const savePreviousTweetTime = async previousTweetTime =>
-  redisClient.setex(
-    PREVIOUS_TWEET_TIME_KEY,
-    brokenStatusCacheTtlSeconds,
-    previousTweetTime.toString()
-  );
+const savePreviousTweetTime = async previousTweetTime => {
+  if (redisClient) {
+    return redisClient.setex(
+      PREVIOUS_TWEET_TIME_KEY,
+      brokenStatusCacheTtlSeconds,
+      previousTweetTime.toString()
+    );
+  }
+};
 
-const getPreviousTweetTime = async () =>
+const getPreviousTweetTime = async (): Promise<Date | null> =>
   new Promise((resolve, reject) => {
-    redisClient.get(PREVIOUS_TWEET_TIME_KEY, (error, result) => {
-      if (result !== null) {
-        resolve(new Date(result));
-      }
-      resolve(null);
-    });
+    if (redisClient) {
+      redisClient.get(PREVIOUS_TWEET_TIME_KEY, (error, result) => {
+        if (error) {
+          resolve(null);
+        }
+
+        if (result !== null) {
+          resolve(new Date(result));
+        }
+        resolve(null);
+      });
+    }
+    resolve(null);
   });
 
 const shouldTweetNow = async brokenNow =>
   new Promise(async (resolve, reject) => {
     const previouslyWasBroken = await getPreviousBrokenStatus();
-    const previousTweetTime = await getPreviousTweetTime();
+    const previousTweetTime: Date | null = await getPreviousTweetTime();
     console.log({ previouslyWasBroken, previousTweetTime });
 
     if (brokenNow === true && previouslyWasBroken === false) {
@@ -91,7 +113,8 @@ const shouldTweetNow = async brokenNow =>
       previouslyWasBroken === true &&
       brokenNow === false &&
       previousTweetTime !== null &&
-      new Date() - previousTweetTime > config.twitterConfig.minInterval
+      new Date().getTime() - previousTweetTime.getTime() >
+        config.twitterConfig.minInterval
     ) {
       resolve(true);
     } else {
@@ -101,18 +124,19 @@ const shouldTweetNow = async brokenNow =>
 
 const tweetIfBroken = async () => {
   console.log('Checking if broken and tweeting maybe');
-  await hsl
-    .fetchFeed()
+  await fetchFeed()
     .then(async feed => {
-      const dataToRespondWith = hsl.createResponse(feed, null);
+      const dataToRespondWith = createResponse(feed);
 
-      // Update redis cache with the response
-      redisClient.setex(
-        cacheKey,
-        cacheTtlSeconds,
-        JSON.stringify(dataToRespondWith),
-        () => console.log('Bot successfully updated cache')
-      );
+      if (redisClient) {
+        // Update redis cache with the response
+        redisClient.setex(
+          cacheKey,
+          cacheTtl,
+          JSON.stringify(dataToRespondWith),
+          () => console.log('Bot successfully updated cache')
+        );
+      }
 
       const brokenNow = dataToRespondWith.broken;
       const shouldTweet = await shouldTweetNow(brokenNow);
@@ -138,8 +162,4 @@ Katso: https://onkometrorikki.fi #länsimetro #hsl #metrohelsinki`;
       console.log('Error in fetching data');
       console.error(e);
     });
-};
-
-module.exports = {
-  setup: setup
 };

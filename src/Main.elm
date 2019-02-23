@@ -7,7 +7,7 @@ import Html exposing (Html, br, button, div, footer, h1, h2, li, main_, span, te
 import Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed, focusable)
 import Html.Attributes exposing (attribute, class, disabled, title, value)
 import Html.Events exposing (onClick)
-import Http
+import Http exposing (..)
 import Markdown
 import Status exposing (Status(..), StatusRequest(..))
 import Task exposing (Task)
@@ -205,17 +205,21 @@ viewLastUpdated t lastUpdated timeZone =
     span [ class "last-updated" ] [ tText LastUpdatedText, text lastUpdatedTimeText ]
 
 
-viewError : T -> String -> Html msg
-viewError t error =
+viewError : T -> Http.Error -> Html msg
+viewError t err =
     let
         tText =
             text << t
     in
-    -- TODO: Consider showing the error?
-    tText GeneralErrorMessage
+    case err of
+        Http.NetworkError ->
+            tText GeneralErrorMessage
+
+        _ ->
+            tText GeneralErrorMessage
 
 
-viewReasons : List String -> Html msg
+viewReasons : List (List Status.TranslatedReason) -> Html msg
 viewReasons reasons =
     -- Handle empty reasons by not adding the ul, semantically.
     -- Could also consider a special case for empty reasons,
@@ -226,13 +230,19 @@ viewReasons reasons =
 
         rs ->
             rs
+                |> List.map (\reason -> List.head reason)
                 |> List.map viewReason
                 |> ul [ class "reasons" ]
 
 
-viewReason : String -> Html msg
+viewReason : Maybe Status.TranslatedReason -> Html msg
 viewReason reason =
-    li [] [ text reason ]
+    case reason of
+        Just r ->
+            li [] [ text r.text ]
+
+        _ ->
+            li [] [ text "Tuntematon virhe" ]
 
 
 viewRefreshButton : T -> StatusRequest -> Theme -> Html Msg
