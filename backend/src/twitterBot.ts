@@ -1,5 +1,4 @@
 const Twit = require('twit');
-import { Option, none, some } from 'fp-ts/lib/Option';
 
 const config = require('./config');
 
@@ -77,24 +76,24 @@ const savePreviousTweetTime = async previousTweetTime =>
     previousTweetTime.toString()
   );
 
-const getPreviousTweetTime = async (): Promise<Option<Date>> =>
+const getPreviousTweetTime = async (): Promise<Date | null> =>
   new Promise((resolve, reject) => {
     redisClient.get(PREVIOUS_TWEET_TIME_KEY, (error, result) => {
       if (error) {
-        resolve(none);
+        resolve(null);
       }
 
       if (result !== null) {
-        resolve(some(new Date(result)));
+        resolve(new Date(result));
       }
-      resolve(none);
+      resolve(null);
     });
   });
 
 const shouldTweetNow = async brokenNow =>
   new Promise(async (resolve, reject) => {
     const previouslyWasBroken = await getPreviousBrokenStatus();
-    const previousTweetTime: Option<Date> = await getPreviousTweetTime();
+    const previousTweetTime: Date | null = await getPreviousTweetTime();
     console.log({ previouslyWasBroken, previousTweetTime });
 
     if (brokenNow === true && previouslyWasBroken === false) {
@@ -103,8 +102,7 @@ const shouldTweetNow = async brokenNow =>
       previouslyWasBroken === true &&
       brokenNow === false &&
       previousTweetTime !== null &&
-      previousTweetTime.isSome() &&
-      new Date().getTime() - previousTweetTime.value.getTime() >
+      new Date().getTime() - previousTweetTime.getTime() >
         config.twitterConfig.minInterval
     ) {
       resolve(true);
