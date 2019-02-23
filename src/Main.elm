@@ -177,7 +177,7 @@ viewError err =
             text "Virhe pyynnön lähettämisessä"
 
 
-viewReasons : List String -> Html msg
+viewReasons : List (List Status.TranslatedReason) -> Html msg
 viewReasons reasons =
     -- Handle empty reasons by not adding the ul, semantically.
     -- Could also consider a special case for empty reasons,
@@ -188,13 +188,19 @@ viewReasons reasons =
 
         rs ->
             rs
+                |> List.map (\reason -> List.head reason)
                 |> List.map viewReason
                 |> ul [ class "reasons" ]
 
 
-viewReason : String -> Html msg
+viewReason : Maybe Status.TranslatedReason -> Html msg
 viewReason reason =
-    li [] [ text reason ]
+    case reason of
+        Just r ->
+            li [] [ text r.text ]
+
+        _ ->
+            li [] [ text "Tuntematon virhe" ]
 
 
 viewRefreshButton : StatusRequest -> Theme -> Html Msg
