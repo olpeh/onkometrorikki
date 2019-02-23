@@ -7,7 +7,7 @@ import Html exposing (Html, br, button, div, footer, h1, h2, li, main_, span, te
 import Html.A11y exposing (ariaHidden, ariaLabel, ariaPressed, focusable)
 import Html.Attributes exposing (attribute, class, disabled)
 import Html.Events exposing (onClick)
-import Http
+import Http exposing (..)
 import Markdown
 import Status exposing (Status(..), StatusRequest(..))
 import Task exposing (Task)
@@ -167,10 +167,14 @@ viewLastUpdated lastUpdated timeZone =
     span [ class "last-updated" ] [ text lastUpdatedText ]
 
 
-viewError : String -> Html msg
-viewError error =
-    -- TODO: Consider showing the error?
-    text "Virhe pyynnön lähettämisessä"
+viewError : Http.Error -> Html msg
+viewError err =
+    case err of
+        Http.NetworkError ->
+            text "Verkkovirhe. Kokeile myöhemmin uudestaan."
+
+        _ ->
+            text "Virhe pyynnön lähettämisessä"
 
 
 viewReasons : List String -> Html msg
