@@ -1,8 +1,7 @@
-const redisWrapper = require('./src/redisWrapper');
 import { setUpApp } from './src/app';
 import { setupTwitterBot } from './src/twitterBot';
 import { setupTelegramBot } from './src/telegramBot';
-const hsl = require('./src/hsl');
+import { redisInstance } from './src/redisWrapper';
 
 const CACHE_KEY = 'metro';
 const port = process.env.PORT || 4000;
@@ -15,15 +14,15 @@ require('dotenv').config();
 
 console.log('Initializing backend...');
 
-let redisInstance = null;
+let redis = null;
 
 if (nodeEnv === 'development') {
   console.log('Booting in dev mode, redis will be disabled');
 } else {
   console.log('Booting in production mode');
-  const redisInstance = redisWrapper.instance();
+  const redis = redisInstance();
 }
 
-setUpApp(redisInstance, port, cacheTtlSeconds, CACHE_KEY, hsl);
-setupTwitterBot(redisInstance, CACHE_KEY, cacheTtlSeconds, hsl);
-setupTelegramBot(telegramBotToken, redisInstance, CACHE_KEY);
+setUpApp(redis, port, cacheTtlSeconds, CACHE_KEY);
+setupTwitterBot(redis, CACHE_KEY, cacheTtlSeconds);
+setupTelegramBot(telegramBotToken, redis, CACHE_KEY);

@@ -3,7 +3,7 @@ const redisUrl = process.env.REDIS_URL || 'redis://localhost:6379';
 
 let clientInstance;
 
-const instance = () => {
+export const redisInstance = () => {
   if (!clientInstance) {
     // create a new redis client and connect to our local redis instance
     clientInstance = redis.createClient({ url: redisUrl });
@@ -12,8 +12,4 @@ const instance = () => {
   }
 
   return clientInstance;
-};
-
-module.exports = {
-  instance
 };

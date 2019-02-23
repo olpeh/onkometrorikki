@@ -3,9 +3,9 @@ const koa = require('koa');
 const bodyParser = require('koa-bodyparser');
 const route = require('koa-route');
 const cacheControl = require('koa-cache-control');
+import { createResponse, fetchFeed } from './hsl';
 
 const respondFromHSL = async (
-  hsl,
   ctx,
   resolve,
   failIfBroken,
@@ -13,10 +13,9 @@ const respondFromHSL = async (
   cacheKey,
   cacheTtlSeconds
 ) =>
-  await hsl
-    .fetchFeed()
+  await fetchFeed()
     .then(async feed => {
-      const dataToRespondWith = hsl.createResponse(feed, null);
+      const dataToRespondWith = createResponse(feed);
 
       if (redisClient) {
         await redisClient.setex(
@@ -38,13 +37,14 @@ const respondFromHSL = async (
     .catch(e => {
       console.log('Error in fetching data');
       console.error(e);
-      const dataToRespondWith = hsl.createResponse(null, e);
-      console.log('Error, going to respond with', dataToRespondWith);
-      ctx.response.statusCode = 500;
-      ctx.response.body = dataToRespondWith;
+      // 502 Bad Gateway
+      // The server was acting as a gateway or proxy and received an invalid
+      // response from the upstream server.
+      ctx.response.statusCode = 503;
+      ctx.response.body = e;
     });
 
-export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey, hsl) => {
+export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
   console.log('Starting app...', { port, cacheTtlSeconds });
 
   const app = new koa();
@@ -71,7 +71,6 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey, hsl) => {
                 resolve();
               } else {
                 await respondFromHSL(
-                  hsl,
                   ctx,
                   resolve,
                   failIfBroken,
@@ -84,7 +83,6 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey, hsl) => {
           } else {
             console.log('Redis unavailable, responding with data from HSL');
             respondFromHSL(
-              hsl,
               ctx,
               resolve,
               failIfBroken,
@@ -112,8 +110,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey, hsl) => {
           throw 'Not allowed';
         }
         await new Promise(resolve => {
-          hsl
-            .fetchFeed()
+          fetchFeed()
             .then(async feed => {
               ctx.response.statusCode = 200;
               ctx.response.body = feed;
