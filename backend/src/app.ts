@@ -40,7 +40,7 @@ const respondFromHSL = async (
       // 502 Bad Gateway
       // The server was acting as a gateway or proxy and received an invalid
       // response from the upstream server.
-      ctx.response.statusCode = 503;
+      ctx.response.statusCode = 502;
       ctx.response.body = e;
     });
 
@@ -95,7 +95,10 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
       } catch (e) {
         console.log('Error');
         console.error(e);
-        ctx.response.statusCode = 500;
+        // 502 Bad Gateway
+        // The server was acting as a gateway or proxy and received an invalid
+        // response from the upstream server.
+        ctx.response.statusCode = 502;
         ctx.response.body = e;
       }
     })
@@ -119,7 +122,10 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
             .catch(e => {
               console.log('Error in fetching data');
               console.error(e);
-              ctx.response.statusCode = 500;
+              // 502 Bad Gateway
+              // The server was acting as a gateway or proxy and received an invalid
+              // response from the upstream server.
+              ctx.response.statusCode = 502;
               ctx.response.body = e;
             });
         });
