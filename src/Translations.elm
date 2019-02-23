@@ -57,8 +57,12 @@ type TranslationKey
     | DoRefreshText
     | RefreshButtonTitleText
     | LastUpdatedText
-    | GeneralErrorMessage
     | ThemeToggleButtonTitleText
+    | ErrorNetwork
+    | ErrorTimeout
+    | ErrorBadUrl
+    | ErrorBadStatus
+    | ErrorBadPayload
 
 
 type alias TranslationSet =
@@ -136,14 +140,38 @@ translationSetFor translationKey =
             , swedish = "Sist uppdaterad"
             }
 
-        GeneralErrorMessage ->
-            { english = "Something went wrong :( Please try again later!"
-            , finnish = "Jokin meni pieleen :( Ole hyvä ja yritä myöhemmin uudelleen!"
-            , swedish = "Något gick fel :( Vänligen försök igen senare!"
-            }
-
         ThemeToggleButtonTitleText ->
             { english = "Toggle between dark and light theme"
             , finnish = "Vaihda teemaa vaalean ja tumman välillä"
             , swedish = "Ändra temat mellan ljus och mörk"
+            }
+
+        ErrorNetwork ->
+            { english = "No connection, try again later."
+            , finnish = "Ei yhteyttä, yritä myöhemmin uudestaan."
+            , swedish = "Ingen anslutning, försök pånytt senare."
+            }
+
+        ErrorTimeout ->
+            { english = "Network timed out."
+            , finnish = "Vastaus aikakatkaistiin."
+            , swedish = "Svaret tidsavbröts."
+            }
+
+        ErrorBadUrl ->
+            { english = "It's not you, it's me. I have the server address wrong."
+            , finnish = "Vika on minussa. Palvelimen osoite on väärä."
+            , swedish = "Det är mitt fel. Serverns adress är felaktig."
+            }
+
+        ErrorBadStatus ->
+            { english = "The server didn't like the request (bad status)."
+            , finnish = "Palvelin ei tykännyt pyynnöstä (virheellinen status)."
+            , swedish = "Servern tyckte inte om förfrågan (bad request)."
+            }
+
+        ErrorBadPayload ->
+            { english = "Ouch, the server responded with strange contents."
+            , finnish = "Auts, palvelin vastasi oudolla sisällöllä."
+            , swedish = "Aj, servern svarade med något konstigt."
             }

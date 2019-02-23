@@ -76,6 +76,10 @@ type Msg
 
 update : Msg -> Model -> ( Model, Cmd Msg )
 update msg model =
+    let
+        t =
+            translate model.language
+    in
     case msg of
         GotStatus statusRequest ->
             ( { model | statusRequest = statusRequest }, Task.perform UpdateTime Time.now )
@@ -213,10 +217,19 @@ viewError t err =
     in
     case err of
         Http.NetworkError ->
-            tText GeneralErrorMessage
+            tText ErrorNetwork
 
-        _ ->
-            tText GeneralErrorMessage
+        Http.Timeout ->
+            tText ErrorTimeout
+
+        Http.BadUrl url ->
+            tText ErrorBadUrl
+
+        Http.BadStatus status ->
+            tText ErrorBadStatus
+
+        Http.BadPayload _ _ ->
+            tText ErrorBadPayload
 
 
 viewReasons : List (List Status.TranslatedReason) -> Html msg
