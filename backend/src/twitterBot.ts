@@ -9,7 +9,7 @@ const brokenStatusCacheTtlSeconds =
 
 let redisClient, bot, cacheKey, cacheTtl, hslHelper;
 
-const setupTwitterBot = (
+export const setupTwitterBot = (
   redisInstance,
   cacheKeyParam,
   cacheTtlSecondsParam,
@@ -165,5 +165,3 @@ Katso: https://onkometrorikki.fi #länsimetro #hsl #metrohelsinki`;
       console.error(e);
     });
 };
-
-module.exports = { setupTwitterBot };

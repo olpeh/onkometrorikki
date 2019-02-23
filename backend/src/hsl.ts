@@ -75,9 +75,8 @@ const fetchFeed = async () => {
   });
 };
 
-const createResponse = (feed, error): Status => {
+const createResponse = (feed): Status => {
   const defaultResponse: Status = {
-    success: true,
     broken: false,
     reasons: []
   };
@@ -86,13 +85,7 @@ const createResponse = (feed, error): Status => {
     console.log('No feed was provided...');
     return {
       ...defaultResponse,
-      success: false,
-      reasons: [
-        ...defaultResponse.reasons,
-        'Failed to fetch the feed.',
-        'Failed to fetch the feed. The Metro might work or might not.'
-      ],
-      error
+      reasons: ['Failed to fetch the feed. The Metro might work or might not.']
     };
   } else {
     let brokenCount = 0;
