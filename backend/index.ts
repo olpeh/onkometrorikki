@@ -13,6 +13,6 @@ require('dotenv').config();
 
 console.log('Initializing backend...');
 const redisInstance = redisWrapper.instance();
-app.setUpApp(redisInstance, port, cacheTtlSeconds, CACHE_KEY);
-twitterBot.setupTwitterBot(redisInstance, CACHE_KEY, cacheTtlSeconds);
+app.setUpApp(redisInstance, port, cacheTtlSeconds, CACHE_KEY, hsl);
+twitterBot.setupTwitterBot(redisInstance, CACHE_KEY, cacheTtlSeconds, hsl);
 telegramBot.setupTelegramBot(telegramBotToken, redisInstance, CACHE_KEY);

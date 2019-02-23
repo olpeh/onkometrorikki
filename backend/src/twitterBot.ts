@@ -2,24 +2,25 @@ const Twit = require('twit');
 import { Option, none, some } from 'fp-ts/lib/Option';
 
 const config = require('./config');
-const hsl = require('./hsl');
 
 const PREVIOUSLY_BROKEN_KEY = 'previously-broken';
 const PREVIOUS_TWEET_TIME_KEY = 'previous-tweet-time';
 const brokenStatusCacheTtlSeconds =
   process.env.STATUS_CACHE_TTL_SECONDS || 60 * 60 * 24;
 
-let redisClient, bot, cacheKey, cacheTtl;
+let redisClient, bot, cacheKey, cacheTtl, hslHelper;
 
 const setupTwitterBot = (
   redisInstance,
   cacheKeyParam,
-  cacheTtlSecondsParam
+  cacheTtlSecondsParam,
+  hsl
 ) => {
   redisClient = redisInstance;
   bot = new Twit(config.twitterKeys);
   cacheKey = cacheKeyParam;
   cacheTtl = cacheTtlSecondsParam;
+  hslHelper = hsl;
   console.log('Bot starting...');
   tweetIfBroken();
   setInterval(tweetIfBroken, config.twitterConfig.check);
@@ -114,10 +115,10 @@ const shouldTweetNow = async brokenNow =>
 
 const tweetIfBroken = async () => {
   console.log('Checking if broken and tweeting maybe');
-  await hsl
+  await hslHelper
     .fetchFeed()
     .then(async feed => {
-      const dataToRespondWith = hsl.createResponse(feed, null);
+      const dataToRespondWith = hslHelper.createResponse(feed, null);
 
       // Update redis cache with the response
       redisClient.setex(

@@ -2,6 +2,9 @@ const GtfsRealtimeBindings = require('gtfs-realtime-bindings');
 const request = require('request');
 import { Status } from './../models/Status';
 
+require('dotenv').config();
+const debugBrokenRandomly = process.env.DEBUG_BROKEN_RANDOMLY || false;
+
 /*
 Deprecated Types
 The values below are retained for backwards-compatibility with existing feeds;
@@ -41,22 +44,34 @@ const METRO_ROUTE_TYPE_NEW = 400;
 const fetchFeed = async () => {
   console.log('Going to fetch from the external API');
   return new Promise((resolve, reject) => {
-    const requestOptions = {
-      method: 'GET',
-      url: 'https://api.digitransit.fi/realtime/service-alerts/v1/',
-      encoding: null
-    };
+    if (debugBrokenRandomly && Math.random() >= 0.3) {
+      console.log(`******************** Debug RANDOMLY BREAK mode on!*************************
+      Servinc alerts randomly from test binary feed and randomly from real feed!`);
+      const fs = require('fs');
+      const path = require('path');
+      var content = fs.readFileSync(
+        path.join(__dirname, '../tests/assets/alerts')
+      );
+      const feed = GtfsRealtimeBindings.FeedMessage.decode(content);
+      resolve(feed);
+    } else {
+      const requestOptions = {
+        method: 'GET',
+        url: 'https://api.digitransit.fi/realtime/service-alerts/v1/',
+        encoding: null
+      };
 
-    request(requestOptions, function(error, response, body) {
-      if (!error && response.statusCode == 200) {
-        console.log('Fetch successful!');
-        const feed = GtfsRealtimeBindings.FeedMessage.decode(body);
-        resolve(feed);
-      } else {
-        console.error(error);
-        reject(error);
-      }
-    });
+      request(requestOptions, function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+          console.log('Fetch successful!');
+          const feed = GtfsRealtimeBindings.FeedMessage.decode(body);
+          resolve(feed);
+        } else {
+          console.error(error);
+          reject(error);
+        }
+      });
+    }
   });
 };
 

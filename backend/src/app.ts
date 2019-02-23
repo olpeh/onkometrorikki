@@ -5,8 +5,9 @@ const route = require('koa-route');
 const cacheControl = require('koa-cache-control');
 
 module.exports = {
-  setUpApp: (redisClient, port, cacheTtlSeconds, cacheKey) => {
+  setUpApp: (redisClient, port, cacheTtlSeconds, cacheKey, hsl) => {
     console.log('Starting app...', { port, cacheTtlSeconds });
+
     const app = new koa();
     app.use(cors());
     app.use(bodyParser());
