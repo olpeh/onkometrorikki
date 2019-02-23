@@ -1,4 +1,4 @@
-module Status exposing (Status(..), StatusRequest(..), get, requestHandler)
+module Status exposing (Status(..), StatusRequest(..), TranslatedReason, get, requestHandler)
 
 import Http
 import Json.Decode as JD exposing (Decoder)
@@ -24,16 +24,22 @@ type Status
       --NOTE: Presumably "List String" is NonEmpty? Or could it be empty?
       -- Could also consider a special case for empty reasons,
       -- such as "Reason not known", and even encode that in the type
-    | Broken (List String)
+    | Broken (List (List TranslatedReason))
 
 
 
 -- JSON
 
 
+type alias TranslatedReason =
+    { text : String
+    , language : String
+    }
+
+
 type alias StatusRequestDTO =
     { broken : Bool
-    , reasons : List String
+    , reasons : List (List TranslatedReason)
     }
 
 
@@ -54,9 +60,17 @@ requestDecoder =
     (JD.succeed
         StatusRequestDTO
         |> JP.required "broken" JD.bool
-        |> JP.required "reasons" (JD.list JD.string)
+        |> JP.required "reasons" (JD.list (JD.list translatedReasonDecoder))
     )
         |> JD.map dtoToStatusRequest
+
+
+translatedReasonDecoder : Decoder TranslatedReason
+translatedReasonDecoder =
+    JD.succeed
+        TranslatedReason
+        |> JP.required "text" JD.string
+        |> JP.required "language" JD.string
 
 
 {-| Wrap the boolean flags into a nice StatusRequest

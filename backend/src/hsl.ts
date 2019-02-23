@@ -108,10 +108,9 @@ export const createResponse = (feed): Status => {
           thisAlertForBrokenMetro &&
           entity.alert.description_text &&
           entity.alert.description_text.translation &&
-          entity.alert.description_text.translation.length > 0 &&
-          entity.alert.description_text.translation[0].text
+          entity.alert.description_text.translation.length > 0
         ) {
-          reasons.push(entity.alert.description_text.translation[0].text);
+          reasons.push(entity.alert.description_text.translation);
         }
       }
     });
