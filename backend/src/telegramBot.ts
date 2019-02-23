@@ -1,10 +1,8 @@
 const Telegraf = require('telegraf');
 const Extra = require('telegraf/extra');
 const Markup = require('telegraf/markup');
-require('dotenv').config();
 
-function setup(redisClient, cacheKey) {
-  const botToken = process.env.BOT_TOKEN;
+const setupTelegramBot = (botToken, redisClient, cacheKey) => {
   console.log('Setting up telegram bot', cacheKey, botToken);
 
   const keyboard = Markup.inlineKeyboard([
@@ -56,8 +54,8 @@ function setup(redisClient, cacheKey) {
   } else {
     console.warn('Telegram bot token was missing... ignoring');
   }
-}
+};
 
 module.exports = {
-  setup: setup
+  setupTelegramBot
 };
