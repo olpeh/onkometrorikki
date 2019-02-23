@@ -131,7 +131,7 @@ view model =
                     [ tText PageTitle ]
                 , div
                     [ class "status" ]
-                    [ viewStatusRequest t model.statusRequest model.lastUpdated model.zone ]
+                    [ viewStatusRequest model.language model.statusRequest model.lastUpdated model.zone ]
                 ]
             , div [ class "actions" ]
                 [ viewRefreshButton t model.statusRequest model.theme
@@ -143,9 +143,12 @@ view model =
         ]
 
 
-viewStatusRequest : T -> StatusRequest -> Time.Posix -> Time.Zone -> Html msg
-viewStatusRequest t statusRequest lastUpdated timeZone =
+viewStatusRequest : Translations.Language -> StatusRequest -> Time.Posix -> Time.Zone -> Html msg
+viewStatusRequest lang statusRequest lastUpdated timeZone =
     let
+        t =
+            translate lang
+
         tText =
             text << t
     in
@@ -160,29 +163,29 @@ viewStatusRequest t statusRequest lastUpdated timeZone =
             span [] [ tText RefreshingText ]
 
         Success status ->
-            viewStatus t status lastUpdated timeZone
+            viewStatus lang status lastUpdated timeZone
 
         Error error ->
             viewError t error
 
 
-viewStatus : T -> Status -> Time.Posix -> Time.Zone -> Html msg
-viewStatus t status lastUpdated timeZone =
+viewStatus : Translations.Language -> Status -> Time.Posix -> Time.Zone -> Html msg
+viewStatus lang status lastUpdated timeZone =
     let
-        tText =
-            text << t
+        t =
+            translate lang
     in
     case status of
         Working ->
             div []
-                [ h2 [] [ tText WorkingText ]
+                [ h2 [] [ text (t WorkingText) ]
                 , viewLastUpdated t lastUpdated timeZone
                 ]
 
         Broken reasons ->
             div []
-                [ h2 [ class "broken" ] [ tText BrokenText ]
-                , viewReasons reasons
+                [ h2 [ class "broken" ] [ text (t BrokenText) ]
+                , viewReasons lang reasons
                 , viewLastUpdated t lastUpdated timeZone
                 ]
 
@@ -232,8 +235,8 @@ viewError t err =
             tText ErrorBadPayload
 
 
-viewReasons : List (List Status.TranslatedReason) -> Html msg
-viewReasons reasons =
+viewReasons : Translations.Language -> List (List Status.TranslatedReason) -> Html msg
+viewReasons lang reasons =
     -- Handle empty reasons by not adding the ul, semantically.
     -- Could also consider a special case for empty reasons,
     -- such as "Reason not known", and even encode that in the type
@@ -243,19 +246,16 @@ viewReasons reasons =
 
         rs ->
             rs
-                |> List.map (\reason -> List.head reason)
-                |> List.map viewReason
-                |> ul [ class "reasons" ]
+                |> List.map (\reason -> viewReason lang reason)
+                |> div []
 
 
-viewReason : Maybe Status.TranslatedReason -> Html msg
-viewReason reason =
-    case reason of
-        Just r ->
-            li [] [ text r.text ]
-
-        _ ->
-            li [] [ text "Tuntematon virhe" ]
+viewReason : Translations.Language -> List Status.TranslatedReason -> Html msg
+viewReason lang reasons =
+    reasons
+        |> List.filter (\reason -> reason.language == String.toLower (languageToString lang))
+        |> List.map (\reason -> li [] [ text reason.text ])
+        |> ul [ class "reasons" ]
 
 
 viewRefreshButton : T -> StatusRequest -> Theme -> Html Msg
