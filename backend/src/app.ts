@@ -58,7 +58,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
   );
 
   app.use(
-    route.get('/isitbroken', async ctx => {
+    route.get('/status', async ctx => {
       try {
         await new Promise(resolve => {
           const failIfBroken = ctx.request.query.failIfBroken || undefined;
