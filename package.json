@@ -4,7 +4,7 @@
   "description": "Check if the metro in Helsinki area is broken at the moment",
   "scripts": {
     "start": "npm run backend",
-    "dev": "ELM_APP_API_URL=http://localhost:4000 npm-run-all --parallel backend frontend",
+    "dev": "NODE_ENV=development ELM_APP_API_URL=http://localhost:4000 npm-run-all --parallel backend frontend",
     "frontend": "elm-app start",
     "backend": "ts-node ./backend/index.ts",
     "build": "NODE_ENV=production elm-app build",

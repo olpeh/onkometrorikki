@@ -4,6 +4,46 @@ const bodyParser = require('koa-bodyparser');
 const route = require('koa-route');
 const cacheControl = require('koa-cache-control');
 
+const respondFromHSL = async (
+  hsl,
+  ctx,
+  resolve,
+  failIfBroken,
+  redisClient,
+  cacheKey,
+  cacheTtlSeconds
+) =>
+  await hsl
+    .fetchFeed()
+    .then(async feed => {
+      const dataToRespondWith = hsl.createResponse(feed, null);
+
+      if (redisClient) {
+        await redisClient.setex(
+          cacheKey,
+          cacheTtlSeconds,
+          JSON.stringify(dataToRespondWith)
+        );
+      }
+
+      if (failIfBroken && dataToRespondWith.broken) {
+        ctx.response.statusCode = 500;
+        resolve();
+      } else {
+        ctx.response.statusCode = 200;
+        ctx.response.body = dataToRespondWith;
+        resolve();
+      }
+    })
+    .catch(e => {
+      console.log('Error in fetching data');
+      console.error(e);
+      const dataToRespondWith = hsl.createResponse(null, e);
+      console.log('Error, going to respond with', dataToRespondWith);
+      ctx.response.statusCode = 500;
+      ctx.response.body = dataToRespondWith;
+    });
+
 module.exports = {
   setUpApp: (redisClient, port, cacheTtlSeconds, cacheKey, hsl) => {
     console.log('Starting app...', { port, cacheTtlSeconds });
@@ -23,45 +63,37 @@ module.exports = {
         try {
           await new Promise(resolve => {
             const failIfBroken = ctx.request.query.failIfBroken || undefined;
-            redisClient.get(cacheKey, async (error, result) => {
-              if (result && !failIfBroken) {
-                console.log('Response was served from the cache');
-                ctx.response.statusCode = 200;
-                ctx.response.body = JSON.parse(result);
-                resolve();
-              } else {
-                await hsl
-                  .fetchFeed()
-                  .then(async feed => {
-                    const dataToRespondWith = hsl.createResponse(feed, null);
-                    await redisClient.setex(
-                      cacheKey,
-                      cacheTtlSeconds,
-                      JSON.stringify(dataToRespondWith)
-                    );
-
-                    if (failIfBroken && dataToRespondWith.broken) {
-                      ctx.response.statusCode = 500;
-                      resolve();
-                    } else {
-                      ctx.response.statusCode = 200;
-                      ctx.response.body = dataToRespondWith;
-                      resolve();
-                    }
-                  })
-                  .catch(e => {
-                    console.log('Error in fetching data');
-                    console.error(e);
-                    const dataToRespondWith = hsl.createResponse(null, e);
-                    console.log(
-                      'Error, going to respond with',
-                      dataToRespondWith
-                    );
-                    ctx.response.statusCode = 500;
-                    ctx.response.body = dataToRespondWith;
-                  });
-              }
-            });
+            if (redisClient) {
+              redisClient.get(cacheKey, async (error, result) => {
+                if (result && !failIfBroken) {
+                  console.log('Response was served from the cache');
+                  ctx.response.statusCode = 200;
+                  ctx.response.body = JSON.parse(result);
+                  resolve();
+                } else {
+                  await respondFromHSL(
+                    hsl,
+                    ctx,
+                    resolve,
+                    failIfBroken,
+                    redisClient,
+                    cacheKey,
+                    cacheTtlSeconds
+                  );
+                }
+              });
+            } else {
+              console.log('Redis unavailable, responding with data from HSL');
+              respondFromHSL(
+                hsl,
+                ctx,
+                resolve,
+                failIfBroken,
+                redisClient,
+                cacheKey,
+                cacheTtlSeconds
+              );
+            }
           });
         } catch (e) {
           console.log('Error');

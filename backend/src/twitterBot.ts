@@ -51,43 +51,55 @@ const tweetNow = async (text, brokenNow) => {
   }
 };
 
-const saveBrokenStatus = async brokenNow =>
-  redisClient.setex(
-    PREVIOUSLY_BROKEN_KEY,
-    brokenStatusCacheTtlSeconds,
-    brokenNow
-  );
+const saveBrokenStatus = async brokenNow => {
+  if (redisClient) {
+    return redisClient.setex(
+      PREVIOUSLY_BROKEN_KEY,
+      brokenStatusCacheTtlSeconds,
+      brokenNow
+    );
+  }
+};
 
 const getPreviousBrokenStatus = async (): Promise<boolean> =>
   new Promise((resolve, reject) => {
-    redisClient.get(PREVIOUSLY_BROKEN_KEY, (error, result) => {
-      console.log(getPreviousBrokenStatus, { result, error });
-      if (error) {
-        resolve(false);
-      }
-      resolve(result === 'true');
-    });
+    if (redisClient) {
+      redisClient.get(PREVIOUSLY_BROKEN_KEY, (error, result) => {
+        console.log(getPreviousBrokenStatus, { result, error });
+        if (error) {
+          resolve(false);
+        }
+        resolve(result === 'true');
+      });
+    }
+    resolve(false);
   });
 
-const savePreviousTweetTime = async previousTweetTime =>
-  redisClient.setex(
-    PREVIOUS_TWEET_TIME_KEY,
-    brokenStatusCacheTtlSeconds,
-    previousTweetTime.toString()
-  );
+const savePreviousTweetTime = async previousTweetTime => {
+  if (redisClient) {
+    return redisClient.setex(
+      PREVIOUS_TWEET_TIME_KEY,
+      brokenStatusCacheTtlSeconds,
+      previousTweetTime.toString()
+    );
+  }
+};
 
 const getPreviousTweetTime = async (): Promise<Date | null> =>
   new Promise((resolve, reject) => {
-    redisClient.get(PREVIOUS_TWEET_TIME_KEY, (error, result) => {
-      if (error) {
-        resolve(null);
-      }
+    if (redisClient) {
+      redisClient.get(PREVIOUS_TWEET_TIME_KEY, (error, result) => {
+        if (error) {
+          resolve(null);
+        }
 
-      if (result !== null) {
-        resolve(new Date(result));
-      }
-      resolve(null);
-    });
+        if (result !== null) {
+          resolve(new Date(result));
+        }
+        resolve(null);
+      });
+    }
+    resolve(null);
   });
 
 const shouldTweetNow = async brokenNow =>
@@ -118,13 +130,15 @@ const tweetIfBroken = async () => {
     .then(async feed => {
       const dataToRespondWith = hslHelper.createResponse(feed, null);
 
-      // Update redis cache with the response
-      redisClient.setex(
-        cacheKey,
-        cacheTtl,
-        JSON.stringify(dataToRespondWith),
-        () => console.log('Bot successfully updated cache')
-      );
+      if (redisClient) {
+        // Update redis cache with the response
+        redisClient.setex(
+          cacheKey,
+          cacheTtl,
+          JSON.stringify(dataToRespondWith),
+          () => console.log('Bot successfully updated cache')
+        );
+      }
 
       const brokenNow = dataToRespondWith.broken;
       const shouldTweet = await shouldTweetNow(brokenNow);
