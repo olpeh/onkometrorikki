@@ -2,7 +2,7 @@ const Telegraf = require('telegraf');
 const Extra = require('telegraf/extra');
 const Markup = require('telegraf/markup');
 
-const setupTelegramBot = (botToken, redisClient, cacheKey) => {
+export const setupTelegramBot = (botToken, redisClient, cacheKey) => {
   console.log('Setting up telegram bot', cacheKey, botToken);
 
   const keyboard = Markup.inlineKeyboard([
@@ -54,8 +54,4 @@ const setupTelegramBot = (botToken, redisClient, cacheKey) => {
   } else {
     console.warn('Telegram bot token was missing... ignoring');
   }
-};
-
-module.exports = {
-  setupTelegramBot
 };

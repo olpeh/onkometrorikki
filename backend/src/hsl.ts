@@ -41,10 +41,10 @@ Value
 const METRO_ROUTE_TYPE_OLD = 1;
 const METRO_ROUTE_TYPE_NEW = 400;
 
-const fetchFeed = async () => {
+export const fetchFeed = async () => {
   console.log('Going to fetch from the external API');
   return new Promise((resolve, reject) => {
-    if (debugBrokenRandomly && Math.random() >= 0.3) {
+    if (debugBrokenRandomly && Math.random() >= 0.5) {
       console.log(`******************** Debug RANDOMLY BREAK mode on!*************************
       Servinc alerts randomly from test binary feed and randomly from real feed!`);
       const fs = require('fs');
@@ -75,9 +75,8 @@ const fetchFeed = async () => {
   });
 };
 
-const createResponse = (feed, error): Status => {
+export const createResponse = (feed): Status => {
   const defaultResponse: Status = {
-    success: true,
     broken: false,
     reasons: []
   };
@@ -86,13 +85,7 @@ const createResponse = (feed, error): Status => {
     console.log('No feed was provided...');
     return {
       ...defaultResponse,
-      success: false,
-      reasons: [
-        ...defaultResponse.reasons,
-        'Failed to fetch the feed.',
-        'Failed to fetch the feed. The Metro might work or might not.'
-      ],
-      error
+      reasons: ['Failed to fetch the feed. The Metro might work or might not.']
     };
   } else {
     let brokenCount = 0;
@@ -129,9 +122,4 @@ const createResponse = (feed, error): Status => {
       reasons: [...defaultResponse.reasons, ...reasons]
     };
   }
-};
-
-module.exports = {
-  fetchFeed,
-  createResponse
 };

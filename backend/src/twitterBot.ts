@@ -1,25 +1,24 @@
 const Twit = require('twit');
 
-const config = require('./config');
+import { config } from './config';
+import { fetchFeed, createResponse } from './hsl';
 
 const PREVIOUSLY_BROKEN_KEY = 'previously-broken';
 const PREVIOUS_TWEET_TIME_KEY = 'previous-tweet-time';
 const brokenStatusCacheTtlSeconds =
   process.env.STATUS_CACHE_TTL_SECONDS || 60 * 60 * 24;
 
-let redisClient, bot, cacheKey, cacheTtl, hslHelper;
+let redisClient, bot, cacheKey, cacheTtl;
 
-const setupTwitterBot = (
+export const setupTwitterBot = (
   redisInstance,
   cacheKeyParam,
-  cacheTtlSecondsParam,
-  hsl
+  cacheTtlSecondsParam
 ) => {
   redisClient = redisInstance;
   bot = new Twit(config.twitterKeys);
   cacheKey = cacheKeyParam;
   cacheTtl = cacheTtlSecondsParam;
-  hslHelper = hsl;
   console.log('Bot starting...');
   tweetIfBroken();
   setInterval(tweetIfBroken, config.twitterConfig.check);
@@ -125,10 +124,9 @@ const shouldTweetNow = async brokenNow =>
 
 const tweetIfBroken = async () => {
   console.log('Checking if broken and tweeting maybe');
-  await hslHelper
-    .fetchFeed()
+  await fetchFeed()
     .then(async feed => {
-      const dataToRespondWith = hslHelper.createResponse(feed, null);
+      const dataToRespondWith = createResponse(feed);
 
       if (redisClient) {
         // Update redis cache with the response
@@ -165,5 +163,3 @@ Katso: https://onkometrorikki.fi #länsimetro #hsl #metrohelsinki`;
       console.error(e);
     });
 };
-
-module.exports = { setupTwitterBot };
