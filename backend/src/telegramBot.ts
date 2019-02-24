@@ -18,7 +18,7 @@ export const setupTelegramBot = (botToken, redisClient, cacheKey) => {
         const question = 'Onko metro rikki? – ';
         if (status.broken) {
           reply(
-            `${question} Kyllä!\n${status.reasons.join(',')}`,
+            `${question} Kyllä!\n${status[0][0].text}`,
             Extra.markup(keyboard)
           );
         } else {
