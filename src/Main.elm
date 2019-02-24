@@ -178,13 +178,13 @@ viewStatus lang status lastUpdated timeZone =
     case status of
         Working ->
             div []
-                [ h2 [] [ text (t WorkingText) ]
+                [ h2 [] [ text (t WorkingText ++ "!") ]
                 , viewLastUpdated t lastUpdated timeZone
                 ]
 
         Broken reasons ->
             div []
-                [ h2 [ class "broken" ] [ text (t BrokenText) ]
+                [ h2 [ class "broken" ] [ text (t BrokenText ++ "!") ]
                 , viewReasons lang reasons
                 , viewLastUpdated t lastUpdated timeZone
                 ]
