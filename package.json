@@ -12,6 +12,7 @@
     "deploy:now": "now --public ./build --local-config=../now.json && now alias --local-config=./now.json",
     "release": "npm run build && npm run deploy:now",
     "test": "elm-format --validate . && elm-test",
+    "prepush": "npm test",
     "format": "prettier --write 'src/**/*.{ts,js,css,md,html}' 'backend/**/*.{ts,js,css,md,html}' 'public/**/*.{ts,js,css,md,html}'",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
