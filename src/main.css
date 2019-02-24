@@ -82,6 +82,36 @@ body {
   padding: 1rem;
 }
 
+.language-select {
+  margin-bottom: 1rem;
+  line-height: 1rem;
+  font-size: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.language-select button.is-current {
+  border-color: white;
+  font-weight: 600;
+}
+
+.language-select button {
+  border-radius: 0;
+  border: 0 solid transparent;
+  border-bottom-width: 1px;
+  background: transparent;
+  padding: 1rem;
+  color: var(--color-fg);
+  background-color: var(--color-bg);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.language-select button + button {
+  margin-left: 0.5rem;
+}
+
 h1 {
   font-size: 64px;
   color: var(--color-accent);

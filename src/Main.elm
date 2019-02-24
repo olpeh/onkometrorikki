@@ -127,7 +127,8 @@ view model =
     div [ class ("container color-fg " ++ Theme.toClass model.theme) ]
         [ main_ [ class "main" ]
             [ div []
-                [ h1 []
+                [ languageSelect model.language
+                , h1 []
                     [ tText PageTitle ]
                 , div
                     [ class "status" ]
@@ -136,7 +137,6 @@ view model =
             , div [ class "actions" ]
                 [ viewRefreshButton t model.statusRequest model.theme
                 , viewThemeToggle t model.theme
-                , languageSelect model.language
                 ]
             ]
         , footer [] [ viewFooter ]
@@ -349,10 +349,10 @@ languageSelect currentLanguage =
             , Html.Events.onClick (SetLanguage lang)
             , class
                 (if currentLanguage == lang then
-                    "is-current"
+                    "button-reset enhanced-outline is-current"
 
                  else
-                    ""
+                    "button-reset enhanced-outline"
                 )
             ]
     in
