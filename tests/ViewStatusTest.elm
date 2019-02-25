@@ -20,17 +20,27 @@ suite =
                 |> Query.has
                     (case status of
                         Working ->
-                            [ Selector.text "Ei" ]
+                            [ Selector.text "Ei!" ]
 
                         Broken reasons ->
-                            [ Selector.text "Kyllä" ]
+                            [ Selector.text "Kyllä!" ]
                     )
+
+
+brokenStatus : List String -> Status
+brokenStatus str =
+    Broken
+        [ [ { text = Maybe.withDefault "" (List.head str)
+            , language = "fi"
+            }
+          ]
+        ]
 
 
 statusFuzzer : Fuzzer Status
 statusFuzzer =
     Fuzz.oneOf
         [ Fuzz.list Fuzz.string
-            |> Fuzz.map Broken
+            |> Fuzz.map brokenStatus
         , Fuzz.constant Working
         ]
