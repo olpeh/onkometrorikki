@@ -13,13 +13,9 @@ import Translations exposing (..)
 
 suite : Test
 suite =
-    let
-        t =
-            translate Translations.Finnish
-    in
-    fuzz statusFuzzer "viewStatus should show correct option" <|
+    fuzz statusFuzzer "viewStatus should show correct option for Finnish" <|
         \status ->
-            Main.viewStatus t status (Time.millisToPosix 0) Time.utc
+            Main.viewStatus Translations.Finnish status (Time.millisToPosix 0) Time.utc
                 |> Query.fromHtml
                 |> Query.find [ Selector.tag "h2" ]
                 |> Query.has
