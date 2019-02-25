@@ -13,14 +13,15 @@ export const setupTelegramBot = (botToken, redisClient, cacheKey) => {
   const replyWithStatus = reply =>
     redisClient.get(cacheKey, async (error, result) => {
       if (result) {
-        console.log('Telegram bot is serving the response from cache');
+        console.log('Telegram bot is serving the response from cache', {
+          error,
+          result
+        });
         const status = JSON.parse(result);
         const question = 'Onko metro rikki? – ';
         if (status.broken) {
-          reply(
-            `${question} Kyllä!\n${status.reasons.join(',')}`,
-            Extra.markup(keyboard)
-          );
+          const finnishReason = status.reasons[0][0].text;
+          reply(`${question} Kyllä!\n${finnishReason}`, Extra.markup(keyboard));
         } else {
           reply(`${question} Ei!`, Extra.markup(keyboard));
         }

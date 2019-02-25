@@ -1,0 +1,19 @@
+{
+  "broken": true,
+  "reasons": [
+    [
+      {
+        "text": "Metro M1 ja M2, epäsäännölliset vuorovälit. Syy: henkilövahinko.",
+        "language": "fi"
+      },
+      {
+        "text": "Metro M1 och M2, oregelbundna turer. Orsak: personskada.",
+        "language": "sv"
+      },
+      {
+        "text": "Metro M1 and M2, irregular intervals. Cause: casualty.",
+        "language": "en"
+      }
+    ]
+  ]
+}

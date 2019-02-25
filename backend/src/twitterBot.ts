@@ -30,7 +30,7 @@ const tweetNow = async (text, brokenNow) => {
   };
 
   if (config.twitterConfig.enabled) {
-    console.log('Going to try to tweet: ', text);
+    console.log('Tweeting enabled – going to try to tweet: ', text);
     bot.post('statuses/update', tweet, (err, data, response) => {
       if (err) {
         console.error('ERROR in tweeting!', err);
@@ -57,6 +57,8 @@ const saveBrokenStatus = async brokenNow => {
       brokenStatusCacheTtlSeconds,
       brokenNow
     );
+  } else {
+    console.warn('Redis unavailable, unable to saveBrokenStatus!');
   }
 };
 
@@ -70,8 +72,10 @@ const getPreviousBrokenStatus = async (): Promise<boolean> =>
         }
         resolve(result === 'true');
       });
+    } else {
+      console.warn('Redis unavailable, unable getPreviousBrokenStatus!');
+      resolve(false);
     }
-    resolve(false);
   });
 
 const savePreviousTweetTime = async previousTweetTime => {
@@ -81,6 +85,8 @@ const savePreviousTweetTime = async previousTweetTime => {
       brokenStatusCacheTtlSeconds,
       previousTweetTime.toString()
     );
+  } else {
+    console.warn('Redis unavailable, unable savePreviousTweetTime!');
   }
 };
 
@@ -97,8 +103,10 @@ const getPreviousTweetTime = async (): Promise<Date | null> =>
         }
         resolve(null);
       });
+    } else {
+      console.warn('Redis unavailable, unable getPreviousTweetTime!');
+      resolve(null);
     }
-    resolve(null);
   });
 
 const shouldTweetNow = async brokenNow =>
@@ -146,7 +154,7 @@ const tweetIfBroken = async () => {
         console.log('Decided to tweet at', new Date());
         if (brokenNow) {
           const tweetText = `JUURI NYT – Metrossa häiriö:
-${dataToRespondWith.reasons.join('')}
+${(dataToRespondWith.reasons[0][0] as any).text}
 Katso: https://onkometrorikki.fi #länsimetro #hsl #metrohelsinki`;
           tweetNow(tweetText, brokenNow);
         } else {

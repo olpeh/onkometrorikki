@@ -16,6 +16,6 @@ export const config = {
     minInterval: parseInt(process.env.TWITTER_MIN_INTERVAL_SECONDS) * 1000,
     searchCount: process.env.TWITTER_SEARCH_COUNT,
     randomReply: process.env.RANDOM_REPLY,
-    enabled: process.env.TWEETING_ENABLED || false
+    enabled: process.env.TWEETING_ENABLED == 'true' || false
   }
 };
