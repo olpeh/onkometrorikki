@@ -1,0 +1,423 @@
+{
+  "header": {
+    "gtfs_realtime_version": "1.0",
+    "incrementality": 0,
+    "timestamp": { "low": 1550473872, "high": 0, "unsigned": true }
+  },
+  "entity": [
+    {
+      "id": "81692",
+      "is_deleted": false,
+      "trip_update": null,
+      "vehicle": null,
+      "alert": {
+        "active_period": [
+          {
+            "start": { "low": 1550467987, "high": 0, "unsigned": true },
+            "end": { "low": 1550475600, "high": 0, "unsigned": true }
+          }
+        ],
+        "informed_entity": [
+          {
+            "agency_id": "HSL",
+            "route_id": "31M2",
+            "route_type": 1,
+            "trip": {
+              "trip_id": null,
+              "route_id": "31M2",
+              "direction_id": 1,
+              "start_time": null,
+              "start_date": null,
+              "schedule_relationship": null
+            },
+            "stop_id": null
+          },
+          {
+            "agency_id": "HSL",
+            "route_id": "31M2",
+            "route_type": 1,
+            "trip": {
+              "trip_id": null,
+              "route_id": "31M2",
+              "direction_id": 0,
+              "start_time": null,
+              "start_date": null,
+              "schedule_relationship": null
+            },
+            "stop_id": null
+          }
+        ],
+        "cause": 1,
+        "effect": 8,
+        "url": null,
+        "header_text": null,
+        "description_text": {
+          "translation": [
+            {
+              "text": "Metro M2. Arvioitu kesto: 07:28 - 09:40. Tapiola klo 8:15 ja 9:40 lähdöt peruttu. Mellunmäki klo 8.57 lähtö peruttu. Syy: henkilöstövaje.",
+              "language": "fi"
+            },
+            {
+              "text": "Metro M2. Beräknad tid: 07:28 - 09:40.",
+              "language": "sv"
+            },
+            {
+              "text": "Metro M2. Estimated time: 07:28 - 09:40.",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "81694",
+      "is_deleted": false,
+      "trip_update": null,
+      "vehicle": null,
+      "alert": {
+        "active_period": [
+          {
+            "start": { "low": 1550470440, "high": 0, "unsigned": true },
+            "end": { "low": 1550475600, "high": 0, "unsigned": true }
+          }
+        ],
+        "informed_entity": [
+          {
+            "agency_id": "HSL",
+            "route_id": "4332",
+            "route_type": 3,
+            "trip": {
+              "trip_id": null,
+              "route_id": "4332",
+              "direction_id": 1,
+              "start_time": "08:40:00",
+              "start_date": "20190218",
+              "schedule_relationship": null
+            },
+            "stop_id": null
+          }
+        ],
+        "cause": 1,
+        "effect": 1,
+        "url": null,
+        "header_text": null,
+        "description_text": {
+          "translation": [
+            {
+              "text": "Seutuliikenteen linja 332 Askistosta, klo 08:40 peruttu. Syy: henkilöstövaje.",
+              "language": "fi"
+            },
+            {
+              "text": "Regiontrafik, linje 332 från Askis, kl. 08:40 inställd. Orsak: personalbrist.",
+              "language": "sv"
+            },
+            {
+              "text": "Regional traffic, line 332 from Askisto, 08:40 cancelled. Cause: shortage of personnel.",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "trip_update:81694",
+      "is_deleted": false,
+      "trip_update": {
+        "trip": {
+          "trip_id": null,
+          "route_id": "4332",
+          "direction_id": 1,
+          "start_time": "08:40:00",
+          "start_date": "20190218",
+          "schedule_relationship": 3
+        },
+        "vehicle": null,
+        "stop_time_update": [],
+        "timestamp": null,
+        "delay": null
+      },
+      "vehicle": null,
+      "alert": null
+    },
+    {
+      "id": "81695",
+      "is_deleted": false,
+      "trip_update": null,
+      "vehicle": null,
+      "alert": {
+        "active_period": [
+          {
+            "start": { "low": 1550473320, "high": 0, "unsigned": true },
+            "end": { "low": 1550478420, "high": 0, "unsigned": true }
+          }
+        ],
+        "informed_entity": [
+          {
+            "agency_id": "HSL",
+            "route_id": "4713",
+            "route_type": 3,
+            "trip": {
+              "trip_id": null,
+              "route_id": "4713",
+              "direction_id": 0,
+              "start_time": "09:27:00",
+              "start_date": "20190218",
+              "schedule_relationship": null
+            },
+            "stop_id": null
+          }
+        ],
+        "cause": 1,
+        "effect": 1,
+        "url": null,
+        "header_text": null,
+        "description_text": {
+          "translation": [
+            {
+              "text": "Lähibussilinja 713 Kuninkaanmäestä, klo 09:27 peruttu. Syy: henkilöstövaje.",
+              "language": "fi"
+            },
+            {
+              "text": "Närbusslinje 713 från Kungsbacka, kl. 09:27 inställd. Orsak: personalbrist.",
+              "language": "sv"
+            },
+            {
+              "text": "Neighborhood route 713 from Kuninkaanmäki, 09:27 cancelled. Cause: shortage of personnel.",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "trip_update:81695",
+      "is_deleted": false,
+      "trip_update": {
+        "trip": {
+          "trip_id": null,
+          "route_id": "4713",
+          "direction_id": 0,
+          "start_time": "09:27:00",
+          "start_date": "20190218",
+          "schedule_relationship": 3
+        },
+        "vehicle": null,
+        "stop_time_update": [],
+        "timestamp": null,
+        "delay": null
+      },
+      "vehicle": null,
+      "alert": null
+    },
+    {
+      "id": "81696",
+      "is_deleted": false,
+      "trip_update": null,
+      "vehicle": null,
+      "alert": {
+        "active_period": [
+          {
+            "start": { "low": 1550473440, "high": 0, "unsigned": true },
+            "end": { "low": 1550477100, "high": 0, "unsigned": true }
+          }
+        ],
+        "informed_entity": [
+          {
+            "agency_id": "HSL",
+            "route_id": "4713",
+            "route_type": 3,
+            "trip": {
+              "trip_id": null,
+              "route_id": "4713",
+              "direction_id": 1,
+              "start_time": "09:05:00",
+              "start_date": "20190218",
+              "schedule_relationship": null
+            },
+            "stop_id": null
+          }
+        ],
+        "cause": 1,
+        "effect": 1,
+        "url": null,
+        "header_text": null,
+        "description_text": {
+          "translation": [
+            {
+              "text": "Lähibussilinja 713 Vaaralasta, klo 09:05 peruttu. Syy: henkilöstövaje.",
+              "language": "fi"
+            },
+            {
+              "text": "Närbusslinje 713 från Fagersta, kl. 09:05 inställd. Orsak: personalbrist.",
+              "language": "sv"
+            },
+            {
+              "text": "Neighborhood route 713 from Vaarala, 09:05 cancelled. Cause: shortage of personnel.",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "trip_update:81696",
+      "is_deleted": false,
+      "trip_update": {
+        "trip": {
+          "trip_id": null,
+          "route_id": "4713",
+          "direction_id": 1,
+          "start_time": "09:05:00",
+          "start_date": "20190218",
+          "schedule_relationship": 3
+        },
+        "vehicle": null,
+        "stop_time_update": [],
+        "timestamp": null,
+        "delay": null
+      },
+      "vehicle": null,
+      "alert": null
+    },
+    {
+      "id": "81697",
+      "is_deleted": false,
+      "trip_update": null,
+      "vehicle": null,
+      "alert": {
+        "active_period": [
+          {
+            "start": { "low": 1550473440, "high": 0, "unsigned": true },
+            "end": { "low": 1550480700, "high": 0, "unsigned": true }
+          }
+        ],
+        "informed_entity": [
+          {
+            "agency_id": "HSL",
+            "route_id": "4713",
+            "route_type": 3,
+            "trip": {
+              "trip_id": null,
+              "route_id": "4713",
+              "direction_id": 1,
+              "start_time": "10:05:00",
+              "start_date": "20190218",
+              "schedule_relationship": null
+            },
+            "stop_id": null
+          }
+        ],
+        "cause": 1,
+        "effect": 1,
+        "url": null,
+        "header_text": null,
+        "description_text": {
+          "translation": [
+            {
+              "text": "Lähibussilinja 713 Vaaralasta, klo 10:05 peruttu. Syy: henkilöstövaje.",
+              "language": "fi"
+            },
+            {
+              "text": "Närbusslinje 713 från Fagersta, kl. 10:05 inställd. Orsak: personalbrist.",
+              "language": "sv"
+            },
+            {
+              "text": "Neighborhood route 713 from Vaarala, 10:05 cancelled. Cause: shortage of personnel.",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "trip_update:81697",
+      "is_deleted": false,
+      "trip_update": {
+        "trip": {
+          "trip_id": null,
+          "route_id": "4713",
+          "direction_id": 1,
+          "start_time": "10:05:00",
+          "start_date": "20190218",
+          "schedule_relationship": 3
+        },
+        "vehicle": null,
+        "stop_time_update": [],
+        "timestamp": null,
+        "delay": null
+      },
+      "vehicle": null,
+      "alert": null
+    },
+    {
+      "id": "81698",
+      "is_deleted": false,
+      "trip_update": null,
+      "vehicle": null,
+      "alert": {
+        "active_period": [
+          {
+            "start": { "low": 1550473500, "high": 0, "unsigned": true },
+            "end": { "low": 1550482020, "high": 0, "unsigned": true }
+          }
+        ],
+        "informed_entity": [
+          {
+            "agency_id": "HSL",
+            "route_id": "4713",
+            "route_type": 3,
+            "trip": {
+              "trip_id": null,
+              "route_id": "4713",
+              "direction_id": 0,
+              "start_time": "10:27:00",
+              "start_date": "20190218",
+              "schedule_relationship": null
+            },
+            "stop_id": null
+          }
+        ],
+        "cause": 1,
+        "effect": 1,
+        "url": null,
+        "header_text": null,
+        "description_text": {
+          "translation": [
+            {
+              "text": "Lähibussilinja 713 Kuninkaanmäestä, klo 10:27 peruttu. Syy: henkilöstövaje.",
+              "language": "fi"
+            },
+            {
+              "text": "Närbusslinje 713 från Kungsbacka, kl. 10:27 inställd. Orsak: personalbrist.",
+              "language": "sv"
+            },
+            {
+              "text": "Neighborhood route 713 from Kuninkaanmäki, 10:27 cancelled. Cause: shortage of personnel.",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "trip_update:81698",
+      "is_deleted": false,
+      "trip_update": {
+        "trip": {
+          "trip_id": null,
+          "route_id": "4713",
+          "direction_id": 0,
+          "start_time": "10:27:00",
+          "start_date": "20190218",
+          "schedule_relationship": 3
+        },
+        "vehicle": null,
+        "stop_time_update": [],
+        "timestamp": null,
+        "delay": null
+      },
+      "vehicle": null,
+      "alert": null
+    }
+  ]
+}
