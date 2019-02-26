@@ -115,7 +115,7 @@ update msg model =
 -- VIEW
 
 
-view : Model -> Html Msg
+view : Model -> Browser.Document Msg
 view model =
     let
         t =
@@ -124,23 +124,27 @@ view model =
         tText =
             text << t
     in
-    div [ class ("container color-fg " ++ Theme.toClass model.theme) ]
-        [ main_ [ class "main" ]
-            [ div []
-                [ languageSelect model.language
-                , h1 []
-                    [ tText PageTitle ]
-                , div
-                    [ class "status" ]
-                    [ viewStatusRequest model.language model.statusRequest model.lastUpdated model.zone ]
+    { title = t PageTitle
+    , body =
+        [ div [ class ("container color-fg " ++ Theme.toClass model.theme) ]
+            [ main_ [ class "main" ]
+                [ div []
+                    [ languageSelect model.language
+                    , h1 []
+                        [ tText PageTitle ]
+                    , div
+                        [ class "status" ]
+                        [ viewStatusRequest model.language model.statusRequest model.lastUpdated model.zone ]
+                    ]
+                , div [ class "actions" ]
+                    [ viewRefreshButton t model.statusRequest model.theme
+                    , viewThemeToggle t model.theme
+                    ]
                 ]
-            , div [ class "actions" ]
-                [ viewRefreshButton t model.statusRequest model.theme
-                , viewThemeToggle t model.theme
-                ]
+            , footer [] [ viewFooter ]
             ]
-        , footer [] [ viewFooter ]
         ]
+    }
 
 
 viewStatusRequest : Translations.Language -> StatusRequest -> Time.Posix -> Time.Zone -> Html msg
@@ -386,7 +390,7 @@ subscriptions model =
 
 main : Program Config Model Msg
 main =
-    Browser.element
+    Browser.document
         { view = view
         , init = init
         , update = update
