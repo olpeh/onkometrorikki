@@ -253,7 +253,7 @@ viewReasons lang reasons =
 viewReason : Translations.Language -> List Status.TranslatedReason -> Html msg
 viewReason lang reasons =
     reasons
-        |> List.filter (\reason -> reason.language == String.toLower (languageToString lang))
+        |> List.filter (\reason -> reason.language == lang)
         |> List.map (\reason -> li [] [ text reason.text ])
         |> ul [ class "reasons" ]
 

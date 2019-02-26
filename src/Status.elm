@@ -3,6 +3,7 @@ module Status exposing (Status(..), StatusRequest(..), TranslatedReason, get, re
 import Http
 import Json.Decode as JD exposing (Decoder)
 import Json.Decode.Pipeline as JP
+import Translations
 
 
 
@@ -33,7 +34,7 @@ type Status
 
 type alias TranslatedReason =
     { text : String
-    , language : String
+    , language : Translations.Language
     }
 
 
@@ -60,6 +61,8 @@ requestDecoder =
     (JD.succeed
         StatusRequestDTO
         |> JP.required "broken" JD.bool
+        -- TODO: Rethink this, are all the languages always available?
+        -- Could this be represented as a record with fields for different languages?
         |> JP.required "reasons" (JD.list (JD.list translatedReasonDecoder))
     )
         |> JD.map dtoToStatusRequest
@@ -70,7 +73,22 @@ translatedReasonDecoder =
     JD.succeed
         TranslatedReason
         |> JP.required "text" JD.string
-        |> JP.required "language" JD.string
+        |> JP.required "language" languageDecoder
+
+
+languageDecoder : Decoder Translations.Language
+languageDecoder =
+    JD.string
+        |> JD.andThen
+            (\s ->
+                case Translations.stringToLanguage (String.toUpper s) of
+                    Just lang ->
+                        JD.succeed lang
+
+                    -- Will fail if HSL adds more languages
+                    Nothing ->
+                        JD.fail "invalid language"
+            )
 
 
 {-| Wrap the boolean flags into a nice StatusRequest
