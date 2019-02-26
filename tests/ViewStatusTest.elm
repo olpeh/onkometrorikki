@@ -32,7 +32,7 @@ brokenStatus : List String -> Status
 brokenStatus str =
     Broken
         [ [ { text = Maybe.withDefault "" (List.head str)
-            , language = "fi"
+            , language = Translations.Finnish
             }
           ]
         ]
