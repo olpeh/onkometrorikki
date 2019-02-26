@@ -63,4 +63,7 @@ function handleThemeChanged(theme, store) {
 
 app.ports.setLanguage.subscribe(function(str) {
   localStorage.setItem(LANG_KEY, str);
+  document
+    .getElementsByTagName('html')[0]
+    .setAttribute('lang', str.toLowerCase());
 });
