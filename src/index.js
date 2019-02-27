@@ -21,7 +21,7 @@ if (language === null) {
   // figure out whether the domain was for SV or EN, default to FI, though
   if (/armetronsonder/.test(hostname)) {
     language = 'SV';
-  } else if (/armetronsonder/.test(hostname)) {
+  } else if (/isthemetroborked/.test(hostname)) {
     language = 'EN';
   }
 }
