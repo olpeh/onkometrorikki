@@ -14,12 +14,20 @@ if (theme) {
   handleThemeChanged(theme, false);
 }
 
-const language = window.localStorage.getItem(LANG_KEY);
+let language = window.localStorage.getItem(LANG_KEY);
+
+if (language === null) {
+  const hostname = window.location.hostname;
+  // figure out whether the domain was for SV or EN, default to FI, though
+  if (/armetronsonder/.test(hostname)) {
+    language = 'SV';
+  } else if (/armetronsonder/.test(hostname)) {
+    language = 'EN';
+  }
+}
 
 //
 // INIT
-
-console.log(language);
 
 const app = Elm.Main.init({
   node: document.getElementById('root'),
