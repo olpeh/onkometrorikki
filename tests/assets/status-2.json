@@ -1,0 +1,33 @@
+{
+  "broken": true,
+  "reasons": [
+    [
+      {
+        "text": "Metro M1, Yksittäinen vuoro peruttu. Matinkylä - Vuosaari 05:49. Vuosaari - Matinkylä 06:35. Syy: henkilöstövaje.",
+        "language": "fi"
+      },
+      {
+        "text": "Metro M1, Enskild avgång inställd. Mattby - Nordsjö 05:49. Nordsjö - Mattby 06:35. Orsak: personalbrist.",
+        "language": "sv"
+      },
+      {
+        "text": "Metro M1, Single departure cancelled. Matinkylä - Vuosaari 05:49. Vuosaari - Matinkylä 06:35. Cause: lack of personnel.",
+        "language": "en"
+      }
+    ],
+    [
+      {
+        "text": "Metro M1, Yksittäinen vuoro peruttu. Matinkylä - Vuosaari 06:12, 07:47, 09:22. Vuosaari - Matinkylä 07:00, 08:35. Syy: henkilöstövaje.",
+        "language": "fi"
+      },
+      {
+        "text": "Metro M1, Enskild avgång inställd. Mattby - Nordsjö 06:12, 07:47, 09:22. Nordsjö - Mattby 07:00, 08:35. Orsak: personalbrist.",
+        "language": "sv"
+      },
+      {
+        "text": "Metro M1, Single departure cancelled. Matinkylä - Vuosaari 06:12, 07:47, 09:22. Vuosaari - Matinkylä 07:00, 08:35. Cause: lack of personnel.",
+        "language": "en"
+      }
+    ]
+  ]
+}
