@@ -2,10 +2,6 @@
   "name": "onkometrorikki",
   "version": "1.0.0",
   "description": "Check if the metro in Helsinki area is broken at the moment",
-  "engines": {
-    "node": ">=12.0.0",
-    "npm": ">=6.0.0"
-  },
   "scripts": {
     "start": "npm run backend",
     "dev": "NODE_ENV=development ELM_APP_API_URL=http://localhost:4000 npm-run-all --parallel backend frontend",
