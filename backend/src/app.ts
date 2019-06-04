@@ -4,7 +4,6 @@ const bodyParser = require('koa-bodyparser');
 const route = require('koa-route');
 const cacheControl = require('koa-cache-control');
 import { createResponse, fetchFeed } from './hsl';
-import { rejects } from 'assert';
 
 const respondFromHSL = async (
   ctx,
