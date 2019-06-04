@@ -138,6 +138,19 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
     })
   );
 
+  app.use(
+    route.post('/slack/actions', async ctx => {
+      const payload = ctx.request.body;
+      if (payload.type === 'url_verification') {
+        ctx.response.statusCode = 200;
+        // TODO: verify this
+        // Once you receive the event, verify the request's authenticity and
+        // then respond in plaintext with the challenge attribute value
+        ctx.response.body = payload.challenge;
+      }
+    })
+  );
+
   console.log('app listening on port ' + port);
 
   app.listen(port);
