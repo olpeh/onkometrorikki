@@ -46,7 +46,7 @@ export const fetchFeed = async () => {
   return new Promise((resolve, reject) => {
     if (debugBrokenRandomly && Math.random() >= 0.5) {
       console.log(`******************** Debug RANDOMLY BREAK mode on!*************************
-      Servinc alerts randomly from test binary feed and randomly from real feed!`);
+      Serving alerts randomly from test binary feed and randomly from real feed!`);
       const fs = require('fs');
       const path = require('path');
       var content = fs.readFileSync(
