@@ -93,7 +93,7 @@ translationSetFor : TranslationKey -> TranslationSet
 translationSetFor translationKey =
     case translationKey of
         PageTitle ->
-            { english = "Is the metro borked?"
+            { english = "Is the metro broken?"
             , finnish = "Onko metro rikki?"
             , swedish = "Är metron sönder?"
             }
