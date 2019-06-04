@@ -150,9 +150,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
           // then respond in plaintext with the challenge attribute value
           ctx.response.body = payload.challenge;
           resolve();
-        }
-
-        if (payload.type === 'app_mention') {
+        } else if (payload.type === 'app_mention') {
           if (redisClient) {
             redisClient.get(cacheKey, async (error, result) => {
               let answer = '42';
@@ -181,10 +179,12 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
               ctx.response.body = answer;
               resolve();
             });
+          } else {
+            console.warn('Redis not available, ignoring app_mention');
+            reject();
           }
         } else {
-          console.warn('Redis not available, ignoring app_mention');
-          reject();
+          console.warn('Unknown payload', { payload });
         }
       });
     })
