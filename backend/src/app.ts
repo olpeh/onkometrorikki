@@ -219,6 +219,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
         } else {
           console.warn('Unknown payload, ignoring');
         }
+        resolve();
       });
     })
   );
