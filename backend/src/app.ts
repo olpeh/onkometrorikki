@@ -153,8 +153,11 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
           ctx.response.body = payload.challenge;
           resolve();
         } else if (
-          payload.event.type === 'app_mention' ||
-          payload.event.type === 'message'
+          (payload.event.type === 'app_mention' ||
+            payload.event.type === 'message') &&
+          (typeof payload.event.subtype === 'undefined' ||
+            // Don't react to messages sent by a bot (this bot for example!)
+            (payload.event.subtype && payload.event.subtype !== 'bot_message'))
         ) {
           /*
           See https://api.slack.com/events/app_mention
@@ -193,8 +196,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
               }
               ctx.response.statusCode = 200;
               ctx.response.body = 'OK';
-              // TODO: SHOULD BE ASYNC!
-              await postSlackMessage({
+              postSlackMessage({
                 channel: payload.event.channel,
                 text: answer,
                 token: slackToken
@@ -215,7 +217,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
             resolve();
           }
         } else {
-          console.warn('Unknown payload', { payload });
+          console.warn('Unknown payload, ignoring');
         }
       });
     })

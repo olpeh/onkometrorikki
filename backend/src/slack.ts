@@ -7,15 +7,16 @@ export type SlackPayload = {
 };
 
 export const postSlackMessage = async (payload: SlackPayload) => {
-  console.log('Trying to post a response', payload);
-  const url = '	https://slack.com/api/chat.postMessage';
-  console.log('Trying to post', { payload }, 'to ', url);
+  const baseUrl = '	https://slack.com/api/chat.postMessage';
+  const { channel, text, token } = payload;
+  const url = `${baseUrl}?token=${token}&channel=${channel}&text=${encodeURI(
+    text
+  )}&pretty=1`;
+  console.log('Trying to post a response to Slack', payload.text);
   axios
-    .post(url, {
-      ...payload
-    })
+    .post(url)
     .then(function(response) {
-      console.log('Got response from Slack', response);
+      console.log('Got response from Slack', response.data);
     })
     .catch(function(error) {
       console.error('ERROR in posting to Slack', error);
