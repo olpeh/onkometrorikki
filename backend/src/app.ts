@@ -4,6 +4,8 @@ const bodyParser = require('koa-bodyparser');
 const route = require('koa-route');
 const cacheControl = require('koa-cache-control');
 import { createResponse, fetchFeed } from './hsl';
+import { postSlackMessage } from './slack';
+const slackToken = process.env.SLACK_BOT_TOKEN;
 
 const respondFromHSL = async (
   ctx,
@@ -150,7 +152,21 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
           // then respond in plaintext with the challenge attribute value
           ctx.response.body = payload.challenge;
           resolve();
-        } else if (payload.type === 'app_mention') {
+        } else if (
+          payload.event.type === 'app_mention' ||
+          payload.event.type === 'message'
+        ) {
+          /*
+          See https://api.slack.com/events/app_mention
+              https://api.slack.com/events/message.im
+          */
+          console.log('Slack bot received', payload);
+
+          if (!slackToken) {
+            console.warn('Slack token missing! Ignoring slack event received');
+            reject();
+          }
+
           if (redisClient) {
             redisClient.get(cacheKey, async (error, result) => {
               let answer = '42';
@@ -176,12 +192,27 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
                   'Jokin meni pieleen... Kokeile myöhemmin uudestaan tai vieraile https://onkometrorikki.fi sivulla.';
               }
               ctx.response.statusCode = 200;
-              ctx.response.body = answer;
+              ctx.response.body = 'OK';
+              // TODO: SHOULD BE ASYNC!
+              await postSlackMessage({
+                channel: payload.event.channel,
+                text: answer,
+                token: slackToken
+              });
               resolve();
             });
           } else {
-            console.warn('Redis not available, ignoring app_mention');
-            reject();
+            const msg =
+              'Redis not available, ignoring app_mention due to performance';
+            console.warn(msg);
+            ctx.response.statusCode = 200;
+            ctx.response.body = 'OK';
+            postSlackMessage({
+              channel: payload.event.channel,
+              text: msg,
+              token: slackToken
+            });
+            resolve();
           }
         } else {
           console.warn('Unknown payload', { payload });
