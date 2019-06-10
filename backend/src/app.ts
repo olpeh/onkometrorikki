@@ -181,7 +181,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
 
         if (!slackToken) {
           const errorMessage =
-            'Slack token missing! Ignoring slack event received';
+            'Slack token missing! Ignoring Slack event received';
           console.warn(errorMessage);
           ctx.response.statusCode = 500;
           ctx.response.body = errorMessage;
@@ -207,7 +207,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
               }
             } else {
               console.warn(
-                'Status was not found in cache, Telegram bot failed to serve status'
+                'Status was not found in cache, Slack bot failed to serve status'
               );
               answer =
                 'Jokin meni pieleen... Kokeile myöhemmin uudestaan tai vieraile https://onkometrorikki.fi sivulla.';
@@ -263,7 +263,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
                 }
               } else {
                 console.warn(
-                  'Status was not found in cache, Telegram bot failed to serve status'
+                  'Status was not found in cache, Slack bot failed to serve status'
                 );
                 answer =
                   'Jokin meni pieleen... Kokeile myöhemmin uudestaan tai vieraile https://onkometrorikki.fi sivulla.';
