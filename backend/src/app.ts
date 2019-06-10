@@ -221,7 +221,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
           });
         } else {
           const msg =
-            'Redis not available, ignoring app_mention due to performance';
+            'Redis not available, ignoring app_mention due to performance reasons';
           console.warn(msg);
           postSlackMessage({
             channel: payload.event.channel,
@@ -231,6 +231,53 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
         }
       } else {
         console.warn('Unknown payload, ignoring');
+      }
+    })
+  );
+
+  app.use(
+    route.post('/slack/commands', async ctx => {
+      ctx.response.statusCode = 200;
+
+      const payload = ctx.request.body;
+
+      if (payload.command === '/onkometrorikki') {
+        if (redisClient) {
+          // TODO: Horrible duplicate code. PLZ fix
+          await new Promise(resolve => {
+            redisClient.get(cacheKey, async (error, result) => {
+              let answer = '42';
+              if (result) {
+                console.log('Slack bot is serving the response from cache', {
+                  error,
+                  result
+                });
+                const status = JSON.parse(result);
+                const question = 'Onko metro rikki? – ';
+                if (status.broken) {
+                  // TODO: add I18N and reuse implementation between bots
+                  const finnishReason = status.reasons[0][0].text;
+                  answer = `${question} Kyllä!\n${finnishReason}`;
+                } else {
+                  answer = `${question} Ei!`;
+                }
+              } else {
+                console.warn(
+                  'Status was not found in cache, Telegram bot failed to serve status'
+                );
+                answer =
+                  'Jokin meni pieleen... Kokeile myöhemmin uudestaan tai vieraile https://onkometrorikki.fi sivulla.';
+              }
+              ctx.response.body = answer;
+              resolve();
+            });
+          });
+        } else {
+          const msg =
+            'Redis not available, ignoring /onkometrorikki due to performance reasons';
+          console.warn(msg);
+          ctx.response.body = msg;
+        }
       }
     })
   );
