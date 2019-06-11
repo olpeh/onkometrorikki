@@ -282,6 +282,13 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
     })
   );
 
+  app.use(
+    route.post('/slack/morko', async ctx => {
+      ctx.response.statusCode = 200;
+      ctx.response.body = 'Kyllä! Mörkö!';
+    })
+  );
+
   console.log('app listening on port ' + port);
 
   app.listen(port);
