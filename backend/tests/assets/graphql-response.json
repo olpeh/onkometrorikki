@@ -4,19 +4,22 @@
       {
         "alertDescriptionTextTranslations": [
           {
-            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "text": "FI: FAKE SUBWAY BROKEN ALERT FOR TESTING PURPOSES",
             "language": "fi"
           },
           {
-            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "text": "SV: FAKE SUBWAY BROKEN ALERT FOR TESTING PURPOSES",
             "language": "sv"
           },
           {
-            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "text": "EN: FAKE SUBWAY BROKEN ALERT FOR TESTING PURPOSES",
             "language": "en"
           }
         ],
-        "route": null
+        "route": {
+          "mode": "SUBWAY"
+        },
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -33,7 +36,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566957600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -50,7 +54,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -69,7 +74,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -86,26 +92,28 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
           {
-            "text": "FI: FAKE SUBWAY BROKEN ALERT FOR TESTING PURPOSES",
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
             "language": "fi"
           },
           {
-            "text": "SV: FAKE SUBWAY BROKEN ALERT FOR TESTING PURPOSES",
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
             "language": "sv"
           },
           {
-            "text": "EN: FAKE SUBWAY BROKEN ALERT FOR TESTING PURPOSES",
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
             "language": "en"
           }
         ],
         "route": {
-          "mode": "SUBWAY"
-        }
+          "mode": "TRAM"
+        },
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -122,7 +130,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -139,7 +148,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -156,7 +166,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -173,7 +184,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -190,7 +202,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -207,7 +220,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -224,7 +238,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -241,7 +256,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -258,7 +274,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -277,7 +294,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -294,7 +312,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -311,7 +330,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -328,7 +348,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -347,7 +368,8 @@
         ],
         "route": {
           "mode": "FERRY"
-        }
+        },
+        "effectiveEndDate": 1566896400
       },
       {
         "alertDescriptionTextTranslations": [
@@ -366,7 +388,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1567285200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -383,7 +406,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -400,7 +424,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -417,7 +442,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -434,7 +460,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -451,7 +478,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -468,7 +496,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -485,7 +514,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567042200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -502,7 +532,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -519,7 +550,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -538,7 +570,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -557,7 +590,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1567044000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -574,7 +608,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -591,7 +626,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -610,7 +646,8 @@
         ],
         "route": {
           "mode": "TRAM"
-        }
+        },
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -627,7 +664,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -644,24 +682,26 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
           {
-            "text": "Metro ei pysähdy Rautatientorilla. Syy: vesivahinko. Arvioitu kesto: toistaiseksi.",
+            "text": "Metro ei pysähdy Rautatientorilla. Syy: vesivahinko. Kesto: 25.8. iltaliikenteen loppuun asti. Huomisesta alkaen metro pysähtyy Rautatientorilla, mutta hissit ovat toistaiseksi pois käytöstä.",
             "language": "fi"
           },
           {
-            "text": "Metron stannar inte vid Järnvägstorget på grund av vattenskador tills vidare.",
+            "text": "Metron stannar inte vid Järnvägstorget på grund av vattenskador. Metron stannar vid Järnvägstationen fr.o.m 26.8. normalt, men liftar är ur bruk tills vidare.",
             "language": "sv"
           },
           {
-            "text": "Metro does not stop at Central Railway Station due to water damage until further notice.",
+            "text": "Metro does not stop at Central Railway Station due to water damage. Metro starts to stop at Central Railway station tomorrow (Monday), but elevators are out of order until further notice.",
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566765000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -680,7 +720,8 @@
         ],
         "route": {
           "mode": "TRAM"
-        }
+        },
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -697,7 +738,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -714,7 +756,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -731,7 +774,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -748,7 +792,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -765,7 +810,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -782,7 +828,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -799,7 +846,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -816,7 +864,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567285200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -833,7 +882,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -850,7 +900,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -867,7 +918,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -884,7 +936,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -901,7 +954,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -918,7 +972,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -935,7 +990,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -952,7 +1008,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -969,7 +1026,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567279800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -986,7 +1044,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1003,7 +1062,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1020,7 +1080,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567042200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1037,7 +1098,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1054,7 +1116,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1071,7 +1134,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1088,7 +1152,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1105,7 +1170,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1122,7 +1188,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1139,7 +1206,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1158,24 +1226,26 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
           {
-            "text": "Metro ei pysähdy Rautatientorilla. Syy: vesivahinko. Arvioitu kesto: toistaiseksi.",
+            "text": "Metro ei pysähdy Rautatientorilla. Syy: vesivahinko. Kesto: 25.8. iltaliikenteen loppuun asti. Huomisesta alkaen metro pysähtyy Rautatientorilla, mutta hissit ovat toistaiseksi pois käytöstä.",
             "language": "fi"
           },
           {
-            "text": "Metron stannar inte vid Järnvägstorget på grund av vattenskador tills vidare.",
+            "text": "Metron stannar inte vid Järnvägstorget på grund av vattenskador. Metron stannar vid Järnvägstationen fr.o.m 26.8. normalt, men liftar är ur bruk tills vidare.",
             "language": "sv"
           },
           {
-            "text": "Metro does not stop at Central Railway Station due to water damage until further notice.",
+            "text": "Metro does not stop at Central Railway Station due to water damage. Metro starts to stop at Central Railway station tomorrow (Monday), but elevators are out of order until further notice.",
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566765000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1192,7 +1262,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1209,7 +1280,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1228,7 +1300,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1245,7 +1318,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1262,7 +1336,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1279,7 +1354,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567279800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1296,7 +1372,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1313,7 +1390,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567279800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1330,7 +1408,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1347,7 +1426,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1364,7 +1444,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1381,7 +1462,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1400,7 +1482,8 @@
         ],
         "route": {
           "mode": "TRAM"
-        }
+        },
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1417,7 +1500,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567279800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1434,7 +1518,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1451,7 +1536,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1468,7 +1554,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567279800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1485,7 +1572,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1502,7 +1590,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1519,7 +1608,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1536,7 +1626,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1553,7 +1644,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1570,7 +1662,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1587,7 +1680,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1604,7 +1698,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1623,7 +1718,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1640,7 +1736,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1657,7 +1754,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1674,7 +1772,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1691,7 +1790,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1708,7 +1808,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1727,7 +1828,8 @@
         ],
         "route": {
           "mode": "TRAM"
-        }
+        },
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1744,7 +1846,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1761,7 +1864,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1778,7 +1882,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1797,7 +1902,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1566871200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1814,7 +1920,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1831,7 +1938,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1848,7 +1956,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1865,7 +1974,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1882,7 +1992,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1899,7 +2010,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1916,7 +2028,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1933,7 +2046,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567279800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1950,7 +2064,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1967,7 +2082,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -1984,7 +2100,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2001,7 +2118,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566871200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2018,7 +2136,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2035,7 +2154,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2052,7 +2172,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2069,7 +2190,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2086,7 +2208,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2103,7 +2226,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2120,7 +2244,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567279800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2137,7 +2262,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2154,7 +2280,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2171,7 +2298,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2188,7 +2316,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2205,7 +2334,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2224,7 +2354,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2243,7 +2374,8 @@
         ],
         "route": {
           "mode": "TRAM"
-        }
+        },
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2260,7 +2392,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2277,7 +2410,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2294,7 +2428,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2311,7 +2446,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2328,7 +2464,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567044000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2347,7 +2484,8 @@
         ],
         "route": {
           "mode": "TRAM"
-        }
+        },
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2364,7 +2502,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2383,7 +2522,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2400,7 +2540,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2419,7 +2560,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1566957600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2436,7 +2578,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2453,7 +2596,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2470,7 +2614,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567279800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2487,7 +2632,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2504,7 +2650,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2521,7 +2668,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2540,7 +2688,8 @@
         ],
         "route": {
           "mode": "BUS"
-        }
+        },
+        "effectiveEndDate": 1567215000
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2557,7 +2706,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2576,7 +2726,8 @@
         ],
         "route": {
           "mode": "TRAM"
-        }
+        },
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2593,7 +2744,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2610,7 +2762,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2627,7 +2780,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2644,7 +2798,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566862200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2661,7 +2816,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1566775800
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2678,7 +2834,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567294200
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2695,7 +2852,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567281600
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2712,7 +2870,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567278900
       },
       {
         "alertDescriptionTextTranslations": [
@@ -2729,7 +2888,8 @@
             "language": "en"
           }
         ],
-        "route": null
+        "route": null,
+        "effectiveEndDate": 1567279800
       }
     ]
   }

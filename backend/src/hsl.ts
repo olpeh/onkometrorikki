@@ -1,4 +1,5 @@
 const request = require('request');
+const _ = require('lodash');
 import { Status } from './../models/Status';
 
 require('dotenv').config();
@@ -32,6 +33,7 @@ export const fetchFeed = async () => {
             route{
               mode
             }
+            effectiveEndDate
           }
         }`
       };
@@ -68,12 +70,19 @@ export const createResponse = (feed): Status => {
       reasons: ['Failed to fetch the feed. The Metro might work or might not.']
     };
   } else {
-    const reasons = feed
-      // TODO: Why can't GraphQL do this filtering for me already?
-      .filter(
-        alert => alert.route && alert.route && alert.route.mode === 'SUBWAY'
-      )
-      .map(alert => alert.alertDescriptionTextTranslations);
+    // This duplicate filter should not be needed here
+    const reasons = _.uniq(
+      feed
+        // TODO: Why can't GraphQL do this filtering for me already?
+        .filter(
+          alert =>
+            alert.route &&
+            alert.route &&
+            alert.route.mode === 'SUBWAY' &&
+            alert.effectiveEndDate > Math.floor(Date.now() / 1000)
+        )
+        .map(alert => alert.alertDescriptionTextTranslations)
+    );
 
     return {
       ...defaultResponse,
