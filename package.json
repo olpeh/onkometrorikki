@@ -36,6 +36,7 @@
     "koa-cache-control": "2.0.0",
     "koa-request": "1.0.0",
     "koa-route": "3.2.0",
+    "lodash": "4.17.15",
     "redis": "2.8.0",
     "request": "2.88.0",
     "telegraf": "3.30.1",
@@ -49,7 +50,6 @@
     "elm-format": "0.8.1",
     "husky": "2.3.0",
     "lint-staged": "8.1.7",
-    "lodash": "^4.17.15",
     "npm-run-all": "4.1.5",
     "prettier": "1.17.1",
     "typescript": "3.5.1"
