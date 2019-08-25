@@ -1,0 +1,2736 @@
+{
+  "data": {
+    "alerts": [
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Suursuon sairaalan pysäkki ei käytössä 27.8. klo 18 - 28.8. klo 5. Linja 50 lähtee Pirjontieltä.",
+            "language": "fi"
+          },
+          {
+            "text": "Storkärrs sjukhus hållplats ur bruk 27.8 kl 18 - 28.8 kl 5. Linje 50 avgår från Birgittavägen.",
+            "language": "sv"
+          },
+          {
+            "text": "Suursuon sairaala stop not in use 27 Aug 6pm - 28 Aug 5am. Bus 50 departs from Pirjontie",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "FI: FAKE SUBWAY BROKEN ALERT FOR TESTING PURPOSES",
+            "language": "fi"
+          },
+          {
+            "text": "SV: FAKE SUBWAY BROKEN ALERT FOR TESTING PURPOSES",
+            "language": "sv"
+          },
+          {
+            "text": "EN: FAKE SUBWAY BROKEN ALERT FOR TESTING PURPOSES",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "SUBWAY"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Ramppivian takia autoja välttämättä ei voida kuormata. Arvioitu kesto: 22.08. 09:30 - 27.08. 12:00",
+            "language": "fi"
+          },
+          {
+            "text": "Bilar transporteras ej p.g.a feliga ramp. Beräknad tid: 22.08. 09:30 - 27.08. 12:00",
+            "language": "sv"
+          },
+          {
+            "text": "Car transportation is not always possible due to technical problem in pier. Estimated duration: 22.08. 09:30 - 27.08. 12:00",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "FERRY"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 16 poikkeusreitillä 31.8. klo 21 alkaen Hakaniemen torin kautta - Kruununhaka jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 16 på avvikande rutt 31.8 fr.o.m. kl 21 via Hagnästorget - Kronohagen körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 16 diverted on 31 August from 9pm via Hakaniemen tori - no service to Kruununhaka due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Lähibussi 313 ajaa poikkeusreittiä Hämevaarassa 26.8.-11.10. - ajetaan suoraan Hämeenkyläntietä pitkin, Valinkauhantien pysäkit jäävät ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Närbussen 313 kör avvikande rutt i Tavastberga 26.8-11.10 - körs rakt via Tavastbyvägen, Stöpslevsvägens hållplatser körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Neighbourhood route 313 diverted in Hämevaara 26 August - 11 October. Runs straight via Hämeenkyläntie, does not use Valinkauhantie bus stops. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 50 poikkeusreitillä Maunulassa 28.-29.8. yöllä klo 18-05. Suursuon sairaala jää ajamatta - väliaikainen lähtöpysäkki Sompasaaren suuntaan Pirjontie. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 50 på avvikande rutt i Månsas på natten 28.-29.8 kl 18-05. Storkärrs sjukhus körs inte - ersättande avgångshållplats i riktning mot Somparn är Birgittavägen. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 50 diverted in Maunula on the night of 28-29 Aug 6pm-5am. No service to Suursuon sairaala - temporary departure stop towards Sompasaari is Pirjontie. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "TRAM"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Metro ei pysähdy Rautatientorilla. Syy: vesivahinko. Arvioitu kesto: toistaiseksi.",
+            "language": "fi"
+          },
+          {
+            "text": "Metron stannar inte vid Järnvägstorget på grund av vattenskador tills vidare.",
+            "language": "sv"
+          },
+          {
+            "text": "Metro does not stop at Central Railway Station due to water damage until further notice.",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "TRAM"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 16 poikkeusreitillä 31.8. klo 21 alkaen Hakaniemen torin kautta - Kruununhaka jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 16 på avvikande rutt 31.8 fr.o.m. kl 21 via Hagnästorget - Kronohagen körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 16 diverted on 31 August from 9pm via Hakaniemen tori - no service to Kruununhaka due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 24 poikkeusreitillä Eirassa 31.8. klo 20.30-22.30. Ajetaan Kapteeninpuistikkoon - Meritori jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 24 på avvikande rutt i Eira 31.8 kl. 20.30-22.30. Körs till Kaptensskvären - Havstorget körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 24 diverted in Eira on 31 August 8.30pm-10.30pm. Runs to Kapteeninpuistikko - Meritori is not served. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Lähibussi 313 ajaa poikkeusreittiä Hämevaarassa 26.8.-11.10. - ajetaan suoraan Hämeenkyläntietä pitkin, Valinkauhantien pysäkit jäävät ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Närbussen 313 kör avvikande rutt i Tavastberga 26.8-11.10 - körs rakt via Tavastbyvägen, Stöpslevsvägens hållplatser körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Neighbourhood route 313 diverted in Hämevaara 26 August - 11 October. Runs straight via Hämeenkyläntie, does not use Valinkauhantie bus stops. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Metro ei pysähdy Rautatientorilla. Syy: vesivahinko. Arvioitu kesto: toistaiseksi.",
+            "language": "fi"
+          },
+          {
+            "text": "Metron stannar inte vid Järnvägstorget på grund av vattenskador tills vidare.",
+            "language": "sv"
+          },
+          {
+            "text": "Metro does not stop at Central Railway Station due to water damage until further notice.",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 24 poikkeusreitillä Eirassa 31.8. klo 20.30-22.30. Ajetaan Kapteeninpuistikkoon - Meritori jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 24 på avvikande rutt i Eira 31.8 kl. 20.30-22.30. Körs till Kaptensskvären - Havstorget körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 24 diverted in Eira on 31 August 8.30pm-10.30pm. Runs to Kapteeninpuistikko - Meritori is not served. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 24 poikkeusreitillä Eirassa 31.8. klo 20.30-22.30. Ajetaan Kapteeninpuistikkoon - Meritori jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 24 på avvikande rutt i Eira 31.8 kl. 20.30-22.30. Körs till Kaptensskvären - Havstorget körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 24 diverted in Eira on 31 August 8.30pm-10.30pm. Runs to Kapteeninpuistikko - Meritori is not served. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "TRAM"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 24 poikkeusreitillä Eirassa 31.8. klo 20.30-22.30. Ajetaan Kapteeninpuistikkoon - Meritori jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 24 på avvikande rutt i Eira 31.8 kl. 20.30-22.30. Körs till Kaptensskvären - Havstorget körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 24 diverted in Eira on 31 August 8.30pm-10.30pm. Runs to Kapteeninpuistikko - Meritori is not served. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 24 poikkeusreitillä Eirassa 31.8. klo 20.30-22.30. Ajetaan Kapteeninpuistikkoon - Meritori jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 24 på avvikande rutt i Eira 31.8 kl. 20.30-22.30. Körs till Kaptensskvären - Havstorget körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 24 diverted in Eira on 31 August 8.30pm-10.30pm. Runs to Kapteeninpuistikko - Meritori is not served. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "TRAM"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 50 poikkeusreitillä Maunulassa 26.-27.8. yöllä klo 18-05. Suursuon sairaala jää ajamatta - väliaikainen lähtöpysäkki Sompasaaren suuntaan Pirjontie. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 50 på avvikande rutt i Månsas på natten 26.-27.8 kl 18-05. Storkärrs sjukhus körs inte - ersättande avgångshållplats i riktning mot Somparn är Birgittavägen. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 50 diverted in Maunula on the night of 26-27 Aug 6pm-5am. No service to Suursuon sairaala - temporary departure stop towards Sompasaari is Pirjontie. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 24 poikkeusreitillä Eirassa 31.8. klo 20.30-22.30. Ajetaan Kapteeninpuistikkoon - Meritori jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 24 på avvikande rutt i Eira 31.8 kl. 20.30-22.30. Körs till Kaptensskvären - Havstorget körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 24 diverted in Eira on 31 August 8.30pm-10.30pm. Runs to Kapteeninpuistikko - Meritori is not served. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Suursuon sairaalan pysäkki ei käytössä 26.8. klo 18 - 27.8. klo 5. Linja 50 lähtee Pirjontieltä.",
+            "language": "fi"
+          },
+          {
+            "text": "Storkärrs sjukhus hållplats ur bruk 26.8 kl 18 - 27.8 kl 5. Linje 50 avgår från Birgittavägen.",
+            "language": "sv"
+          },
+          {
+            "text": "Suursuon sairaala stop not in use 26 Aug 6pm - 27 Aug 5am. Bus 50 departs from Pirjontie",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 24 poikkeusreitillä Eirassa 31.8. klo 20.30-22.30. Ajetaan Kapteeninpuistikkoon - Meritori jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 24 på avvikande rutt i Eira 31.8 kl. 20.30-22.30. Körs till Kaptensskvären - Havstorget körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 24 diverted in Eira on 31 August 8.30pm-10.30pm. Runs to Kapteeninpuistikko - Meritori is not served. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "TRAM"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Suursuon sairaalan pysäkki ei käytössä 28.8. klo 18 - 29.8. klo 5. Linja 50 lähtee Pirjontieltä.",
+            "language": "fi"
+          },
+          {
+            "text": "Storkärrs sjukhus hållplats ur bruk 28.8 kl 18 - 29.8 kl 5. Linje 50 avgår från Birgittavägen.",
+            "language": "sv"
+          },
+          {
+            "text": "Suursuon sairaala stop not in use 28 Aug 6pm - 29 Aug 5am. Bus 50 departs from Pirjontie",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "TRAM"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 50 poikkeusreitillä Maunulassa 27.-28.8. yöllä klo 18-05. Suursuon sairaala jää ajamatta - väliaikainen lähtöpysäkki Sompasaaren suuntaan Pirjontie. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 50 på avvikande rutt i Månsas på natten 27.-28.8 kl 18-05. Storkärrs sjukhus körs inte - ersättande avgångshållplats i riktning mot Somparn är Birgittavägen. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 50 diverted in Maunula on the night of 27-28 Aug 6pm-5am. No service to Suursuon sairaala - temporary departure stop towards Sompasaari is Pirjontie. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 24 poikkeusreitillä Eirassa 31.8. klo 20.30-22.30. Ajetaan Kapteeninpuistikkoon - Meritori jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 24 på avvikande rutt i Eira 31.8 kl. 20.30-22.30. Körs till Kaptensskvären - Havstorget körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 24 diverted in Eira on 31 August 8.30pm-10.30pm. Runs to Kapteeninpuistikko - Meritori is not served. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 785K, 787K ja 788K/KV poikkeusreitillä Kuninkaanmäessä 26.8.-6.10. Ajetaan Laurintien ja Lahdentien kautta - Kuninkaanmäki jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 785K, 787K och 788K/KV på avvikande rutt i Kungsbacka 26.8-6.10. Körs via Larsvägen och Lahtisvägen - Kungsbacka körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Buses 785K, 787K and 788K/KV diverted in Kuninkaanmäki 26 Aug - 6 Oct. Runs via Laurintie and Lahdentie - no service to Kuninkaanmäki. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "BUS"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": {
+          "mode": "TRAM"
+        }
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 27.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 27.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 27 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä 26.8. klo 00 alkaen iltaliikenteen loppuun saakka - Eiran lenkkiä ajetaan vain myötäpäivään. Vastapäivään ei ole liikennettä. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt fr.o.m. 26.8 kl 00 tills trafiken slutar - i Eira körs det bara medurs. Ingen trafik moturs. Info: hsl.fi/sv",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted on 26 August from 12 am until the end of traffic - trams only run clockwise in Eira. No traffic in counter-clockwise direction. Info: hsl.fi/en",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 7 poikkeusreitillä 31.8. klo 18 alkaen. Ajetaan Kaisaniemenkadun kautta Rautatieasemalle - Snellmaninkatu ja Aleksanterinkatu jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 7 på avvikande rutt 31.8 fr.o.m kl 18. Körs via Kajsaniemigatan till Järnvägsstationen - Snellmansgatan och Alexandersgatan körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 7 diverted 31 August from 6pm. Runs via Kaisaniemenkatu to Railway Station - no traffic via Snellmaninkatu and Aleksanterinkatu due to event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Raitiolinja 4 ajetaan 4T:nä Katajanokan terminaaliin 31.8. klo 20.45-23 - Merisotilaantorille ei ajeta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Spårvägslinje 4 körs som 4T till Skatuddens terminal 31.8 kl. 20.45-23 - körs inte till Flottisttorget. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Tram 4 operates as 4T to Katajanokka terminal on 31 August 8.45pm-11pm - no service to Merisotilaantori due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linjat 2 ja 3 poikkeusreitillä Hietalahteen 31.8. klo 20.45-22.15 - Eira jää ajamatta. Syy: yleisötapahtuma. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linjerna 2 och 3 på avvikande rutt till Sandviken 31.8 kl. 20.45-22.15 - Eira körs inte. Orsak: evenemang. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Trams 2 and 3 diverted to Hietalahti on 31 August 8.45pm-10.15pm - no service to Eira due to an event. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      },
+      {
+        "alertDescriptionTextTranslations": [
+          {
+            "text": "Linja 24 poikkeusreitillä Eirassa 31.8. klo 20.30-22.30. Ajetaan Kapteeninpuistikkoon - Meritori jää ajamatta. Info: hsl.fi",
+            "language": "fi"
+          },
+          {
+            "text": "Linje 24 på avvikande rutt i Eira 31.8 kl. 20.30-22.30. Körs till Kaptensskvären - Havstorget körs inte. Info: hsl.fi",
+            "language": "sv"
+          },
+          {
+            "text": "Bus 24 diverted in Eira on 31 August 8.30pm-10.30pm. Runs to Kapteeninpuistikko - Meritori is not served. Info: hsl.fi",
+            "language": "en"
+          }
+        ],
+        "route": null
+      }
+    ]
+  }
+}
