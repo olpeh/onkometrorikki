@@ -12,7 +12,7 @@ Check if the metro in Helsinki area is broken at the moment
 
 A really stupid prototype app that shows whether the metro in Helsinki is broken currently.
 
-The information is based on the [Service Alerts API](https://digitransit.fi/en/developers/apis/4-realtime-api/service-alerts/).
+The information is based on the [HSL Disruption info API](https://digitransit.fi/en/developers/apis/1-routing-api/disruption-info/).
 
 Follow [@onkometrorikki](https://twitter.com/onkometrorikki) for notifications when there are disruptions in the metro.
 
