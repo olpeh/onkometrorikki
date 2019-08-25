@@ -2478,10 +2478,10 @@ create-ecdh@^4.0.0:
     bn.js "^4.1.0"
     elliptic "^6.0.0"
 
-create-elm-app@3.0.8:
-  version "3.0.8"
-  resolved "https://registry.yarnpkg.com/create-elm-app/-/create-elm-app-3.0.8.tgz#f3c3815c921c4ddfc5c6d1ee3486c790fa0253dc"
-  integrity sha512-P/LPHmclWTPvLdMmbhJAk7uBaFiWingXKXvu2npQMmCWUFM/FAJoeAZFfeeEin/FlgGgQON4bqy1Z6kPhDyyPA==
+create-elm-app@3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/create-elm-app/-/create-elm-app-3.2.1.tgz#a01217bbdc41d19b211137c50e64ba59e8c4daf1"
+  integrity sha512-IT0qBSN9bl9CoMAXF1FeW3Bh9jsOf8bOgemrgffJjoU9x5MF0TiyZ1cY8ZdDDukNgFZcqdCgFdoLUQea7YJ4GA==
   dependencies:
     "@babel/cli" "7.2.3"
     "@babel/core" "7.3.4"
@@ -2503,7 +2503,7 @@ create-elm-app@3.0.8:
     elm "0.19.0-bugfix6"
     elm-hot-webpack-loader "^1.0.2"
     elm-test "^0.19.0-rev5"
-    elm-webpack-loader "^5.0.0"
+    elm-webpack-loader "github:halfzebra/elm-webpack-loader#updated-elm-compiler"
     file-loader "^1.1.6"
     fs-extra "^6.0.1"
     html-webpack-plugin "^4.0.0-alpha.2"
@@ -3153,18 +3153,17 @@ elm-test@^0.19.0-rev5:
   optionalDependencies:
     fsevents "1.2.4"
 
-elm-webpack-loader@^5.0.0:
-  version "5.0.0"
-  resolved "https://registry.yarnpkg.com/elm-webpack-loader/-/elm-webpack-loader-5.0.0.tgz#bcbd3334f232f61412390f7a9373264068cf7aa2"
-  integrity sha512-d1a06wvnQzXsAAakkI+lB2uQ9m3BREAqRFk/foxdznQ2Ge29ygkBUGQZ3spNwOy8hLo55ULKd9n1eifW9HJ5ag==
+"elm-webpack-loader@github:halfzebra/elm-webpack-loader#updated-elm-compiler":
+  version "6.0.0"
+  resolved "https://codeload.github.com/halfzebra/elm-webpack-loader/tar.gz/9ca0812c4885985ada19c28c27b841eb0e75c2d6"
   dependencies:
-    elm "^0.19.0"
+    elm "0.19.0-no-deps"
     glob "^7.1.1"
     loader-utils "^1.0.2"
     node-elm-compiler "^5.0.0"
     yargs "^6.5.0"
 
-elm@0.19.0, elm@^0.19.0:
+elm@0.19.0:
   version "0.19.0"
   resolved "https://registry.yarnpkg.com/elm/-/elm-0.19.0.tgz#c6ad86afea9e971424ebe75e36c9d03412a787fa"
   integrity sha512-CYgewByRByMOilPk5/yrW1mtflaS/vp+026gwb0EEX6aqUl+TGYoTSTW+uf44XB/FOKgUauV3TDH3Bl0IHZ8Ag==
@@ -3177,6 +3176,11 @@ elm@0.19.0-bugfix6:
   integrity sha512-nD/oK/nG26ULh94GREsILA9aQa3Gon+KKBmS0Z0MstywLWwrhuWKba8gfiIWLdnpQWHFIf+UsThk6Z71UWi6TQ==
   dependencies:
     binwrap "0.2.0"
+
+elm@0.19.0-no-deps:
+  version "0.19.0-no-deps"
+  resolved "https://registry.yarnpkg.com/elm/-/elm-0.19.0-no-deps.tgz#4754b658c424771823ee91bd5bf6387647954add"
+  integrity sha512-tOlSeo5Bt0Rkrt/aBjL+/a+TmAFdfeqjrOlThrhgKOoGeHt1hU7/hJ+HFMlHiODf09AQh7Anl64o7V6thzmRHw==
 
 elmi-to-json@0.19.1:
   version "0.19.1"
