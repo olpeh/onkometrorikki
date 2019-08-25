@@ -2,12 +2,13 @@ const request = require('request');
 import { Status } from './../models/Status';
 
 require('dotenv').config();
-const debugBrokenRandomly = process.env.DEBUG_BROKEN_RANDOMLY || false;
+const debugBrokenRandomly =
+  process.env.DEBUG_BROKEN_RANDOMLY === 'true' || false;
 
 export const fetchFeed = async () => {
   console.log('Going to fetch from the external API');
   return new Promise((resolve, reject) => {
-    if (debugBrokenRandomly === 'true' && Math.random() >= 0.5) {
+    if (debugBrokenRandomly && Math.random() >= 0.5) {
       console.log(`******************** Debug RANDOMLY BREAK mode on!*************************
       Serving alerts randomly from test binary feed and randomly from real feed!`);
       const fs = require('fs');
