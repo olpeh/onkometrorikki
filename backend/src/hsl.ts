@@ -38,21 +38,26 @@ export const fetchFeed = async () => {
         }`
       };
 
-      request(requestOptions, function(error, response, body) {
-        if (!error && response.statusCode == 200) {
-          console.log('Fetch successful!');
-          try {
-            const alerts = JSON.parse(body).data.alerts;
-            resolve(alerts);
-          } catch (e) {
-            console.error(e);
-            reject(e);
+      try {
+        request(requestOptions, function(error, response, body) {
+          if (!error && response.statusCode == 200) {
+            console.log('Fetch successful!');
+            try {
+              const alerts = JSON.parse(body).data.alerts;
+              resolve(alerts);
+            } catch (e) {
+              console.error('Error in parsing the response', e);
+              reject(e);
+            }
+          } else {
+            console.error(error, JSON.stringify(JSON.parse(body), null, 4));
+            reject(error);
           }
-        } else {
-          console.error(error, JSON.stringify(JSON.parse(body), null, 4));
-          reject(error);
-        }
-      });
+        });
+      } catch (e) {
+        console.error(e);
+        reject(e);
+      }
     }
   });
 };
