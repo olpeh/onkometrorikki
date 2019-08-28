@@ -50,7 +50,7 @@ export const fetchFeed = async () => {
               reject(e);
             }
           } else {
-            console.error(error, JSON.stringify(JSON.parse(body), null, 4));
+            console.error(error, JSON.stringify(response, null, 4));
             reject(error);
           }
         });
