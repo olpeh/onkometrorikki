@@ -50,7 +50,11 @@ export const fetchFeed = async () => {
               reject(e);
             }
           } else {
-            console.error(error, JSON.stringify(response, null, 4));
+            console.error(
+              'ERROR from HSL API:',
+              error,
+              JSON.stringify(response, null, 4)
+            );
             reject(error);
           }
         });
