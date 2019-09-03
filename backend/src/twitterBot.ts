@@ -154,7 +154,7 @@ const tweetIfBroken = async () => {
         console.log('Decided to tweet at', new Date());
         if (brokenNow) {
           const tweetText = `JUURI NYT – Metrossa häiriö:
-${(dataToRespondWith.reasons[0][0].substring(0, 170) as any).text}
+${(dataToRespondWith.reasons[0][0] as any).text.substring(0, 170)}
 Katso: https://onkometrorikki.fi #länsimetro #hsl #metrohelsinki`;
           tweetNow(tweetText, brokenNow);
         } else {
