@@ -34,9 +34,12 @@ export const fetchFeed = async () => {
               mode
             }
             effectiveEndDate
+            alertHash
           }
         }`
       };
+      // Test this out at:
+      // https://api.digitransit.fi/graphiql/hsl?query=%257B%250A%2520%2520alerts%28severityLevel%253A%2520%255BWARNING%252C%2520UNKNOWN_SEVERITY%252C%2520SEVERE%255D%29%2520%257B%250A%2520%2520%2520%2520alertDescriptionTextTranslations%2520%257B%250A%2520%2520%2520%2520%2520%2520text%250A%2520%2520%2520%2520%2520%2520language%250A%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520route%257B%250A%2520%2520%2520%2520%2520%2520mode%250A%2520%2520%2520%2520%257D%250A%2520%2520%2520%2520effectiveEndDate%250A%2520%2520%2520%2520alertHash%250A%2520%2520%257D%250A%257D
 
       try {
         request(requestOptions, function(error, response, body) {
@@ -79,18 +82,19 @@ export const createResponse = (feed): Status => {
       reasons: ['Failed to fetch the feed. The Metro might work or might not.']
     };
   } else {
+    const filteredFeed = feed
+      // TODO: Why can't GraphQL do this filtering for me already?
+      .filter(
+        alert =>
+          alert.route &&
+          alert.route &&
+          alert.route.mode === 'SUBWAY' &&
+          alert.effectiveEndDate > Math.floor(Date.now() / 1000)
+      );
+
     // This duplicate filter should not be needed here
-    const reasons = _.uniq(
-      feed
-        // TODO: Why can't GraphQL do this filtering for me already?
-        .filter(
-          alert =>
-            alert.route &&
-            alert.route &&
-            alert.route.mode === 'SUBWAY' &&
-            alert.effectiveEndDate > Math.floor(Date.now() / 1000)
-        )
-        .map(alert => alert.alertDescriptionTextTranslations)
+    const reasons = _.uniqBy(filteredFeed, 'alertHash').map(
+      alert => alert.alertDescriptionTextTranslations
     );
 
     return {
