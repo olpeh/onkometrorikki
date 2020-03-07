@@ -6,4 +6,6 @@ elm-test:
 elm-format:
   - '0.8.3'
 script: yarn test && yarn build
-cache: npm
+cache:
+  npm: true
+  yarn: true
