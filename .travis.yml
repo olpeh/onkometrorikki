@@ -5,4 +5,4 @@ elm-test:
   - '0.19.1-revision2'
 elm-format:
   - '0.8.3'
-script: npm test
+script: npm test && npm build
