@@ -1,4 +1,4 @@
-language: elm
+language: node_js
 script: yarn test && yarn build
 cache:
   npm: true
