@@ -7,7 +7,7 @@
     "dev": "NODE_ENV=development ELM_APP_API_URL=http://localhost:4000 npm-run-all --parallel backend frontend",
     "frontend": "NODE_OPTIONS='--openssl-legacy-provider' elm-app start",
     "backend": "ts-node ./backend/index.ts",
-    "build": "NODE_ENV=production elm-app build",
+    "build": "NODE_OPTIONS='--openssl-legacy-provider' NODE_ENV=production elm-app build",
     "test": "elm-format --validate . && elm-test",
     "prepush": "npm test",
     "format": "prettier --write 'src/**/*.{ts,js,css,md,html}' 'backend/**/*.{ts,js,css,md,html}' 'public/**/*.{ts,js,css,md,html}'",
