@@ -23,7 +23,10 @@ export const fetchFeed = async () => {
       const requestOptions = {
         method: 'POST',
         url: 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql',
-        headers: { 'Content-Type': 'application/graphql' },
+        headers: {
+          'Content-Type': 'application/graphql',
+          'digitransit-subscription-key': process.env.HSL_API_KEY
+        },
         body: `{
           alerts(severityLevel: [WARNING, UNKNOWN_SEVERITY, SEVERE]) {
             alertDescriptionTextTranslations {
