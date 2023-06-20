@@ -74,7 +74,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
                 console.log('Response was served from the cache');
                 ctx.response.statusCode = 200;
                 ctx.response.body = JSON.parse(result);
-                resolve();
+                resolve(undefined);
               } else {
                 await respondFromHSL(
                   ctx,
@@ -123,7 +123,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
             .then(async feed => {
               ctx.response.statusCode = 200;
               ctx.response.body = feed;
-              resolve();
+              resolve(undefined);
             })
             .catch(e => {
               console.log('Error in fetching data');
@@ -269,7 +269,7 @@ export const setUpApp = (redisClient, port, cacheTtlSeconds, cacheKey) => {
                   'Jokin meni pieleen... Kokeile myöhemmin uudestaan tai vieraile https://onkometrorikki.fi sivulla.';
               }
               ctx.response.body = answer;
-              resolve();
+              resolve(undefined);
             });
           });
         } else {
