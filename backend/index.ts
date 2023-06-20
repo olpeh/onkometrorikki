@@ -20,7 +20,9 @@ if (nodeEnv === 'development') {
   console.log('Booting in dev mode, redis will be disabled');
 } else {
   console.log('Booting in production mode');
-  redis = redisInstance();
+  if (!process.env.REDIS_ENABLED) {
+    redis = redisInstance();
+  }
 }
 
 setUpApp(redis, port, cacheTtlSeconds, CACHE_KEY);
