@@ -5,12 +5,9 @@
   "scripts": {
     "start": "npm run backend",
     "dev": "NODE_ENV=development ELM_APP_API_URL=http://localhost:4000 npm-run-all --parallel backend frontend",
-    "frontend": "elm-app start",
+    "frontend": "NODE_OPTIONS='--openssl-legacy-provider' elm-app start",
     "backend": "ts-node ./backend/index.ts",
     "build": "NODE_ENV=production elm-app build",
-    "now-build": "NODE_ENV=production elm-app build",
-    "deploy:now": "now --public ./build --local-config=../now.json && now alias --local-config=./now.json",
-    "release": "npm run build && npm run deploy:now",
     "test": "elm-format --validate . && elm-test",
     "prepush": "npm test",
     "format": "prettier --write 'src/**/*.{ts,js,css,md,html}' 'backend/**/*.{ts,js,css,md,html}' 'public/**/*.{ts,js,css,md,html}'",
