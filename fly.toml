@@ -1,0 +1,19 @@
+# fly.toml app configuration file generated for onkometrorikki on 2023-06-20T22:43:35+03:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "onkometrorikki"
+primary_region = "arn"
+
+[build]
+  builder = "heroku/buildpacks:20"
+
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
+  min_machines_running = 0
+
