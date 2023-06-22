@@ -22,6 +22,7 @@ export const fetchFeed = async () => {
     } else {
       const requestOptions = {
         method: 'POST',
+        timeout: 10000,
         url: 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql',
         headers: {
           'Content-Type': 'application/graphql',

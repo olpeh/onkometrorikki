@@ -32,8 +32,7 @@ if (language === null) {
 const app = Elm.Main.init({
   node: document.getElementById('root'),
   flags: {
-    apiBaseUrl:
-      process.env.ELM_APP_API_URL || 'https://onkometrorikki.herokuapp.com',
+    apiBaseUrl: process.env.ELM_APP_API_URL || 'https://onkometrorikki.fly.dev',
     theme,
     language
   }
