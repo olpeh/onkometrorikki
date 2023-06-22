@@ -4,7 +4,7 @@
 #
 
 app = "onkometrorikki"
-primary_region = "arn"
+primary_region = "ams"
 
 [build]
   builder = "heroku/buildpacks:20"
