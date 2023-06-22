@@ -110,11 +110,15 @@ dtoToStatusRequest { broken, reasons } =
 
 get : String -> Http.Request StatusRequest
 get apiBaseUrl =
-    Http.get
-        (apiBaseUrl
-            ++ "/status"
-        )
-        requestDecoder
+    Http.request
+        { method = "GET"
+        , headers = []
+        , url = apiBaseUrl ++ "/status"
+        , body = Http.emptyBody
+        , expect = Http.expectJson requestDecoder
+        , timeout = Just 5000
+        , withCredentials = False
+        }
 
 
 {-| Transform the HTTP Result into a StatusRequest, and convert to some message type

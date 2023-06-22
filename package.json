@@ -10,6 +10,7 @@
     "build": "NODE_OPTIONS='--openssl-legacy-provider' NODE_ENV=production elm-app build",
     "test": "elm-format --validate . && elm-test",
     "prepush": "npm test",
+    "elm-format": "elm-format .",
     "format": "prettier --write 'src/**/*.{ts,js,css,md,html}' 'backend/**/*.{ts,js,css,md,html}' 'public/**/*.{ts,js,css,md,html}'",
     "contributors:add": "all-contributors add",
     "contributors:generate": "all-contributors generate"
