@@ -5,6 +5,8 @@
 
 app = "onkometrorikki"
 primary_region = "ams"
+kill_signal = "SIGINT"
+kill_timeout = "5s"
 
 [build]
   builder = "heroku/buildpacks:20"
