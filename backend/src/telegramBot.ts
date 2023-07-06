@@ -53,6 +53,10 @@ export const setupTelegramBot = (botToken, redisClient, cacheKey) => {
       bot.command('status', ctx => replyWithStatus(ctx.reply));
       bot.launch();
       console.log('Bot listening to messages and commands...');
+
+      // Enable graceful stop
+      process.once('SIGINT', () => bot.stop('SIGINT'));
+      process.once('SIGTERM', () => bot.stop('SIGTERM'));
     } else {
       console.warn('Telegram bot token was missing... ignoring');
     }
