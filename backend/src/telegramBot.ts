@@ -35,24 +35,28 @@ export const setupTelegramBot = (botToken, redisClient, cacheKey) => {
       }
     });
 
-  if (botToken) {
-    const bot = new Telegraf(botToken);
-    bot.start(ctx =>
-      ctx.reply(
-        'Terve. Olen onkometrorikki.fi botti. Lähetä komento /status nähdäksesi onko metro rikki tällä hetkellä.',
-        Extra.markdown()
-      )
-    );
+  try {
+    if (botToken) {
+      const bot = new Telegraf(botToken);
+      bot.start(ctx =>
+        ctx.reply(
+          'Terve. Olen onkometrorikki.fi botti. Lähetä komento /status nähdäksesi onko metro rikki tällä hetkellä.',
+          Extra.markdown()
+        )
+      );
 
-    bot.action('refresh', ({ reply, deleteMessage }) => {
-      replyWithStatus(reply);
-      deleteMessage();
-    });
+      bot.action('refresh', ({ reply, deleteMessage }) => {
+        replyWithStatus(reply);
+        deleteMessage();
+      });
 
-    bot.command('status', ctx => replyWithStatus(ctx.reply));
-    bot.launch();
-    console.log('Bot listening to messages and commands...');
-  } else {
-    console.warn('Telegram bot token was missing... ignoring');
+      bot.command('status', ctx => replyWithStatus(ctx.reply));
+      bot.launch();
+      console.log('Bot listening to messages and commands...');
+    } else {
+      console.warn('Telegram bot token was missing... ignoring');
+    }
+  } catch (e) {
+    console.error('Failed to setup telegram bot', e);
   }
 };
